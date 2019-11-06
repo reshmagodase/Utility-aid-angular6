@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        frequently asked questions
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="strategies">
+  <div class="responsive-tabs tesponsive-tabs--enabled mobile">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#tab1" style="color: #3697c2!important">
+          FAQs
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="tab1" class="container tab-pane active" *ngIf="producttext">
+        <br />
+        <h3 class="headings">FAQs</h3>
+        <div class="questions innerspan">
+          <span [innerHtml]="producttext" style="color:white;font-family:'vag_roundedregular'">
+          </span><br />
+        </div>
+
+        <!-- //////////////////////////////////////////////////////////// -->
+      </div>
+      <div class="container text-center">
+
+        <a href="https://www.utility-aid.co.uk/LOA-Templates.zip" class="btnFindOutMore fontBold" target="_self"
+          download="LOA-Templates.zip">
+          Download LOA Template
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,233 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        current vacancies
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="blogs" id="blog">
+  <div class="container text-center">
+    <h2 class="heading_text_inner fontBold">
+      Sales Executive - Norwich
+    </h2>
+    <br /><br />
+    <div class="blog-work col-sm-12">
+      <p>
+        <b>Full-time and Part-time roles available</b>
+      </p>
+      <p>
+        <b>Salary:</b>
+        £18,000.00 basic salary (or pro-rata) plus tiered bonuses rising to
+        £40,000 per annum
+      </p>
+      <p>
+        <b>Description:</b>
+      </p>
+      <p>
+        Your role will be based in our Norwich City Centre office, where you
+        will join a small but growing sales team. Here, you will have the
+        opportunity to help and contribute to the positive work we do supporting
+        charities and not for profit organisations.
+        <br /><br />
+        Outbound calling to potential prospects and networking through the
+        current client database building strong relationships and attracting new
+        business.
+        <br />Extensive training will be given and maintained through regular
+        training sessions.
+      </p>
+      <p>
+        <b>Requirements:</b>
+      </p>
+      <ul>
+        <li>Positive attitude</li>
+        <li>Excellent relationship builder</li>
+        <li>Self-motivated</li>
+        <li>The ability to hit and exceed targets</li>
+        <li>Ability to build and manage your sales pipeline</li>
+      </ul>
+      <a class="btnFindOutMore" data-toggle="modal" data-target="#myModal1">
+        Apply Now
+      </a>
+    </div>
+  </div>
+
+  <!-- ////////////////////////////////////// second part///////////////////////////////////////// -->
+  <div class="text-center" style="background-color: #f2f2f2;color: #000;">
+    <div class="container">
+      <h2 class="heading_text_inner fontBold">
+        Sales Executive - Glasgow
+      </h2>
+      <br /><br />
+      <div class="blog-work col-sm-12">
+        <p>
+          <b>Full-time and Part-time roles available</b>
+        </p>
+        <p>
+          <b>Salary:</b>
+          £18,000.00 basic salary (or pro-rata) plus tiered bonuses rising to
+          £40,000 per annum
+        </p>
+        <p>
+          <b>Description:</b>
+        </p>
+        <p>
+          Your role will be based in our Norwich City Centre office, where you
+          will join a small but growing sales team. Here, you will have the
+          opportunity to help and contribute to the positive work we do
+          supporting charities and not for profit organisations.
+          <br /><br />
+          Outbound calling to potential prospects and networking through the
+          current client database building strong relationships and attracting
+          new business.
+          <br />Extensive training will be given and maintained through regular
+          training sessions.
+        </p>
+        <p>
+          <b>Requirements:</b>
+        </p>
+        <ul>
+          <li>Positive attitude</li>
+          <li>Excellent relationship builder</li>
+          <li>Self-motivated</li>
+          <li>The ability to hit and exceed targets</li>
+          <li>Ability to build and manage your sales pipeline</li>
+        </ul>
+        <a class="btnFindOutMore2" data-toggle="modal" data-target="#myModal2">
+          Apply Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /////////////////////    modal 1   /////////////////// -->
+<div class="modal fade" id="myModal1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <h1 class="text-center">
+        <div class="modal-header">
+          <h2 class="modal-title">
+            Apply for
+            <span style="color:#3697C2">Sales Executive - </span>
+            <span>Norwich</span>
+          </h2>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name" ng-model="name"
+                name="name" placeholder="Name" />
+            </div>
+            <div class="controls">
+              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email"
+                ng-model="email" name="email" placeholder="Email" />
+            </div>
+
+            <div class="controls">
+
+              <label class="dropzone">
+                Drop your CV here
+                <input type="file" (change)="detectFiles($event)"
+                  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  style="display:none;">
+                <div class="output">{{ fileName }} </div>
+              </label>
+
+
+
+            </div>
+
+
+            <div class="control-group">
+              <div class="controls" style="padding-top:16px;">
+                <button type="button" class="btnFindOutMore">Submit</button>
+                <br />
+                <!-- <img src="" class="fa fa-spinner"> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <div id="stage" class="form-all">
+                                <p style="text-align:center;">
+                                    <img src="img/check-icon.png" alt="" width="128" height="128">
+                                </p>
+    
+                                <div style="text-align:center;">
+                                    <h1 style="text-align: center;">Thank You!</h1>
+    
+                                    <p style="text-align: center;">We've received your query! Our team will respond as soon
+                                        as possible.
+                                    </p>
+                                </div>
+                            </div> -->
+        </div>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<!-- //////////////////////////////////  modal 2//////////////////////////////// -->
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <h1 class="text-center">
+        <div class="modal-header">
+          <h2 class="modal-title">
+            Apply for
+            <span style="color:#3697C2">Sales Executive - </span>
+            <span>Glasgow</span>
+          </h2>
+          <button type="button" class="close" data-dismiss="modal">
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name" ng-model="name"
+                name="name" placeholder="Name" />
+            </div>
+            <div class="controls">
+              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email"
+                ng-model="email" name="email" placeholder="Email" />
+            </div>
+
+            <div class="controls">
+              <label class="dropzone">
+                Drop your CV here
+                <input type="file" (change)="detectFiles($event)"
+                  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  style="display:none;">
+                <div class="output">{{ fileName }} </div>
+              </label>
+            </div>
+
+            <div class="control-group">
+              <div class="controls" style="padding-top:16px;">
+                <button type="button" class="btnFindOutMore">Submit</button>
+                <br />
+                <img src="" class="fa fa-spinner" />
+              </div>
+            </div>
+          </div>
+
+          <!-- <div id="stage" class="form-all">
+                                    <p style="text-align:center;">
+                                        <img src="img/check-icon.png" alt="" width="128" height="128">
+                                    </p>
+        
+                                    <div style="text-align:center;">
+                                        <h1 style="text-align: center;">Thank You!</h1>
+        
+                                        <p style="text-align: center;">We've received your query! Our team will respond as soon
+                                            as possible.
+                                        </p>
+                                    </div>
+                                </div> -->
+        </div>
+      </h1>
+    </div>
+  </div>
+</div>

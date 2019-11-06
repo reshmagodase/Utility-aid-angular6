@@ -1,0 +1,176 @@
+.header {
+  background: url(../../assets/workwithus.jpg) no-repeat center 50% fixed;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+  margin-top: -22px;
+  padding-bottom: 40px;
+  margin-bottom: 0px;
+  padding-top: 160px;
+  padding-bottom: 150px;
+}
+
+.blogs {
+  background-color: #23527c;
+  color: #fff;
+}
+
+.container {
+  padding: 70px 20px;
+}
+
+.blog-work {
+  width: 100%;
+  text-align: left;
+}
+
+.blog-work p {
+  font-family: "vag_roundedregular" !important;
+  font-weight: normal;
+}
+
+b {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16.5px;
+  margin: 5 0 0 10px;
+  margin-bottom: 15px;
+  font-stretch: normal;
+  line-height: normal;
+  /* font-family: "Helvetica Neue";  */
+}
+
+ul>li {
+  font-size: 16.5px;
+  font-family: "vag_roundedregular";
+  margin-bottom: 10px;
+}
+
+a.btnFindOutMore {
+  cursor: pointer;
+  padding: 6px;
+  font-size: 18px !important;
+  /* margin-top:20px; */
+}
+
+a.btnFindOutMore2 {
+  cursor: pointer;
+  padding: 6px;
+  font-size: 18px !important;
+  /* margin-top:20px; */
+  color: #23527c !important;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal-dialog {
+  width: 40%;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 100px;
+}
+
+.modal-content {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  min-width: 35%;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* td {
+  min-width: 350px;
+  padding: 10px 0px;
+} */
+.close {
+  float: right !important;
+}
+
+.modal-header h2 {
+  color: black;
+  font-family: "vag_roundedregular";
+  font-size: 24px;
+  margin-left: -2px;
+}
+
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+.modal input {
+  border-radius: 18px;
+}
+
+.form-control {
+  height: 38px;
+  font-size: 14px;
+  width: 100%;
+  font-family: "vag_roundedregular";
+}
+
+.controls {
+  padding: 3px;
+}
+
+.dropzone {
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #fff;
+  font: 20.5px "vag_roundedregular";
+  display: block
+}
+
+.file-upload-filename {
+  font: 18.5px "vag_roundedregular";
+  padding-top: 30px;
+}
+
+.modal .btnFindOutMore {
+  text-decoration: none;
+  color: #3496c1;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 6px solid #3496c1;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: "vag_roundedregular";
+  background-color: #23527c;
+}
+
+@media (max-width: 767px) {
+  .modal-dialog {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal-dialog {
+    width: 50%;
+    /* padding-left: 30px;
+    padding-right: 30px; */
+  }
+}

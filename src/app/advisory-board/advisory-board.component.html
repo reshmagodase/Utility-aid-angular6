@@ -1,0 +1,62 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        advisory board
+      </span>
+    </h1>
+  </div>
+</header>
+
+<section class="advisory lightblue" *ngIf="person">
+  <div class="container-fluid">
+    <div class="text-center">
+      <h2 class="titletext">
+        {{ person[0].titletext }}
+      </h2>
+      <br />
+      <div class="personname">
+        <h3>
+          The panel includes:
+        </h3>
+        <img src="assets/advisory1.png" />
+        <h3 id="person1">
+          {{ person[0].person1 }}
+        </h3>
+        <h2>
+          {{ person[0].person1_description }}
+        </h2>
+      </div>
+
+      <div class="personname">
+        <img src="assets/advisory2.png" />
+        <h3 id="person2">
+          {{ person[0].person2 }}
+        </h3>
+        <h2>
+          {{ person[0].person2_description }}
+        </h2>
+      </div>
+
+      <div class="personname">
+        <img src="assets/advisory3.png" />
+        <h3 id="person3">
+          {{ person[0].person3 }}
+        </h3>
+        <h2>
+          {{ person[0].person3_description }}
+        </h2>
+      </div>
+
+      <div class="personname">
+        <img src="assets/advisory4.png" />
+        <h3 id="person4">
+          {{ person[0].person4 }}
+        </h3>
+        <h2>
+          {{ person[0].person4_description }}
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>

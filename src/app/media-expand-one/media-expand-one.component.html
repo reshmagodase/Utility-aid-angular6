@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        media
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="expand-media-page">
+  <div class="container" *ngIf="details">
+    <div class="row">
+      <div class="expand col-md-4">
+        <img src="https://www.utility-aid.co.uk/{{ details.image }}" />
+      </div>
+      <div class="col-md-8">
+        <div class="news-headings">
+          {{details.heading}}
+        </div>
+        <span class="right-date">
+          {{details.newsdate | date: "d MMMM yyyy"}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="expand col-md-12 innerspan">
+        <p class="content-description"></p>
+        <p [innerHtml]="list1">
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>

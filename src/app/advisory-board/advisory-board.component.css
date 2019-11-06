@@ -1,0 +1,48 @@
+
+      .header{
+        background: url(../../assets/advisoryboard.jpg)no-repeat center 50% fixed;
+      display: table;
+      position: relative;
+      width: 100%;
+      height: 70%;
+      background-size: cover;
+      margin-top: -22px;
+      padding-bottom: 40px;
+      margin-bottom: 0px;
+      padding-top: 160px;
+      padding-bottom: 150px;
+  }
+  .advisory{
+      background-color:#17252a;
+      padding-top: 10px;
+  }
+  .container-fluid{
+      max-width:1000px;
+    padding: 70px 20px;
+  }
+  .advisory h2 {
+    font-size: 23.5px;
+    color:white;
+    font-family:'vag_roundedregular';
+line-height:1.5;
+padding-bottom:15px;
+}
+.advisory h3{
+    font-family: 'vag_roundedbold';
+font-size: 23.5px;
+color: #3697c2;
+margin: 5px 0px;
+padding-top: 35px;
+padding-bottom: 25px;
+}
+.personname h3{
+    font-family: 'vag_roundedbold';
+    font-size: 23.5px;
+    padding:15px;
+}
+
+@media screen and (max-width:767px){
+.advisory h2{
+  font-size:19.5px;
+}
+}

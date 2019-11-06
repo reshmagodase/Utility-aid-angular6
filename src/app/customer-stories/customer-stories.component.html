@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        customer stories
+      </span>
+    </h1>
+  </div>
+</header>
+
+<section id="case-study" class="blogs">
+  <div class="container text-center">
+    <h2 class="heading_text_inner fontBold">Case Study</h2>
+    <br /><br />
+
+    <div class="row" *ngIf="blogdata">
+      <div class="case-blog col-md-4 col-sm-6" *ngFor="let blog of blogdata">
+        <a [routerLink]="['/case-study-blog', blog.slug]">
+          <div class="innerblog">
+            <img
+              src="https://www.utility-aid.co.uk/{{ blog.image1 }}"
+              width="260"
+              height="200"
+            />
+            <div class="details">
+              <h2 class="hedaings">
+                {{ blog.title }}
+              </h2>
+              <p class="four-lines">
+                {{ blog.home_page_listing_excerpt }}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container text-center">
+    <h2 class="heading-text-inner fontBold">
+      Affinity Partners
+    </h2>
+    <br /><br />
+
+    <div class="row" *ngIf="partnerlist">
+      <!-- ///////////////////////////////////////////// -->
+
+      <div
+        class="case-logo col-md-3 col-sm-6"
+        *ngFor="let partner of partnerlist"
+      >
+        <div class="partners">
+          <a routerLink="#">
+            <img
+              src="https://utility-aid.co.uk/{{ partner.image1 }}"
+              width="200"
+            />
+            <br />
+            <span
+              class="affinity-round"
+              style="font-family:'vag_roundedregular';"
+            >
+              {{ partner.partner_name }}
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

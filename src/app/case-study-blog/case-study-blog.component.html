@@ -1,0 +1,222 @@
+<section
+  class="case-study-blog"
+  [ngStyle]="{
+    'background-image':
+      'url(https://utility-aid.co.uk/' + casestudy.image1 + ')'
+  }"
+>
+  <div class="container text-center" *ngIf="casestudy">
+    <div class="row desc-info">
+      <div class="desc">
+        <h2>
+          {{ casestudy.banner_col_1_title }}
+          <!-- {{ casestudy.image1 }} -->
+        </h2>
+        <span [innerHtml]="casestudy.banner_col_1_text"> </span>
+      </div>
+
+      <div class="desc">
+        <img src="assets/plus.png" />
+      </div>
+
+      <div class="desc">
+        <h2>
+          {{ casestudy.banner_col_2_title }}
+        </h2>
+        <span [innerHtml]="casestudy.banner_col_2_text"></span>
+      </div>
+
+      <div class="desc">
+        <img src="assets/equal.png" />
+      </div>
+
+      <div class="desc">
+        <h2>
+          {{ casestudy.banner_col_3_title }}
+        </h2>
+        <span [innerHtml]="casestudy.banner_col_3_text"></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3 class="col-md-11 innerspan">
+        <span [innerHtml]="casestudy.banner_title"></span>
+      </h3>
+    </div>
+  </div>
+</section>
+<section class="appreciate">
+  <div class="container-fluid text-center" *ngIf="casestudy">
+    <h2 class="appreciate appreciate1">
+      <div class="title-appreciate">
+        {{ casestudy.block_1_title }}
+      </div>
+    </h2>
+    <h3 class="appreciate-subtitle">
+      <div [innerHtml]="casestudy.block_1_sub_title"></div>
+    </h3>
+
+    <div class="row desc-info">
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_1_col_1_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor1"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_1_col_2_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor2"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_1_col_3_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor3"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  class="case-study-blog2"
+  [ngStyle]="{
+    'background-image':
+      'url(https://utility-aid.co.uk/' + casestudy.image2 + ')'
+  }"
+>
+  <div class="container-fluid" *ngIf="casestudy">
+    <div class="quote" [innerHtml]="casestudy.block_2_quote"></div>
+    <h4>
+      <div>{{ casestudy.block_2_author }}</div>
+      <span>
+        {{ casestudy.block_2_city }}
+      </span>
+    </h4>
+  </div>
+</section>
+<section class="appreciate">
+  <div class="container-fluid text-center" *ngIf="casestudy">
+    <h2 class="appreciate appreciate2">
+      <div class="title-appreciate">
+        {{ casestudy.block_3_title }}
+      </div>
+    </h2>
+    <h3 class="appreciate-subtitle innerspan">
+      <div [innerHtml]="casestudy.block_3_sub_title"></div>
+    </h3>
+
+    <div class="row desc-info">
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_3_col_1_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor4"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_3_col_2_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor5"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_3_col_3_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor6"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  class="case-study-blog3"
+  [ngStyle]="{
+    'background-image':
+      'url(https://utility-aid.co.uk/' + casestudy.image3 + ')'
+  }"
+>
+  <div class="container-fluid" *ngIf="casestudy">
+    <div class="quote" [innerHtml]="casestudy.block_4_quote"></div>
+    <h4>
+      <div>{{ casestudy.block_4_author }}</div>
+      <span>
+        {{ casestudy.block_4_city }}
+      </span>
+    </h4>
+  </div>
+</section>
+<section class="appreciate">
+  <div class="container-fluid text-center" *ngIf="casestudy">
+    <h2 class="appreciate appreciate3">
+      <div class="title-appreciate">
+        {{ casestudy.block_5_title }}
+      </div>
+    </h2>
+    <h3 class="appreciate-subtitle innerspan">
+      <div [innerHtml]="casestudy.block_5_sub_title"></div>
+    </h3>
+
+    <div class="row desc-info">
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_5_col_1_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor7"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_5_col_2_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor8"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-12 questions">
+        <div class="text">
+          <h2>
+            {{ casestudy.block_5_col_3_title }}
+          </h2>
+          <div class="subtext innerspan">
+            <p [innerHtml]="casestudy.editor9"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

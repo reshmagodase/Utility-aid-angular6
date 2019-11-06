@@ -1,0 +1,131 @@
+.askButton {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 15px;
+  position: fixed;
+  z-index: 999;
+  right: 25%;
+  bottom: 0px;
+  background-color: #3697c2;
+  border: 1px solid black;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 10px 10px 0px 0px;
+  color: white !important;
+  border-bottom: none;
+  font-family: "vag_roundedregular";
+  margin-right: 80px;
+}
+
+.modal {
+  width: 100%;
+}
+.sp a {
+  color: black !important;
+  font-size: 13px;
+  margin: 0 10px 0 0;
+  font-family: "vag_roundedregular";
+}
+.btn a {
+  font-size: 20px;
+}
+footer {
+  background-color: #e4dcc1;
+}
+
+.modal-title {
+  color: "#000000";
+  font-family: "vag_roundedregular";
+  font-size: 30px;
+}
+ul.ua {
+  list-style-image: url("../../assets/ua.png");
+}
+
+ul > li {
+  font-family: "vag_roundedregular";
+  line-height: 2;
+  font-size: 14.5px;
+}
+
+input {
+  font-family: "vag_roundedregular";
+  font-size: 14px;
+  border-radius: 18px;
+}
+textarea {
+  font-family: "vag_roundedregular";
+  font-size: 14px;
+}
+
+.askButton:hover {
+  color: #23527c !important;
+}
+a:hover {
+  text-decoration: underline !important;
+}
+.modal-body {
+  overflow-y: inherit;
+  padding: 20px;
+}
+.modal-lg {
+  max-width: 900px;
+}
+.controls {
+  padding: 3px;
+}
+.form-control {
+  height: 38px;
+}
+.col-md-5 {
+  padding-left: 0px;
+}
+.modal .btnFindOutMore {
+  text-decoration: none;
+  color: #3496c1;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 6px solid #3496c1;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: "vag_roundedregular";
+  background-color: #23527c;
+}
+@media screen and (max-width: 768px) {
+  .askButton {
+    /* font-size:11px;
+        width:100%;
+     display:table; */
+
+    /* vertical-align: middle;
+        position: relative;
+      */
+    font-size: 19px;
+    cursor: pointer;
+    padding: 5px 15px;
+    position: fixed;
+    z-index: 999;
+    right: 0%;
+    bottom: 0px;
+    background-color: #3697c2;
+    border: 1px solid black;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    border-bottom: none;
+  }
+  .modal {
+    width: 100%;
+    position: fixed;
+    right: 30%;
+  }
+  .modal-body {
+    max-height: 35em;
+    overflow-y: auto;
+  }
+}

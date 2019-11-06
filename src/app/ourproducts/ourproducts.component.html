@@ -1,0 +1,164 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        our products
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="strategies">
+  <div>
+    <div class="responsive-tabs responsive-tabs--enabled mobile" *ngIf="product">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" (click)="currentTabData('Fixed Price Strategy')" href="#tab1">
+            Fixed Price Strategy
+            <!-- <div class="arrow-down"></div> -->
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="currentTabData('Market Trigger Strategy')" href="#tab2">
+            Market Trigger Strategy
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="currentTabData('Portfolio Managed Strategy')" href="#tab3">
+            Portfolio Managed Strategy
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="currentTabData('Bespoke Strategy')" href="#tab4">
+            Bespoke Strategy
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" (click)="currentTabData('Bureau Services')" href="#tab5">
+            Bureau Services
+          </a>
+        </li>
+      </ul>
+
+      <!-- ===================================   tab 1  ===================================== -->
+      <div class="tab-content">
+        <div id="tab1" class="container tab-pane active" *ngIf="tab">
+          <br />
+          <h3 class="headings">{{ tab.heading }}</h3>
+          <div class="tabdetails innerspan">
+            <span [innerHtml]="tabData"></span>
+          </div>
+        </div>
+      </div>
+      <!-- ================================== end ================================== -->
+    </div>
+  </div>
+
+  <!-- ================================= mobile tab============================== -->
+
+  <div class="accordion mobile-device" id="accordion" role="tablist" *ngIf="tab">
+    <div class="card">
+      <div class="card-header" role="tab" id="heading2">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1"
+          (click)="currentTabData('Fixed Price Strategy')">
+          <h5 class="headingstab">
+            Fixed Price Strategy <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading2" data-parent="#accordion">
+        <div class="card-body">
+          <h3 class="headings">{{ tab.heading }}</h3>
+          <div class="tabdetails innerspan">
+            <span [innerHtml]="tabData"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =========================================== mobile tab2 ===================== -->
+
+    <div class="card">
+      <div class="card-header" role="tab" id="heading2">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2"
+          (click)="currentTabData('Market Trigger Strategy')">
+          <h5 class="headingstab">
+            Market Trigger Strategy
+            <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <div id="collapse2" class="collapse" role="tabpanel" aria-labelledby="heading2" data-parent="#accordion">
+        <div class="card-body">
+          <h3 class="headings">{{ tab.heading }}</h3>
+          <div class="tabdetails innerspan">
+            <span [innerHtml]="tabData"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===================================== mobile tab3 ================================ -->
+    <div class="card">
+      <div class="card-header" role="tab" id="heading3">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3"
+          (click)="currentTabData('Portfolio Managed Strategy')">
+          <h5 class="headingstab">
+            Portfolio Managed Strategy
+            <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <div id="collapse3" class="collapse" role="tabpanel" aria-labelledby="heading3" data-parent="#accordion">
+        <div class="card-body">
+          <h3 class="headings">{{ tab.heading }}</h3>
+          <div class="tabdetails innerspan">
+            <span [innerHtml]="tabData"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================================ mobile tab4 ================================== -->
+    <div class="card">
+      <div class="card-header" role="tab" id="heading4">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
+          (click)="currentTabData('Bespoke Strategy')">
+          <h5 class="headingstab">
+            Bespoke Strategy <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="heading4" data-parent="#accordion">
+        <div class="card-body">
+          <h3 class="headings">{{ tab.heading }}</h3>
+          <div class="tabdetails innerspan">
+            <span [innerHtml]="tabData"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======================================  mobile tab5 =========================== -->
+    <div class="card">
+      <div class="card-header" role="tab" id="heading5">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5"
+          (click)="currentTabData('Bureau Services')">
+          <h5 class="headingstab">
+            Bureau Services <i class="fas fa-angle-down rotate-icon"></i>
+          </h5>
+        </a>
+      </div>
+
+      <div id="collapse5" class="collapse" role="tabpanel" aria-labelledby="heading5" data-parent="#accordion">
+        <div class="card-body">
+          <h3 class="headings">{{ tab.heading }}</h3>
+          <div class="tabdetails innerspan">
+            <span [innerHtml]="tabData"></span>
+          </div>
+        </div>
+      </div>
+      <!-- ========================================================================================= -->
+    </div>
+  </div>
+
+</section>

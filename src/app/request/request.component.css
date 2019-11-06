@@ -1,0 +1,133 @@
+.header {
+  background: url(../../assets/request.jpg) no-repeat center 25% fixed;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+  margin-top: -22px;
+  padding-bottom: 40px;
+  margin-bottom: 0px;
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.details {
+  background-color: #f2f2f2;
+
+  padding: 70px 20px;
+}
+h2 {
+  font-size: 30px;
+  font-family: "vag_roundedregular";
+  padding-bottom: 40px;
+}
+.details h3 {
+  font-family: "vag_roundedbold";
+  font-size: 16px;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  color: #3496c1;
+}
+.control-info {
+  width: 50%;
+  float: left;
+}
+.details .control-group {
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+.control-group .controls input {
+  width: 100%;
+  padding: 4px 0 0 15px;
+  border-radius: 18px;
+  border: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  height: auto;
+}
+
+.form-check-input input {
+  font-family: "vag_roundedregular";
+  float: left;
+  margin-bottom: 20px;
+  width: 10px;
+}
+.control-group {
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+label {
+  float: left;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "vag_roundedregular";
+  margin-top: 20px;
+}
+.row {
+  margin-top: 20px;
+}
+
+.control-group .form-check-label label {
+  /* text-align: left!important; */
+
+  /* min-width: 175px; */
+  margin-top: 0;
+  padding-left: 0px;
+  padding-top: 5px;
+  height: 28px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "vag_roundedregular";
+  float: left;
+}
+.control-textarea {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  margin-top: 20px;
+  padding: 9px 0 0 15px;
+  border-radius: 18px;
+  border: none;
+  border: 1px solid #ccc;
+  height: 120px;
+  max-height: 120px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.btnFindOutMore {
+  text-decoration: none;
+  color: #3496c1;
+  padding: 8px 10px;
+  border: 6px solid #3496c1;
+  border-radius: 20px;
+  font-size: 18px;
+  display: inline-block;
+}
+.btnFindOutMore:hover {
+  border: 6px solid black;
+}
+.btnFindOutMore a {
+  color: #3496c1;
+}
+.btnFindOutMore a:hover {
+  color: black;
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .control-info {
+    width: 100%;
+  }
+}
+/* @media screen and (max-width: 1024px) {
+  .col-md-6 {
+    width: 100%;
+  }
+} */

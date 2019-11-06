@@ -1,0 +1,60 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        media
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="media-page">
+  <div class="container">
+    <div class="ua-news-wrapper" id="blog" style="min-height:500px" *ngIf="news">
+      <div class="row ua-energy-row" *ngFor="let newslist of news" (click)="headingTitle(newslist)">
+        <div class="col-lg-5 col-md-5">
+          <div class="ua-news-img">
+            <!-- <a              class="ua-expand-link"              routerLink="['media-expand-one',newslist.heading]"
+            >  </a>-->
+            <img src="https://www.utility-aid.co.uk/{{ newslist.image }}" />
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-7">
+          <div class="ua-news">
+            <!-- <a
+              class="ua-expand-link"
+              routerLink="['media-expand-one',newslist.heading]"
+            >
+             
+            </a> -->
+            <h3 class="news-headings">
+              {{ newslist.heading }}
+            </h3>
+            <p class="content-description"></p>
+
+            <p class="content-description">{{ newslist.description }}</p>
+            <br />
+
+            <!-- <p>
+              <span style="font-size:medium">
+                Here are a few fundraising tips that we have picked up along the
+                way:
+              </span>
+            </p> -->
+            <p>
+              <br />
+            </p>
+          </div>
+
+          <div style="width:100%">
+            <!-- <a class="expand-link" routerLink="['media-expand-one',newslist.heading]">
+              <span style="font-size:20.5px;font-family:'vag_roundedregular';">Expand ></span>
+            </a> -->
+            <span class="right-date">
+              {{ newslist.newsdate | date: "d MMMM yyyy" }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

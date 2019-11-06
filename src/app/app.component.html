@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+
+
+
+
+  <meta name="viewport" content="width=device-width">
+
+
+
+</head>
+
+<body #scrollMe>
+  <button class="back-to-top" (click)="backToTop($event);" [style.display]="showButton?'block':'none'"></button>
+</body>
+
+
+<app-header1></app-header1>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
+<app-footer1></app-footer1>

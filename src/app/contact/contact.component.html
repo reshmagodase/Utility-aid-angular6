@@ -1,0 +1,80 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        contact
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="contacts">
+  <div class="container text-center">
+    <h2>
+      If you would like to discuss ways utility aid can help your organisation
+      save money, get in touch on
+    </h2>
+    <h3 class="fontBold">
+      0808 1788 170
+    </h3>
+    <div class="row" *ngIf="contacts">
+      <div class="col-md-4 col-sm-6 contact text-left" *ngFor="let contact of contacts">
+        <div class="title">{{ contact.title }}</div>
+        <div class="location">{{ contact.location }}</div>
+        <div class="address">{{ contact.address }}</div>
+        <div class="number">{{ contact.phone }}</div>
+
+
+        <a href="mailto:Eberry@utility-aid.com">
+          <div class="mail"></div>
+          <!-- mailto:recipient@domain.com?cc=other@domain.com -->
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-6 contact text-left">
+        <div class="title">Social Media</div>
+        <div class="location"><br /></div>
+        <div class="address"><br /></div>
+        <div class="number"><br /></div>
+        <div class="social">
+          <a routerLink="#">
+            <div class="facebook"></div>
+          </a>
+          <a routerLink="#">
+            <div class="twitter"></div>
+          </a>
+          <a routerLink="#">
+            <div class="linkdin"></div>
+          </a>
+          <a routerLink="#">
+            <div class="instagram"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="header"></header>
+<section class="home" style="background-color: #17252a">
+  <div class="container-fluid">
+    <div class="text-center">
+      <h2 class="heading_text_inner" style="margin-top:0px;
+                padding-bottom: 70px;
+              padding-top: 100px;color:white;">
+        <span class="fontBold">lets work together!</span>
+
+        <br />
+        <br />
+        <p style="font-size: 22.5px;color:white;font-family: vag_roundedregular;line-height: 1.5;">
+          The money we save for your organisation can be used to do more good!
+        </p>
+      </h2>
+      <div class="btnFindOutMore">
+        <a class="fontBold" routerLink="../request" style="color: #3697c2;">
+          Request a
+          <span style="color:white;">FREE</span>
+          energy consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

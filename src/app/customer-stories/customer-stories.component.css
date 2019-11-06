@@ -1,0 +1,92 @@
+.header {
+  background: url(../../assets/customer-stories.jpg) no-repeat center 25% fixed;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+  margin-top: -22px;
+  padding-bottom: 40px;
+  margin-bottom: 0px;
+  padding-top: 160px;
+  padding-bottom: 150px;
+}
+
+.blogs {
+  background-color: #e4dcc1;
+  border-bottom: 1px solid darkkhaki;
+  color: #17252b;
+  padding-top: 1px;
+  padding-bottom: 70px;
+}
+
+.container-fluid {
+  padding: 70px 20px;
+}
+.heading_text_inner {
+  margin-top: 15px;
+  font-size: 40px;
+}
+.fontBold {
+  font-family: "vag_roundedbold";
+  padding-top: 70px;
+  padding-bottom: 25px;
+}
+.blogs .innerblog {
+  text-align: left;
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-bottom: 40px;
+}
+.blogs a:hover .innerblog {
+  background-color: #3697c2;
+}
+.blogs .details {
+  overflow: hidden;
+  height: 200px;
+}
+.blogs .details h2 {
+  font-size: 20.5px;
+  color: #3496c1;
+  min-height: 80px;
+  padding-top: 10px;
+  font-family: "vag_roundedregular";
+  line-height: 1.5;
+}
+.blogs a:hover h2 {
+  color: white !important;
+}
+.blogs .details p {
+  font-size: 16.5px;
+  color: black;
+  font-family: "vag_roundedregular";
+  line-height: 1.5;
+}
+a {
+  color: #3496c1;
+}
+.blogs a:hover .details p {
+  color: white !important;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    background-attachment: scroll;
+  }
+  .heading_text {
+    font-size: 45px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .case-blog {
+    max-width: 50%;
+  }
+  .case-logo {
+    max-width: 50%;
+  }
+}

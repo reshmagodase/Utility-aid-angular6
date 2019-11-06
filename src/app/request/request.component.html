@@ -1,0 +1,175 @@
+<header class="header">
+  <div class="text-vertical-center">
+    <h1 class="heading_text">
+      <span class="fontBold">
+        request a free energy consultation
+      </span>
+    </h1>
+  </div>
+</header>
+<section class="details">
+  <form class="request-form">
+    <div class="container text-center" style="max-width:900px;">
+      <h2>
+        Drop your details in below and we'll be in touch
+      </h2>
+      <div class="row">
+        <div class="control-info col-md-6">
+          <h3>About you</h3>
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="title" class="form-control" ng-model="title" name="title" placeholder="Title" />
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="fullname" class="form-control" ng-model="fullname" name="fullname"
+                placeholder="Full name *" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="contact" class="form-control" ng-model="contact" name="contact"
+                placeholder="Contact number *" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="email" class="form-control" ng-model="email" name="email" placeholder="Email *" />
+            </div>
+          </div>
+          <h3>Do you require a FREE energy audit?</h3>
+          <div>
+            <div>
+              <!-- <span><br /></span> -->
+              <div class="row ">
+                <div class="col-sm-6">
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="audit" value="Yes" /> Yes please
+                    </label>
+                  </div>
+
+                  <!-- <label>
+                    <input type="radio" name="audit" value="Yes" />
+                    Yes please
+                  </label> -->
+                </div>
+
+                <div class="col-sm-6 ">
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="audit" value="No" /> No Thank
+                      you
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-info col-md-6">
+          <h3>Your company</h3>
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="companyname" class="form-control" ng-model="companyname" name="companyname"
+                placeholder="Company name " />
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="yourposition" class="form-control" ng-model="yourposition" name="yourposition"
+                placeholder="Your position" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="supplier" class="form-control" ng-model="supplier" name="supplier"
+                placeholder="Current energy supplier" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <input type="text" id="cost" class="form-control" ng-model="cost" name="cost"
+                placeholder="Annual energy cost" />
+            </div>
+          </div>
+          <h3>How did you hear about us?</h3>
+          <div>
+            <div>
+              <!-- <span><br /></span> -->
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="about" value="Internet" /> Internet
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6 ">
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="about" value="Press" />Press
+                      advert
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 ">
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="about" value="Recommendation" />
+                      Recommendation
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-6 ">
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="about" value="Other" />Other
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="control-textarea col-md-12">
+          <div class="control-group">
+            <div class="controls">
+              <span><br /></span>
+              <textarea id="message" class="form-control" cols="40" rows="10" name="message" placeholder="Your enquiry">
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="control-textarea col-md-12">
+          <div class="control-group">
+            <div class="controls">
+              <span><br /></span>
+              <div class="btnFindOutMore">
+                <a class="fontBold" routerLink="#" style=" font-family:'vag_roundedregular';">
+                  Send Enquiry
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>

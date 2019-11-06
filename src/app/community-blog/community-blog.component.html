@@ -1,0 +1,56 @@
+<div class="community-blog" *ngIf="community">
+  <section
+    class="blog-header"
+    [ngStyle]="{
+      'background-image':
+        'url(https://utility-aid.co.uk/' + community.image1 + ')'
+    }"
+  >
+    <img
+      [src]="'https://utility-aid.co.uk/' + community.image1"
+      style="  margin-top: -70px;width: 100%;"
+    />
+  </section>
+
+  <section class="blog-content" *ngIf="community">
+    <div class="container" style="max-width:940px">
+      <div class="row">
+        <div class="col-md-8 white">
+          <div class="content">
+            <h2 [innerHtml]="community.page_content_extended_title"></h2>
+
+            <div id="editor1" [innerHtml]="editorChange"></div>
+
+            <div class="share">
+              <span>Share:</span>
+              <div id="share-logo">
+                <a class="share-fb" routerLink="#"> </a>
+                <a class="share-tw" routerLink="#"> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- /////////////////////////    author   ///////////////////////// -->
+        <div class="col-md-4" *ngIf="Article">
+          <h3>More good news</h3>
+          <div class="articles" *ngFor="let articles of Article">
+            <span>
+              <a
+                class="recent"
+                [routerLink]="[
+                  '/community-blog',
+                  {
+                    date: articles.publish_date_0 | date: 'yyyy/M/d',
+                    slug: articles.slug
+                  }
+                ]"
+                >{{ articles.page_content_extended_title }}</a
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

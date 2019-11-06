@@ -1,0 +1,21 @@
+.back-to-top {
+  background: #dddddd url(../assets/backtotop.png) no-repeat center 43%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 10px;
+  bottom: 10px;
+
+  border: 1px solid #3697c2;
+}
+
+
+@media screen and (max-height:700px) {
+  .back-to-top {
+    display: none;
+
+  }
+}
