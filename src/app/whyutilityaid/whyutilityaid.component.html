@@ -7,25 +7,13 @@
     </h1>
 
     <h2>
-      <video
-        id="videowhyua"
-        poster="../../assets/videoimg1.jpg"
-        src="https://www.utility-aid.co.uk/videos/RA504_Utility_Aid_VOL_MASTER_small.mp4"
-        width="300"
-        height="200"
-        controls
-        loop
-      ></video>
+      <video id="videowhyua" poster="../../assets/videoimg1.jpg"
+        src="assets/videos/RA504_Utility_Aid_VOL_MASTER_small.mp4" width="300" height="200" controls loop></video>
     </h2>
   </div>
 </header>
 
-<section
-  id="save"
-  class="save ng-scope"
-  style="background-color:#17252a"
-  *ngIf="text"
->
+<section #saveMoney id="saveMoney" class="save ng-scope" style="background-color:#17252a" *ngIf="text">
   <div class="container-fluid" style="max-width:1100px">
     <div class="text_center">
       <h2 id="save_text" class="fontRegular innerSpan">
@@ -96,28 +84,19 @@
     <br />
 
     <div class="row" *ngIf="dataBlog">
-      <div
-        class="row-blog col-md-4 col-sm-6 col-12"
-        *ngFor="let bloginfo of dataBlog"
-      >
-        <a
-          [routerLink]="[
+      <div class="row-blog col-md-4 col-sm-6 col-12" *ngFor="let bloginfo of dataBlog">
+        <a [routerLink]="[
             '/community-blog',
             {
               date: bloginfo.publish_date_0 | date: 'yyyy/M/d',
               slug: bloginfo.slug
             }
-          ]"
-        >
+          ]">
           <div class="innerblog">
-            <img
-              src="https://www.utility-aid.co.uk/{{ bloginfo.image1 }}"
-              width="260"
-              height="200"
-            />
+            <img src="https://www.utility-aid.co.uk/{{ bloginfo.image1 }}" width="260" height="200" />
             <div class="details">
               <h2 class="hedaings">
-                {{ bloginfo.meta_data_meta_title }}
+                {{ bloginfo.title }}
               </h2>
               <p class="four-lines">
                 {{ bloginfo.page_content_excerpt }}

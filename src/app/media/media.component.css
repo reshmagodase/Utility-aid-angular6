@@ -26,7 +26,7 @@
   padding: 0px 40px;
 }
 
-.ua-news-img img {
+.ua-news-img .img1 {
   border: 3px solid #3697c2;
   width: 100%;
 }
@@ -35,6 +35,10 @@
   max-height: 270px;
   overflow: hidden;
   color: black;
+}
+
+.ua-news>img {
+  visibility: hidden;
 }
 
 .news-headings {
@@ -48,8 +52,8 @@
 h3 {
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
   line-height: 1.5;
 }
 
@@ -98,3 +102,24 @@ a:hover {
   overflow: hidden;
   color: black;
 }
+
+.expand {
+  color: #3697c2;
+}
+
+.expand:hover {
+  color: #23527c;
+  text-decoration: none;
+  outline: none;
+}
+
+::ng-deep .ua-news img {
+  display: none;
+}
+
+/* 
+@media screen and(max-width:767px) {
+  .ua-news-img {
+    margin-bottom: 10px;
+  }
+} */

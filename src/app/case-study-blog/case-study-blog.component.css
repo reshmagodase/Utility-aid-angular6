@@ -20,6 +20,7 @@
   min-height: 190px;
   margin-bottom: 60px;
 }
+
 .desc h2 {
   font-family: "vag_roundedbold";
   font-size: 28px;
@@ -27,29 +28,36 @@
   margin-bottom: 30px;
   line-height: 1.5;
 }
+
 .desc span {
   font-family: "vag_roundedregular";
   font-size: 16px;
   color: white;
   line-height: 24px;
 }
+
 h3 {
   font-family: "vag_roundedregular";
   font-size: 24px;
   color: white;
 }
+
 .appreciate {
   background-color: #f2f2f2;
 }
+
 .appreciate1 {
   background-image: url("../../assets/appreciate-img1.png");
 }
+
 .appreciate2 {
   background-image: url("../../assets/analyse-img1.png");
 }
+
 .appreciate3 {
   background-image: url("../../assets/action-img1.png");
 }
+
 .appreciate {
   text-align: center;
   font-size: 28px;
@@ -62,9 +70,11 @@ h3 {
   color: black;
   padding: 100px;
 }
+
 .title-appreciate {
   padding-top: 20px;
 }
+
 .appreciate-subtitle {
   font-size: 24px;
   margin-top: -20px;
@@ -72,11 +82,13 @@ h3 {
   color: #3496c1;
   line-height: 36px;
 }
+
 .text {
   color: black;
   padding: 0 10px;
   text-align: left;
 }
+
 .text h2 {
   font-size: 16px;
   margin-bottom: 20px;
@@ -86,11 +98,13 @@ h3 {
   padding-left: 0;
   line-height: 24px;
 }
+
 p {
   font-size: 16.5px;
   font-family: "vag_roundedregular";
   line-height: 1.4;
 }
+
 .case-study-blog2 {
   /* background: url("../../assets/case-study-blog2.jpg"); */
   background-position: center top;
@@ -99,6 +113,7 @@ p {
   background-repeat: no-repeat;
   min-height: 800px;
 }
+
 .quote {
   border: none;
   padding: 0 40px;
@@ -109,19 +124,23 @@ p {
   color: #fff;
   font-family: "vag_roundedregular";
 }
+
 .case-study-blog2 h4 {
   color: #fff;
   font-family: "vag_roundedbold";
   font-size: 24px;
 }
+
 .case-study-blog2 h4 span {
   color: #fff;
   line-height: 2;
   font-family: "vag_roundedregular" !important;
 }
+
 .case-study-blog2 .container-fluid {
   padding: 180px 0;
 }
+
 .case-study-blog3 {
   /* background: url("../../assets/case-study-blog2.jpg"); */
   background-position: center top;
@@ -136,11 +155,13 @@ p {
   font-family: "vag_roundedbold";
   font-size: 24px;
 }
+
 .case-study-blog3 h4 span {
   color: #fff;
   line-height: 2;
   font-family: "vag_roundedregular" !important;
 }
+
 .case-study-blog3 .container-fluid {
   padding: 180px 0;
 }
@@ -149,15 +170,19 @@ p {
   .desc-info {
     display: inline-block;
   }
+
   .container {
     float: none;
   }
+
   .appreciate {
     padding: 40px;
   }
+
   .title-appreciate {
     padding-top: 70px;
   }
+
   .quote {
     font-size: 28px;
     line-height: 34px;
@@ -169,18 +194,30 @@ p {
   .desc-info {
     display: inline-block;
   }
+
   .container {
     float: none;
   }
+
   .quote {
     font-size: 28px;
     line-height: 34px;
     color: #fff;
   }
+
   .questions {
     max-width: 100%;
   }
+
   .case-study-blog {
     margin-top: -23px;
+  }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .author {
+    margin-left: 85px;
   }
 }

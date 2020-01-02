@@ -4,10 +4,14 @@ import { RouterModule, Routes } from "@angular/router";
 import { MediaExpandOneComponent } from "../media-expand-one/media-expand-one.component";
 
 import { MediaComponent } from "./media.component";
+import { listLazyRoutes } from "@angular/compiler/src/aot/lazy_routes";
 
 const routes: Routes = [
   { path: "", component: MediaComponent },
-  { path: "media-expand-one", component: MediaExpandOneComponent }
+  {
+    path: "news-media/:title/:newsDate",
+    component: MediaExpandOneComponent
+  }
 ];
 
 @NgModule({

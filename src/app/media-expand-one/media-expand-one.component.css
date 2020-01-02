@@ -21,7 +21,7 @@
   padding: 10px 0px;
 }
 
-.expand img {
+.expand .img1 {
   border: 3px solid #3697c2;
   width: 300px;
 }
@@ -77,8 +77,18 @@ a:hover {
   outline: none;
 }
 
+::ng-deep .innerspan .MsoNormal img {
+  width: 100% !important;
+  max-width: 700px !important;
+}
+
+::ng-deep .innerspan img {
+  width: 100% !important;
+  max-width: 700px !important;
+}
+
 @media screen and (max-width:1022px) {
-  .expand img {
+  .expand .img1 {
     width: 200px;
   }
 }

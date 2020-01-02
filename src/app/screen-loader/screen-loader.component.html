@@ -1,0 +1,7 @@
+<div *ngIf="loading">
+  <div class="loader-overlay">
+    <div>
+      <ng-progress #progressBar (started)="onStarted()" (completed)="onCompleted()"></ng-progress>
+    </div>
+  </div>
+</div>

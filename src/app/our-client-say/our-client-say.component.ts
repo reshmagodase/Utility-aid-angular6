@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
+import { MetaserviceService } from "../metaservice.service";
 @Component({
   selector: "app-our-client-say",
   templateUrl: "./our-client-say.component.html",
@@ -7,11 +8,16 @@ import { ServiceCallsService } from "../service-calls.service";
 })
 export class OurClientSayComponent implements OnInit {
   partnerlist: any;
-  constructor(private servicecalls: ServiceCallsService) {
+  constructor(
+    private servicecalls: ServiceCallsService,
+    private meta: MetaserviceService
+  ) {
     this.getPartnerList();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateTitle("", "Our Clients Say");
+  }
   getPartnerList() {
     this.servicecalls.postServer("getPartnerList", { active: "on" }).subscribe(
       (res: any) => {

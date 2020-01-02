@@ -2,11 +2,11 @@ nav {
   background-color: #17252a;
   margin-bottom: 15px;
   padding-bottom: 25px;
-  margin-top: -8px;
+  margin-top: -10px;
 }
 
 .navbar-brand img {
-  margin-top: 7px;
+  margin-top: 14px;
   margin-left: 25px;
   margin-bottom: -5px;
   width: 240px;
@@ -57,13 +57,14 @@ a {
   font-family: "vag_roundedregular";
 }
 
+
 .anchorMargin a {
-  margin: 5px;
+  margin: 3px;
 }
 
 .navbar-right {
   float: right !important;
-  margin-top: 22px;
+  margin-top: 28px;
   margin-bottom: -20px;
   margin-left: 95px;
   /* padding-right: -40px;  */
@@ -162,7 +163,7 @@ ul>li>a {
     margin-bottom: -20px;
     margin-left: 5px;
 
-    padding-top: 2px;
+    padding-top: 8px;
     position: absolute;
     right: 0;
     line-height: 2;
@@ -171,7 +172,7 @@ ul>li>a {
   nav {
     background-color: #17252a;
     margin-bottom: 22px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
     margin-top: -8px;
   }
 
@@ -181,7 +182,7 @@ ul>li>a {
   }
 
   .freephone-nav {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .dropdown-menu {
@@ -195,3 +196,79 @@ ul>li>a {
     display: block;
   }
 } */
+/* @media (min-width:800px)and(max-width: 1280px) {
+  .navbar-right {
+    float: left !important;
+    margin-top: 100px !important;
+    margin-bottom: -20px;
+    margin-left: 5px;
+
+    padding-top: 0px;
+    position: absolute;
+    right: 0;
+    line-height: 2;
+  }
+} */
+
+@media screen and (max-width:767px) {
+  .dashboardView {
+    display: none;
+  }
+
+
+}
+
+@media screen and (min-width:768px) {
+  .mobileView {
+    display: none !important;
+  }
+
+  .dashboardView {
+    display: block;
+  }
+
+}
+
+@media (min-width: 800px) and (max-width: 1280px) {
+  .navbar-right {
+    float: left !important;
+    margin-top: 0px;
+    margin-bottom: -20px;
+    margin-left: 5px;
+
+    /* padding-top: 30px; */
+    position: absolute;
+    right: 0;
+    line-height: 1.5;
+  }
+
+  .freephone-nav {
+    margin-top: 20px;
+  }
+
+  .navbar-brand {
+    margin-left: 0px !important;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .navbar-right {
+    float: left !important;
+
+    margin-left: 5px;
+
+    padding-top: 40px;
+    position: absolute;
+    right: 0;
+    line-height: 1.5;
+  }
+
+  .freephone-nav {
+    margin-top: 25px
+  }
+
+  .navbar-brand img {
+    margin-top: 8px;
+    /* width: 100%; */
+  }
+}

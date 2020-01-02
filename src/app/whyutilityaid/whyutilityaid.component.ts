@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
 import { DatePipe } from "@angular/common";
+import { MetaserviceService } from "../metaservice.service";
+import { ActivationEnd, ActivatedRoute } from "@angular/router";
 @Component({
   selector: "app-whyutilityaid",
   templateUrl: "./whyutilityaid.component.html",
@@ -15,16 +17,39 @@ export class WhyutilityaidComponent implements OnInit {
   dataBlog: any;
   blogDate: any;
   date: any;
+  elmnt: any;
 
+  private fragment: string;
   constructor(
     private servicecalls: ServiceCallsService,
-    public datepipe: DatePipe
+    public datepipe: DatePipe,
+    private meta: MetaserviceService,
+    private router: ActivatedRoute
   ) {
     this.getText2();
     this.getBlog();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.router.fragment.subscribe(fragment => {
+      this.fragment = fragment;
+    });
+    // this.elmnt = document.getElementById("saveMoney");
+    // this.elmnt.scrollIntoView();
+    // window.document.getElementById("saveMoney").scrollIntoView();
+    this.meta.updateMetaInfo(
+      "We primarily work in the Not-for-Profit sector. So, suppliers give us the lowest prices in the UK - guaranteed.",
+      "Why UA?",
+      "contact.jpg",
+      "why-ua"
+    );
+    this.meta.updateTitle("", "Why UA?");
+  }
+  ngAfterViewInit(): void {
+    try {
+      document.querySelector("#" + this.fragment).scrollIntoView();
+    } catch (e) {}
+  }
   getText2() {
     this.servicecalls
       .postServer("getProductList", { collection: "whyua" })

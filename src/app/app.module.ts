@@ -5,7 +5,7 @@ import { DatePipe } from "@angular/common";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { Header1Component } from "./header1/header1.component";
 import { Footer1Component } from "./footer1/footer1.component";
@@ -26,11 +26,16 @@ import { LazyLoadScriptService } from "./lazy-load-script.service";
 import { ServiceCallsService } from "./service-calls.service";
 import { CaseStudyBlogComponent } from "./case-study-blog/case-study-blog.component";
 import { CommunityBlogComponent } from "./community-blog/community-blog.component";
-import { OurClientSayComponent } from './our-client-say/our-client-say.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { EnviromentalPolicyComponent } from './enviromental-policy/enviromental-policy.component';
-import { BriberyActComponent } from './bribery-act/bribery-act.component';
-
+import { OurClientSayComponent } from "./our-client-say/our-client-say.component";
+import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
+import { EnviromentalPolicyComponent } from "./enviromental-policy/enviromental-policy.component";
+import { BriberyActComponent } from "./bribery-act/bribery-act.component";
+import { EngineComponent } from "./engine/engine.component";
+import { ScreenLoaderComponent } from "./screen-loader/screen-loader.component";
+import { LoaderService } from "./loader.service";
+import { InterceptorService } from "./interceptor.service";
+import { NgProgressModule } from "@ngx-progressbar/core";
+import { NgProgressHttpModule } from "@ngx-progressbar/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,10 +59,32 @@ import { BriberyActComponent } from './bribery-act/bribery-act.component';
     OurClientSayComponent,
     PrivacyPolicyComponent,
     EnviromentalPolicyComponent,
-    BriberyActComponent
+    BriberyActComponent,
+    EngineComponent,
+    ScreenLoaderComponent
   ],
-  imports: [BrowserModule, CommonModule, AppRoutingModule, HttpClientModule],
-  providers: [LazyLoadScriptService, ServiceCallsService, DatePipe],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgProgressModule.withConfig({
+      spinnerPosition: "left",
+      color: "#3697c2"
+    }),
+    NgProgressHttpModule
+  ],
+  providers: [
+    LazyLoadScriptService,
+    ServiceCallsService,
+    DatePipe,
+    LoaderService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })

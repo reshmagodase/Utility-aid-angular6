@@ -3,6 +3,8 @@ import { LazyLoadScriptService } from "../lazy-load-script.service";
 import { map, filter, take, switchMap } from "rxjs/operators";
 import { ServiceCallsService } from "../service-calls.service";
 import { DomSanitizer } from "@angular/platform-browser";
+import { MetaserviceService } from "../metaservice.service";
+import { Router } from "@angular/router";
 
 declare var $;
 @Component({
@@ -16,12 +18,25 @@ export class HomeComponent implements OnInit {
   constructor(
     private lazyLoadService: LazyLoadScriptService,
     private servicecalls: ServiceCallsService,
-    protected _sanitizer: DomSanitizer
+    protected _sanitizer: DomSanitizer,
+    private meta: MetaserviceService,
+    private router: Router
   ) {
     this.getText();
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateMetaInfo(
+      "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
+      "Energy and Utilities Consultancy",
+      "contact.jpg",
+      ""
+    );
+    this.meta.updateTitle("", "Energy and Utilities Consultancy");
+  }
 
+  scroll() {
+    this.router.navigate(["/why-ua"], { fragment: "saveMoney" });
+  }
   getText() {
     this.servicecalls
       .postServer("getProductList", { collection: "home" })

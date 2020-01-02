@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
 import { DomSanitizer } from "@angular/platform-browser";
+import { MetaserviceService } from "../metaservice.service";
 @Component({
   selector: "app-ourproducts",
   templateUrl: "./ourproducts.component.html",
@@ -13,12 +14,21 @@ export class OurproductsComponent implements OnInit {
   tabData2: any;
   constructor(
     private servicecalls: ServiceCallsService,
-    protected _sanitizer: DomSanitizer
+    protected _sanitizer: DomSanitizer,
+    private meta: MetaserviceService
   ) {
     this.getTabs();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateMetaInfo(
+      "Fixed Price Strategy, Market Trigger Strategy, Portfolio Managed Strategy, Bespoke Strategy, Bureau Services",
+      "Our Products",
+      "contact.jpg",
+      "our-products"
+    );
+    this.meta.updateTitle("", "Our Products");
+  }
 
   currentTabData(list) {
     for (let i = 0; i < this.product.length; i++) {

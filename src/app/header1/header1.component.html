@@ -9,12 +9,13 @@
   <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+  <div class="dashboardView">
     <!-- 
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
-    <ul class="nav navbar-nav navbar-right">
-      <li data-toggle="collapse" data-target="#collapsibleNavbar">
-        <a routerLink="whyutilityaid">why utility aid?</a>
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+    <ul class="nav navbar-nav navbar-right mt-3">
+      <li data-target="#collapsibleNavbar">
+        <a routerLink="why-ua">why utility aid?</a>
       </li>
 
       <li class="dropdown-open">
@@ -22,31 +23,41 @@
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="ourproducts">our products</a></li>
-          <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="#">business energy switching</a>
+          <li data-target="#collapsibleNavbar">
+            <a routerLink="our-products">our products</a>
           </li>
-          <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="domestic-energy">domestic energy
-              switching</a></li>
+          <li data-target="#collapsibleNavbar">
+            <a routerLink="#">business energy switching</a>
+          </li>
+          <li data-target="#collapsibleNavbar">
+            <a routerLink="energyswitching">domestic energy switching</a>
+          </li>
         </ul>
       </li>
 
-      <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="customer-stories">customer stories</a>
+      <li data-target="#collapsibleNavbar">
+        <a routerLink="case-studies">customer stories</a>
       </li>
-      <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="advisory-board">advisory board</a></li>
-      <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="media">media</a></li>
-      <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="faqs">FAQs</a></li>
-      <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="work-with-us">work with us</a></li>
-      <li data-toggle="collapse" data-target="#collapsibleNavbar"><a routerLink="contact">contact</a></li>
+      <li data-target="#collapsibleNavbar">
+        <a routerLink="advisory-board">advisory board</a>
+      </li>
+      <li data-target="#collapsibleNavbar"><a routerLink="media">media</a></li>
+      <li data-target="#collapsibleNavbar"><a routerLink="faq">FAQs</a></li>
+      <li data-target="#collapsibleNavbar">
+        <a routerLink="workwithus">work with us</a>
+      </li>
+      <li data-target="#collapsibleNavbar">
+        <a routerLink="contact">contact</a>
+      </li>
     </ul>
 
     <!-- ////////////////////////////  freephone   ////////////////////// -->
 
-    <ul class="nav navbar-nav navbar-right freephone-nav">
+    <ul class="nav navbar-nav navbar-right freephone-nav p-2">
       <li class="fontBold freephone" style="color:white">
         freephone:
         <span class="anchorMargin" style="color:#3697C2">
           0808 1788 170&nbsp;
-
 
           <a href="https://www.facebook.com/ua.domoregood">
             <img src="assets/no.png" style="height:20px" />
@@ -56,11 +67,84 @@
             <img src="assets/22.png" style="height:20px" />
           </a>
 
-
           <a href="https://www.linkedin.com/company/utility-aid-ltd">
             <img src="assets/lndn.png" style="height:20px" />
           </a>
 
+          <a href="https://www.instagram.com/utilityaid/">
+            <img src="assets/req.png" style="height:20px" />
+          </a>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ======== mobile navbar =============== -->
+
+  <div class="collapse navbar-collapse mobileView" id="collapsibleNavbar">
+    <!-- 
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+    <ul class="nav navbar-nav navbar-right">
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="why-ua">why utility aid?</a>
+      </li>
+
+      <li class="dropdown-open">
+        <a class="dropdown-toggle" data-toggle="dropdown">products
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li data-toggle="collapse" data-target="#collapsibleNavbar">
+            <a routerLink="our-products">our products</a>
+          </li>
+          <li data-toggle="collapse" data-target="#collapsibleNavbar">
+            <a routerLink="#">business energy switching</a>
+          </li>
+          <li data-toggle="collapse" data-target="#collapsibleNavbar">
+            <a routerLink="energyswitching">domestic energy switching</a>
+          </li>
+        </ul>
+      </li>
+
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="case-studies">customer stories</a>
+      </li>
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="advisory-board">advisory board</a>
+      </li>
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="media">media</a>
+      </li>
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="faq">FAQs</a>
+      </li>
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="work-with-us">work with us</a>
+      </li>
+      <li data-toggle="collapse" data-target="#collapsibleNavbar">
+        <a routerLink="contact">contact</a>
+      </li>
+    </ul>
+
+    <!-- ////////////////////////////  freephone   ////////////////////// -->
+
+    <ul class="nav navbar-nav navbar-right freephone-nav p-2">
+      <li class="fontBold freephone" style="color:white">
+        freephone:
+        <span class="anchorMargin" style="color:#3697C2">
+          0808 1788 170&nbsp;
+
+          <a href="https://www.facebook.com/ua.domoregood">
+            <img src="assets/no.png" style="height:20px" />
+          </a>
+
+          <a href="https://twitter.com/UA_Energy">
+            <img src="assets/22.png" style="height:20px" />
+          </a>
+
+          <a href="https://www.linkedin.com/company/utility-aid-ltd">
+            <img src="assets/lndn.png" style="height:20px" />
+          </a>
 
           <a href="https://www.instagram.com/utilityaid/">
             <img src="assets/req.png" style="height:20px" />

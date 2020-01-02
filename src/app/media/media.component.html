@@ -15,12 +15,12 @@
           <div class="ua-news-img">
             <!-- <a              class="ua-expand-link"              routerLink="['media-expand-one',newslist.heading]"
             >  </a>-->
-            <img src="https://www.utility-aid.co.uk/{{ newslist.image }}" />
+            <img class="img1" src="https://www.utility-aid.co.uk/{{ newslist.image }}" />
           </div>
         </div>
 
         <div class="col-lg-7 col-md-7">
-          <div class="ua-news">
+          <div class="ua-news innerspan" style="max-height:250px;margin-bottom: 10px;">
             <!-- <a
               class="ua-expand-link"
               routerLink="['media-expand-one',newslist.heading]"
@@ -30,28 +30,35 @@
             <h3 class="news-headings">
               {{ newslist.heading }}
             </h3>
+            <!-- <p class="content-description"></p> -->
+
+            <!-- <p class="content-description">{{ newslist.description }}</p> -->
             <p class="content-description"></p>
+            <p [innerHtml]="newslist.description">
 
-            <p class="content-description">{{ newslist.description }}</p>
-            <br />
+              <br />
 
-            <!-- <p>
+              <!-- <p>
               <span style="font-size:medium">
                 Here are a few fundraising tips that we have picked up along the
                 way:
               </span>
             </p> -->
-            <p>
-              <br />
-            </p>
+              <p>
+                <br />
+              </p>
           </div>
+          <div style="width:100%" class="d-flex justify-content-between">
+            <div>
+              <a class="expand-link" (click)="headingTitle(newslist)">
+                <span class="expand" style="font-size:20.5px;font-family:'vag_roundedregular';">Expand ></span>
+              </a>
+            </div>
+            <div>
+              <span class="right-date pt-1">
+                {{ newslist.newsdate | date: "d MMMM yyyy" }}</span>
+            </div>
 
-          <div style="width:100%">
-            <!-- <a class="expand-link" routerLink="['media-expand-one',newslist.heading]">
-              <span style="font-size:20.5px;font-family:'vag_roundedregular';">Expand ></span>
-            </a> -->
-            <span class="right-date">
-              {{ newslist.newsdate | date: "d MMMM yyyy" }}</span>
           </div>
         </div>
       </div>

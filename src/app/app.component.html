@@ -15,10 +15,11 @@
 </head>
 
 <body #scrollMe>
-  <button class="back-to-top" (click)="backToTop($event);" [style.display]="showButton?'block':'none'"></button>
+  <button class="back-to-top" (click)="backToTop();" [style.display]="showButton?'block':'none'"></button>
 </body>
 
-
+<app-screen-loader></app-screen-loader>
 <app-header1></app-header1>
 <router-outlet (activate)="onActivate($event)"></router-outlet>
+
 <app-footer1></app-footer1>

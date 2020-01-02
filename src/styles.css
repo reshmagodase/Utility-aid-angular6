@@ -6,12 +6,10 @@
 @font-face {
   font-family: "vag_roundedbold";
   src: url("./assets/font/vag_rounded_bold-webfont.eot");
-  src: url("./assets/font/vag_rounded_bold-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("./assets/font/vag_rounded_bold-webfont.eot?#iefix") format("embedded-opentype"),
     url("./assets/font/vag_rounded_bold-webfont.woff") format("woff"),
     url("./assets/font/vag_rounded_bold-webfont.ttf") format("truetype"),
-    url("./assets/font/vag_rounded_bold-webfont.svg#vag_roundedbold")
-      format("svg");
+    url("./assets/font/vag_rounded_bold-webfont.svg#vag_roundedbold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,12 +17,10 @@
 @font-face {
   font-family: "vag_roundedregular";
   src: url("./assets/font/vag_rounded_thin-webfont.eot?1");
-  src: url("./assets/font/vag_rounded_thin-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("./assets/font/vag_rounded_thin-webfont.eot?#iefix") format("embedded-opentype"),
     url("./assets/font/vag_rounded_thin-webfont.woff?1") format("woff"),
     url("./assets/font/vag_rounded_thin-webfont.ttf?1") format("truetype"),
-    url("./assets/font/vag_rounded_thin-webfont.svg#vag_roundedregular")
-      format("svg");
+    url("./assets/font/vag_rounded_thin-webfont.svg#vag_roundedregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -41,6 +37,7 @@
 a:focus {
   border: none;
 }
+
 /* .header{
   display: table;
   position: relative;
@@ -87,6 +84,7 @@ a.btnFindOutMore {
   border-bottom-left-radius: 20px;
   font-size: 22px;
 }
+
 a.btnFindOutMore2 {
   text-decoration: none;
   color: #23527c;
@@ -126,38 +124,46 @@ a.btnFindOutMore2 {
   font-size: 40px;
   text-align: center;
 }
+
 .heading_text_inner {
   margin-top: 15px;
   font-size: 40px;
   text-align: center;
 }
+
 .fontBold {
   font-family: "vag_roundedbold";
   padding-top: 50px;
   padding-bottom: 25px;
 }
+
 .clients {
   background-color: #e4dcc1;
   border-bottom: 1px inset darkkhaki;
   color: #17252b;
   padding-bottom: 55px;
 }
+
 .clients a {
   text-decoration: none;
   color: #23527c;
   font-size: 16.5px;
 }
+
 .clients img:hover {
   width: 192px;
 }
+
 .partners img {
   margin-top: 40px;
+  margin-bottom: 17px;
 }
 
 @media screen and (max-width: 767px) {
   .header {
     background-attachment: scroll !important;
   }
+
   .heading_text {
     font-size: 45px !important;
     margin-left: 10px;
@@ -171,6 +177,7 @@ a.btnFindOutMore2 {
 .strategies {
   font-size: 20.5px;
 }
+
 .tab-content {
   text-align: justify !important;
   line-height: 1.4;

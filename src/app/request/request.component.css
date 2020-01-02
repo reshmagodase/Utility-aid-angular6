@@ -17,28 +17,33 @@
 
   padding: 70px 20px;
 }
+
 h2 {
   font-size: 30px;
   font-family: "vag_roundedregular";
   padding-bottom: 40px;
 }
+
 .details h3 {
   font-family: "vag_roundedbold";
   font-size: 16px;
   text-align: left;
   padding-left: 20px;
   margin-top: 70px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   color: #3496c1;
 }
+
 .control-info {
   width: 50%;
   float: left;
 }
+
 .details .control-group {
   padding: 0 15px;
   margin-bottom: 20px;
 }
+
 .control-group .controls input {
   width: 100%;
   padding: 4px 0 0 15px;
@@ -55,10 +60,12 @@ h2 {
   margin-bottom: 20px;
   width: 10px;
 }
+
 .control-group {
   padding: 0 15px;
   margin-bottom: 20px;
 }
+
 label {
   float: left;
   font-size: 15px;
@@ -66,6 +73,7 @@ label {
   font-family: "vag_roundedregular";
   margin-top: 20px;
 }
+
 .row {
   margin-top: 20px;
 }
@@ -85,9 +93,11 @@ label {
   font-family: "vag_roundedregular";
   float: left;
 }
+
 .control-textarea {
   width: 100%;
 }
+
 textarea {
   width: 100%;
   max-width: 100%;
@@ -102,6 +112,7 @@ textarea {
   font-size: 16px;
   margin-bottom: 25px;
 }
+
 .btnFindOutMore {
   text-decoration: none;
   color: #3496c1;
@@ -111,21 +122,26 @@ textarea {
   font-size: 18px;
   display: inline-block;
 }
+
 .btnFindOutMore:hover {
   border: 6px solid black;
 }
+
 .btnFindOutMore a {
   color: #3496c1;
 }
+
 .btnFindOutMore a:hover {
   color: black;
   text-decoration: none;
 }
+
 @media screen and (max-width: 767px) {
   .control-info {
     width: 100%;
   }
 }
+
 /* @media screen and (max-width: 1024px) {
   .col-md-6 {
     width: 100%;

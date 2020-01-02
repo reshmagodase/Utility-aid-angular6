@@ -1,6 +1,7 @@
 import { Component, HostListener, ElementRef } from "@angular/core";
 import { LocationStrategy } from "@angular/common";
 import { Router, NavigationEnd } from "@angular/router";
+import { MetaserviceService } from "./metaservice.service";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -14,10 +15,13 @@ export class AppComponent {
   constructor(
     private router: Router,
     private locStrat: LocationStrategy,
-    public el: ElementRef
-  ) {}
+    public el: ElementRef,
+    private meta: MetaserviceService
+  ) {
+    this.meta.updateTitle();
+  }
 
-  @HostListener("window:scroll", ["$event"])
+  @HostListener("window:scroll", [])
   onWindowScroll() {
     let pos =
       document.documentElement.scrollTop +
@@ -35,7 +39,7 @@ export class AppComponent {
     let pos = window.pageYOffset;
     console.log("pos-->>>", pos);
   }
-  backToTop(event) {
+  backToTop() {
     let scrollToTop = window.setInterval(() => {
       let pos = window.pageYOffset;
       if (pos > 0) {
@@ -46,6 +50,7 @@ export class AppComponent {
     }, 16);
   }
   onActivate(event) {
+    console.log("---->", event);
     window.scroll(0, 0);
   }
 }

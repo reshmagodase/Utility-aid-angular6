@@ -17,30 +17,83 @@ import { OurClientSayComponent } from "./our-client-say/our-client-say.component
 import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
 import { EnviromentalPolicyComponent } from "./enviromental-policy/enviromental-policy.component";
 import { BriberyActComponent } from "./bribery-act/bribery-act.component";
-
+import { EngineComponent } from "./engine/engine.component";
 const routes: Routes = [
-  { path: "", component: HomeComponent },
-  { path: "our-client-say", component: OurClientSayComponent },
-  { path: "whyutilityaid", component: WhyutilityaidComponent },
-  { path: "ourproducts", component: OurproductsComponent },
-  { path: "domestic-energy", component: DomesticEnergyComponent },
-  { path: "advisory-board", component: AdvisoryBoardComponent },
-  { path: "customer-stories", component: CustomerStoriesComponent },
-  { path: "faqs", component: FAQsComponent },
+  {
+    path: "",
+    component: HomeComponent
+  },
+  {
+    path: "our-client-say",
+    component: OurClientSayComponent
+  },
+  {
+    path: "why-ua",
+    component: WhyutilityaidComponent
+  },
+  {
+    path: "why-ua/#id",
+    component: WhyutilityaidComponent
+  },
+  {
+    path: "our-products",
+    component: OurproductsComponent
+  },
+  {
+    path: "energyswitching",
+    component: DomesticEnergyComponent
+  },
+  {
+    path: "advisory-board",
+    component: AdvisoryBoardComponent
+  },
+  {
+    path: "case-studies",
+    component: CustomerStoriesComponent
+  },
+  {
+    path: "faq",
+    component: FAQsComponent
+  },
   {
     path: "media",
     loadChildren: () =>
       import("./media/media.module").then(mod => mod.MediaModule)
   },
 
-  { path: "work-with-us", component: WorkWithUsComponent },
-  { path: "contact", component: ContactComponent },
-  { path: "request", component: RequestComponent },
-  { path: "case-study-blog/:slug", component: CaseStudyBlogComponent },
+  {
+    path: "workwithus",
+    component: WorkWithUsComponent
+  },
+  {
+    path: "contact",
+    component: ContactComponent
+  },
+  {
+    path: "request",
+    component: RequestComponent
+  },
+  {
+    path: "case-study-blog/:slug",
+    component: CaseStudyBlogComponent
+  },
   { path: "community-blog", component: CommunityBlogComponent },
-  { path: "privacy-policy", component: PrivacyPolicyComponent },
-  { path: "enviromental-policy", component: EnviromentalPolicyComponent },
-  { path: "bribery-act", component: BriberyActComponent }
+  {
+    path: "privacy-policy",
+    component: PrivacyPolicyComponent
+  },
+  {
+    path: "enviromental-policy",
+    component: EnviromentalPolicyComponent
+  },
+  {
+    path: "bribery-act",
+    component: BriberyActComponent
+  },
+  {
+    path: "engine",
+    component: EngineComponent
+  }
 ];
 
 @NgModule({

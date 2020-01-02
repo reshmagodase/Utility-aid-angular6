@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
+import { MetaserviceService } from "../metaservice.service";
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.component.html",
@@ -7,11 +8,22 @@ import { ServiceCallsService } from "../service-calls.service";
 })
 export class ContactComponent implements OnInit {
   contacts: any;
-  constructor(private servicecalls: ServiceCallsService) {
+  constructor(
+    private servicecalls: ServiceCallsService,
+    private meta: MetaserviceService
+  ) {
     this.getContact();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateMetaInfo(
+      "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
+      "Contact",
+      "contact.jpg",
+      "contact"
+    );
+    this.meta.updateTitle("", "Contact");
+  }
   getContact() {
     this.servicecalls
       .postServer("getProductList", { collection: "contact" })

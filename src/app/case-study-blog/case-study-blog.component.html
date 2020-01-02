@@ -1,10 +1,7 @@
-<section
-  class="case-study-blog"
-  [ngStyle]="{
+<section class="case-study-blog" [ngStyle]="{
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image1 + ')'
-  }"
->
+  }">
   <div class="container text-center" *ngIf="casestudy">
     <div class="row desc-info">
       <div class="desc">
@@ -39,7 +36,7 @@
     </div>
 
     <div class="row">
-      <h3 class="col-md-11 innerspan">
+      <h3 class="col-md-10 innerspan author">
         <span [innerHtml]="casestudy.banner_title"></span>
       </h3>
     </div>
@@ -92,13 +89,10 @@
     </div>
   </div>
 </section>
-<section
-  class="case-study-blog2"
-  [ngStyle]="{
+<section class="case-study-blog2" [ngStyle]="{
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image2 + ')'
-  }"
->
+  }">
   <div class="container-fluid" *ngIf="casestudy">
     <div class="quote" [innerHtml]="casestudy.block_2_quote"></div>
     <h4>
@@ -156,13 +150,10 @@
     </div>
   </div>
 </section>
-<section
-  class="case-study-blog3"
-  [ngStyle]="{
+<section class="case-study-blog3" [ngStyle]="{
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image3 + ')'
-  }"
->
+  }">
   <div class="container-fluid" *ngIf="casestudy">
     <div class="quote" [innerHtml]="casestudy.block_4_quote"></div>
     <h4>

@@ -11,18 +11,20 @@
 }
 
 video {
-  width: 40%;
+  width: 39%;
   height: 40%;
   border: 2px solid #000;
   border-radius: 10px;
 
   display: table-cell;
-  margin-top: -60px;
-  margin-left: 30%;
+  margin-top: -70px;
+  margin-left: 31%;
 }
+
 .text_center {
   text-align: center;
 }
+
 h2 {
   font-size: 23.5px;
   color: white;
@@ -33,11 +35,13 @@ h2 {
 .fontRegular {
   font-family: vag_roundedregular;
 }
+
 .save {
   margin-top: -8px;
   padding-bottom: 45px;
   margin-bottom: -15px;
 }
+
 h3 {
   font-size: 40px;
   font-family: vag_roundedbold;
@@ -45,6 +49,7 @@ h3 {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+
 p {
   padding-top: 28px;
   color: white;
@@ -53,6 +58,7 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .fontBold {
   color: #17252b;
   font-family: vag_roundedbold;
@@ -60,6 +66,7 @@ p {
   padding-top: 75px;
   padding-bottom: 16px;
 }
+
 /* .fontBold{
   font-family: 'vag_roundedbold';
   padding-top: 70px;
@@ -72,6 +79,7 @@ p {
   font-family: vag_roundedregular;
   /* padding-top: 24px; */
 }
+
 .fourlines {
   color: black;
 
@@ -87,6 +95,7 @@ p {
   padding-top: 1px;
   padding-bottom: 70px;
 }
+
 .heading_text_inner {
   margin-top: 15px;
   font-size: 40px;
@@ -102,13 +111,16 @@ p {
 
   margin-bottom: 40px;
 }
+
 .blogs a:hover .innerblog {
   background-color: #3697c2;
 }
+
 .blogs .details {
   overflow: hidden;
   height: 200px;
 }
+
 .blogs .details h2 {
   font-size: 20.5px;
   color: #3496c1;
@@ -117,21 +129,26 @@ p {
   font-family: "vag_roundedregular";
   line-height: 1.5;
 }
+
 .blogs a:hover h2 {
   color: white !important;
 }
+
 .blogs .details p {
   font-size: 16.5px;
   color: black;
   font-family: "vag_roundedregular";
   line-height: 1.5;
 }
+
 a {
   color: #3496c1;
 }
+
 .blogs a:hover .details p {
   color: white !important;
 }
+
 /* .a:hover {
   background-color: rgb(8, 179, 236);
 } */
@@ -142,6 +159,7 @@ a {
     height: auto;
     margin-left: 0px;
   }
+
   .header img {
     background: url(../../assets/whyua.jpg) no-repeat center 25% fixed;
     width: 100%;
@@ -152,21 +170,26 @@ a {
   h2 {
     font-size: 20px;
   }
+
   h3 {
     font-size: 25px;
   }
+
   p {
     font-size: 19.5px;
   }
+
   .fontBold {
     font-size: 32px;
   }
+
   .heading_text {
     font-size: 45px !important;
     margin-top: 60px !important;
-    margin-bottom: -2.5rem;
+    margin-bottom: 0.5rem;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .header {
     background-attachment: scroll;
@@ -175,7 +198,12 @@ a {
   .heading_text {
     font-size: 45px;
   }
+
+  .row-blog {
+    margin-right: 15%;
+  }
 }
+
 @media screen and (min-width: 1023px) and (max-width: 1366px) {
   .row-blog {
     max-width: 33%;

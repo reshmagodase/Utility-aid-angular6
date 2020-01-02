@@ -5,7 +5,7 @@
     <div class="text-vertical-center text-center">
       <h1 class="heading_text" style="margin-top:0;padding-top:0">
         <span class="fontBold">
-          <br />
+
           Welcome to Utility Aid
         </span>
         <p id="text1" class="heading_text_inner">
@@ -13,9 +13,8 @@
         </p>
       </h1>
       <h2>
-        <video id="videoplayer" poster="assets/videoimg.jpg"
-          src="https://www.utility-aid.co.uk/videos/RA504_Utility_Aid_MASTER_Compressed.mp4" controls=""
-          loop=""></video>
+        <video id="videoplayer" poster="assets/videoimg.jpg" src="assets/videos/RA504_Utility_Aid_MASTER_Compressed.mp4"
+          controls="" loop=""></video>
       </h2>
     </div>
   </div>
@@ -72,15 +71,16 @@
         </p>
       </h2>
       <br />
-      <a class="btnFindOutMore fontBold" routerLink="whyutilityaid">find out more</a>
+      <a role="button" class="btnFindOutMore fontBold" (click)="scroll()">find out more</a>
     </div>
+    <!-- routerLink="why-ua" fragment="saveMoney" -->
   </div>
 </section>
 
 <!--   //////////////////////////////   blue part/    //////////////////// -->
 
 <section class="home burner lightblue ng-scope" *ngIf="text">
-  <div class="text-vertical-center innerSpan">
+  <div class="text-vertical-center innerSpan burner-top">
     <span [innerHtml]="text"> </span><br />
     <span class="text-button">
       <a class="btnFindOutMore fontBold" routerLink="our-client-say">find out more</a>

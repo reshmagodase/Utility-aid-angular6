@@ -23,15 +23,18 @@
 .container-fluid {
   padding: 70px 20px;
 }
+
 .heading_text_inner {
   margin-top: 15px;
   font-size: 40px;
 }
+
 .fontBold {
   font-family: "vag_roundedbold";
   padding-top: 70px;
   padding-bottom: 25px;
 }
+
 .blogs .innerblog {
   text-align: left;
   background-color: white;
@@ -42,13 +45,16 @@
   margin-bottom: 0px;
   margin-bottom: 40px;
 }
+
 .blogs a:hover .innerblog {
   background-color: #3697c2;
 }
+
 .blogs .details {
   overflow: hidden;
   height: 200px;
 }
+
 .blogs .details h2 {
   font-size: 20.5px;
   color: #3496c1;
@@ -57,18 +63,23 @@
   font-family: "vag_roundedregular";
   line-height: 1.5;
 }
+
 .blogs a:hover h2 {
   color: white !important;
 }
+
 .blogs .details p {
   font-size: 16.5px;
   color: black;
   font-family: "vag_roundedregular";
   line-height: 1.5;
 }
+
 a {
-  color: #3496c1;
+  color: #23527c;
+  text-decoration: none;
 }
+
 .blogs a:hover .details p {
   color: white !important;
 }
@@ -77,15 +88,18 @@ a {
   .header {
     background-attachment: scroll;
   }
+
   .heading_text {
     font-size: 45px;
     margin-left: 10px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .case-blog {
     max-width: 50%;
   }
+
   .case-logo {
     max-width: 50%;
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
+import { MetaserviceService } from "../metaservice.service";
 @Component({
   selector: "app-customer-stories",
   templateUrl: "./customer-stories.component.html",
@@ -8,12 +9,23 @@ import { ServiceCallsService } from "../service-calls.service";
 export class CustomerStoriesComponent implements OnInit {
   blogdata: any;
   partnerlist: any;
-  constructor(private servicecalls: ServiceCallsService) {
+  constructor(
+    private servicecalls: ServiceCallsService,
+    private meta: MetaserviceService
+  ) {
     this.getBlogInfo();
     this.getPartnerList();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateMetaInfo(
+      "Going through the energy audit process with ua has been extremely useful. It not only highlighted the savings to be made but saved us valuable time.",
+      "Case Studies",
+      "contact.jpg",
+      "case-studies"
+    );
+    this.meta.updateTitle("", "Case Studies");
+  }
   getBlogInfo() {
     this.servicecalls
       .postServer("getCaseStudyList", { active: "on" })

@@ -26,7 +26,7 @@
   Having billing or broker problems? We can help. Click here
 </a>
 
-<div class="modal fade" id="myModal" role="dialog" ng-controller="QuestionController" style="display: none;">
+<div class="modal fade" id="myModal" role="dialog" style="display: none;">
   <div class="modal-dialog modal-lg">
     <div class="modal-content askTable" style="background-color: #F2F2F2;margin: 0 auto">
       <div class="row">
@@ -85,24 +85,20 @@
             <div class="modal-body">
               <div class="control-group" id="questionForm">
                 <div class="controls ">
-                  <input class="form-control ng-pristine ng-valid ng-untouched ng-empty" id="askname" ng-model="askname"
-                    name="askname" placeholder="Name" type="text" />
+                  <input class="form-control " id="askname" name="askname" placeholder="Name" type="text" />
                   <span id="asknameID"></span>
                 </div>
                 <div class="controls ">
-                  <input class="form-control ng-pristine ng-valid ng-untouched ng-empty" id="askphone"
-                    ng-model="askphone" name="askphone" placeholder="Phone" type="text" />
+                  <input class="form-control " id="askphone" name="askphone" placeholder="Phone" type="text" />
                   <span id="askphoneID"></span>
                 </div>
                 <div class="controls ">
-                  <input class="form-control ng-pristine ng-valid ng-untouched ng-empty" id="askemail"
-                    ng-model="askemail" name="askemail" placeholder="Email" type="text" />
+                  <input class="form-control " id="askemail" name="askemail" placeholder="Email" type="text" />
                   <span id="askemailID"></span>
                 </div>
                 <div class="controls ">
-                  <textarea style="height: 150px" ng-model="askquestions"
-                    class="form-control ng-pristine ng-untouched ng-valid ng-empty" cols="25" id="askquestions"
-                    name="askquestions" placeholder="Comments/Questions" rows="10"></textarea>
+                  <textarea style="height: 150px" class="form-control " cols="25" id="askquestions" name="askquestions"
+                    placeholder="Comments/Questions" rows="10"></textarea>
                   <span id="askquestionsID"></span>
                 </div>
                 <div class="control-group">
@@ -113,64 +109,13 @@
                   </div>
                 </div>
               </div>
-              <!-- <div id="stage" class="form-all">
-                                        <p style="text-align:center;">
-                                            <img bn-lazy-src="img/check-icon.png" alt="" width="128" height="128">
-                                        </p>
-        
-                                        <div style="text-align:center;">
-                                            <h1 style="text-align: center;">Thank You!</h1>
-        
-                                            <p style="text-align: center;">
-                                                We've received your query! Our team will respond as soon
-                                                as possible.
-                                            </p>
-                                        </div>
-                                    </div> -->
+
             </div>
-            <!--  <div class="modal-footer">
-                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                  </div>-->
+
           </div>
         </div>
       </div>
-      <!-- <div
-        style="vertical-align: top; color: black;border-right: 1px solid #e5e5e5;font-size: 14.5px;padding: 20px;"
-      >
-        <h2 class="modal-title">We offer:</h2>
-        <ul class="ua">
-          <li>The lowest rates on energy in the UK - guaranteed!</li>
-          <li>
-            Exclusive rates for charities and Not-For-Profit organisations
-          </li>
-          <li>
-            Invoice Validation; we reclaim over £250K for clients every year!
-          </li>
-          <li>
-            Your own portal to view your consumption data and historical bills
-          </li>
-        </ul>
-        <h2 class="modal-title" style="color:#000000">
-          <br />We are proud to be:
-        </h2>
-        <ul class="ua">
-          <li>
-            The only broker in the UK that deals with 27 suppliers - most
-            brokers only work with a handful
-          </li>
-          <li>
-            The UK's only National Broker - having six offices across the
-            country
-          </li>
-          <li>
-            The only Broker in the UK with an Advisory Panel - free to help
-            clients understand key issues
-          </li>
-          <li>
-            We also have our own OJEU Procurement Framework
-          </li>
-        </ul>
-      </div> -->
+
     </div>
   </div>
 </div>

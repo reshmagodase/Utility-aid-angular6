@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
 import { DomSanitizer } from "@angular/platform-browser";
+import { MetaserviceService } from "../metaservice.service";
 @Component({
   selector: "app-faqs",
   templateUrl: "./faqs.component.html",
@@ -11,12 +12,21 @@ export class FAQsComponent implements OnInit {
   producttext: any;
   constructor(
     private servicecalls: ServiceCallsService,
-    protected _sanitizer: DomSanitizer
+    protected _sanitizer: DomSanitizer,
+    private meta: MetaserviceService
   ) {
     this.getQuestions();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateMetaInfo(
+      "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
+      "FAQ",
+      "contact.jpg",
+      "faq"
+    );
+    this.meta.updateTitle("", "FAQ");
+  }
   getQuestions() {
     this.servicecalls
       .postServer("getProductList", { collection: "faq" })

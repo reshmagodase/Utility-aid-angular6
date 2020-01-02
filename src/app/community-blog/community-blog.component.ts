@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
 import { RouteConfigLoadEnd, ActivatedRoute } from "@angular/router";
 import { DomSanitizer } from "@angular/platform-browser";
+import { MetaserviceService } from "../metaservice.service";
 @Component({
   selector: "app-community-blog",
   templateUrl: "./community-blog.component.html",
@@ -19,7 +20,8 @@ export class CommunityBlogComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private servicecalls: ServiceCallsService,
-    protected _sanitizer: DomSanitizer
+    protected _sanitizer: DomSanitizer,
+    private meta: MetaserviceService
   ) {
     // this.getBlog();
     this.route.params.subscribe(params => {
@@ -31,7 +33,15 @@ export class CommunityBlogComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.meta.updateMetaInfo(
+      "",
+      this.community.page_content_extended_title,
+      "contact.jpg",
+      this.community.slug
+    );
+    this.meta.updateTitle("", this.community.page_content_extended_title);
+  }
   getblogs(slug) {
     this.servicecalls.postServer("getBlogList", { slug: slug }).subscribe(
       (res: any) => {
@@ -70,6 +80,7 @@ export class CommunityBlogComponent implements OnInit {
             console.log("asfsaf", this.Article);
           }
         }
+        this.meta.updateTitle("", this.community.title);
 
         if (this.Article.length == 3) {
           this.Article.splice(2, 1);
