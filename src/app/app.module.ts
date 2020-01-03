@@ -36,6 +36,8 @@ import { LoaderService } from "./loader.service";
 import { InterceptorService } from "./interceptor.service";
 import { NgProgressModule } from "@ngx-progressbar/core";
 import { NgProgressHttpModule } from "@ngx-progressbar/http";
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,8 @@ import { NgProgressHttpModule } from "@ngx-progressbar/http";
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgProgressModule.withConfig({
       spinnerPosition: "left",
       color: "#3697c2"

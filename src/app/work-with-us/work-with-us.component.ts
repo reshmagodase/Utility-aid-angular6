@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MetaserviceService } from "../metaservice.service";
-
+import { FormGroup, FormBuilder } from "@angular/forms";
+declare var $: any;
 @Component({
   selector: "app-work-with-us",
   templateUrl: "./work-with-us.component.html",
@@ -9,7 +10,9 @@ import { MetaserviceService } from "../metaservice.service";
 export class WorkWithUsComponent implements OnInit {
   selectedFiles: FileList;
   fileName: string;
-  constructor(private meta: MetaserviceService) {}
+  name: string;
+  applyForm: FormGroup;
+  constructor(private meta: MetaserviceService, private apply: FormBuilder) {}
 
   ngOnInit() {
     this.meta.updateMetaInfo(
@@ -19,10 +22,26 @@ export class WorkWithUsComponent implements OnInit {
       "workwithus"
     );
     this.meta.updateTitle("", "Work With Us");
+    this.initForm();
+  }
+  initForm() {
+    this.applyForm = this.apply.group({
+      name: [""],
+      email: [""],
+      file: [""]
+    });
   }
   detectFiles(event) {
     this.selectedFiles = event.target.files;
     this.fileName = this.selectedFiles[0].name;
     console.log("selectedFiles: " + this.fileName);
+  }
+  getName(e) {
+    $("#myModal2").modal("show");
+    this.name = e;
+    console.log(e);
+  }
+  onSubmit() {
+    console.log("form value", this.applyForm.value);
   }
 }

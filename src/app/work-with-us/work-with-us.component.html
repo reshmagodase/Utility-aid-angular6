@@ -47,7 +47,7 @@
         <li>The ability to hit and exceed targets</li>
         <li>Ability to build and manage your sales pipeline</li>
       </ul>
-      <a class="btnFindOutMore" data-toggle="modal" data-target="#myModal1">
+      <a class="btnFindOutMore" (click)="getName('Norwich')">
         Apply Now
       </a>
     </div>
@@ -94,127 +94,63 @@
           <li>The ability to hit and exceed targets</li>
           <li>Ability to build and manage your sales pipeline</li>
         </ul>
-        <a class="btnFindOutMore2" data-toggle="modal" data-target="#myModal2">
+        <a class="btnFindOutMore2" (click)="getName('Glasgow')">
           Apply Now
         </a>
       </div>
     </div>
   </div>
 </section>
-<!-- /////////////////////    modal 1   /////////////////// -->
-<div class="modal fade" id="myModal1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <h1 class="text-center">
-        <div class="modal-header">
-          <h2 class="modal-title">
-            Apply for
-            <span style="color:#3697C2">Sales Executive - </span>
-            <span>Norwich</span>
-          </h2>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
-        <div class="modal-body">
-          <div class="control-group">
-            <div class="controls">
-              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name" ng-model="name"
-                name="name" placeholder="Name" />
-            </div>
-            <div class="controls">
-              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email"
-                ng-model="email" name="email" placeholder="Email" />
-            </div>
 
-            <div class="controls">
-
-              <label class="dropzone">
-                Drop your CV here
-                <input type="file" (change)="detectFiles($event)"
-                  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                  style="display:none;">
-
-              </label>
-              <div class="output">{{ fileName }} </div>
-
-
-            </div>
-
-
-            <div class="control-group">
-              <div class="controls" style="padding-top:16px;">
-                <button type="button" class="btnFindOutMore">Submit</button>
-                <br />
-
-              </div>
-            </div>
-          </div>
-
-          <!-- <div id="stage" class="form-all">
-                                <p style="text-align:center;">
-                                    <img src="img/check-icon.png" alt="" width="128" height="128">
-                                </p>
-    
-                                <div style="text-align:center;">
-                                    <h1 style="text-align: center;">Thank You!</h1>
-    
-                                    <p style="text-align: center;">We've received your query! Our team will respond as soon
-                                        as possible.
-                                    </p>
-                                </div>
-                            </div> -->
-        </div>
-      </h1>
-    </div>
-  </div>
-</div>
 
 <!-- //////////////////////////////////  modal 2//////////////////////////////// -->
 <div class="modal fade" id="myModal2">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <h1 class="text-center">
-        <div class="modal-header">
-          <h2 class="modal-title">
-            Apply for
-            <span style="color:#3697C2">Sales Executive - </span>
-            <span>Glasgow</span>
-          </h2>
-          <button type="button" class="close" data-dismiss="modal">
-            ×
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="control-group">
-            <div class="controls">
-              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name" ng-model="name"
-                name="name" placeholder="Name" />
-            </div>
-            <div class="controls">
-              <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email"
-                ng-model="email" name="email" placeholder="Email" />
-            </div>
-
-            <div class="controls">
-              <label class="dropzone">
-                Drop your CV here
-                <input type="file" (change)="detectFiles($event)"
-                  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                  style="display:none;">
-
-              </label>
-              <div class="output">{{ fileName }} </div>
-            </div>
-
+        <form [formGroup]="applyForm" (ngSubmit)="onSubmit()">
+          <div class="modal-header">
+            <h2 class="modal-title">
+              Apply for
+              <span style="color:#3697C2">Sales Executive - </span>
+              <span>{{name}}</span>
+            </h2>
+            <button type="button" class="close" data-dismiss="modal">
+              ×
+            </button>
+          </div>
+          <div class="modal-body">
             <div class="control-group">
-              <div class="controls" style="padding-top:16px;">
-                <button type="button" class="btnFindOutMore">Submit</button>
-                <br />
+              <div class="controls">
+                <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name"
+                  ng-model="name" formControlName="name" placeholder="Name" />
+              </div>
+              <div class="controls">
+                <input type="email" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email"
+                  ng-model="email" formControlName="email" placeholder="Email" />
+              </div>
 
+              <div class="controls">
+                <label class="dropzone">
+                  Drop your CV here
+                  <input type="file" formControlName="file" (change)="detectFiles($event)"
+                    accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    style="display:none;">
+
+                </label>
+                <div class="output">{{ fileName }} </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls" style="padding-top:16px;">
+                  <button type="submit" class="btnFindOutMore">Submit</button>
+                  <br />
+
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- <div id="stage" class="form-all">
+            <!-- <div id="stage" class="form-all">
                                     <p style="text-align:center;">
                                         <img src="img/check-icon.png" alt="" width="128" height="128">
                                     </p>
@@ -227,7 +163,8 @@
                                         </p>
                                     </div>
                                 </div> -->
-        </div>
+          </div>
+        </form>
       </h1>
     </div>
   </div>

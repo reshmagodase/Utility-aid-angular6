@@ -8,7 +8,7 @@
   </div>
 </header>
 <section class="details">
-  <form class="request-form">
+  <form [formGroup]="requestForm" (ngSubmit)="onSubmit()">
     <div class="container text-center" style="max-width:900px;">
       <h2>
         Drop your details in below and we'll be in touch
@@ -18,26 +18,27 @@
           <h3>About you</h3>
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="title" class="form-control" ng-model="title" name="title" placeholder="Title" />
+              <input formControlName="title" type="text" class="form-control" placeholder="Title" />
             </div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="fullname" class="form-control" ng-model="fullname" name="fullname"
+              <input formControlName="fullname" type="text" id="fullname" class="form-control" name="fullname"
                 placeholder="Full name *" />
             </div>
           </div>
 
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="contact" class="form-control" ng-model="contact" name="contact"
-                placeholder="Contact number *" />
+              <input formControlName="contact" type="number" id="contact" class="form-control" ng-model="contact"
+                name="contact" placeholder="Contact number " />
             </div>
           </div>
 
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="email" class="form-control" ng-model="email" name="email" placeholder="Email *" />
+              <input formControlName="email" type="email" id="email" class="form-control" ng-model="email" name="email"
+                placeholder="Email *" />
             </div>
           </div>
 
@@ -49,7 +50,8 @@
                 <div class="col-sm-4 ml-3">
                   <div class="form-group form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="audit" value="Yes" /> Yes please
+                      <input formControlName="audit" class="form-check-input" type="radio" value="Yes" /> Yes
+                      please
                     </label>
                   </div>
 
@@ -62,7 +64,8 @@
                 <div class="col-sm-4 ml-3">
                   <div class="form-group form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="audit" value="No" /> No Thank
+                      <input formControlName="audit" class="form-check-input" type="radio" value="No" /> No
+                      Thank
                       you
                     </label>
                   </div>
@@ -76,27 +79,27 @@
           <h3>Your company</h3>
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="companyname" class="form-control" ng-model="companyname" name="companyname"
-                placeholder="Company name " />
+              <input formControlName="companyname" type="text" id="companyname" class="form-control"
+                ng-model="companyname" name="companyname" placeholder="Company name " />
             </div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="yourposition" class="form-control" ng-model="yourposition" name="yourposition"
-                placeholder="Your position" />
-            </div>
-          </div>
-
-          <div class="control-group">
-            <div class="controls">
-              <input type="text" id="supplier" class="form-control" ng-model="supplier" name="supplier"
-                placeholder="Current energy supplier" />
+              <input formControlName="yourposition" type="text" id="yourposition" class="form-control"
+                ng-model="yourposition" name="yourposition" placeholder="Your position" />
             </div>
           </div>
 
           <div class="control-group">
             <div class="controls">
-              <input type="text" id="cost" class="form-control" ng-model="cost" name="cost"
+              <input formControlName="supplier" type="text" id="supplier" class="form-control" ng-model="supplier"
+                name="supplier" placeholder="Current energy supplier" />
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <input formControlName="cost" type="number" id="cost" class="form-control" ng-model="cost" name="cost"
                 placeholder="Annual energy cost" />
             </div>
           </div>
@@ -109,14 +112,14 @@
                 <div class="col-sm-4 ml-3">
                   <div class="form-group form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="about" value="Internet" /> Internet
+                      <input formControlName="about" class="form-check-input" type="radio" value="Internet" /> Internet
                     </label>
                   </div>
                 </div>
                 <div class="col-sm-4 ml-3">
                   <div class="form-group form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="about" value="Press" />Press
+                      <input formControlName="about" class="form-check-input" type="radio" value="Press" />Press
                       advert
                     </label>
                   </div>
@@ -127,7 +130,7 @@
                 <div class="col-sm-4 ml-3">
                   <div class="form-group form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="about" value="Recommendation" />
+                      <input formControlName="about" class="form-check-input" type="radio" value="Recommendation" />
                       Recommendation
                     </label>
                   </div>
@@ -135,7 +138,7 @@
                 <div class="col-sm-4 ml-3">
                   <div class="form-group form-check">
                     <label class="form-check-label">
-                      <input class="form-check-input" type="radio" name="about" value="Other" />Other
+                      <input formControlName="about" class="form-check-input" type="radio" value="Other" />Other
                     </label>
                   </div>
                 </div>
@@ -150,7 +153,8 @@
           <div class="control-group">
             <div class="controls">
               <span><br /></span>
-              <textarea id="message" class="form-control" cols="40" rows="10" name="message" placeholder="Your enquiry">
+              <textarea formControlName="message" id="message" class="form-control" cols="40" rows="10" name="message"
+                placeholder="Your enquiry">
               </textarea>
             </div>
           </div>
@@ -163,9 +167,9 @@
             <div class="controls">
               <span><br /></span>
               <div class="btnFindOutMore">
-                <a class="fontBold" routerLink="#" style=" font-family:'vag_roundedregular';">
+                <button type="submit" class="btn fontBold" routerLink="#" style=" font-family:'vag_roundedregular';">
                   Send Enquiry
-                </a>
+                </button>
               </div>
             </div>
           </div>

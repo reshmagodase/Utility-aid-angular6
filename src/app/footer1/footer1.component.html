@@ -83,31 +83,33 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="control-group" id="questionForm">
-                <div class="controls ">
-                  <input class="form-control " id="askname" name="askname" placeholder="Name" type="text" />
-                  <span id="asknameID"></span>
-                </div>
-                <div class="controls ">
-                  <input class="form-control " id="askphone" name="askphone" placeholder="Phone" type="text" />
-                  <span id="askphoneID"></span>
-                </div>
-                <div class="controls ">
-                  <input class="form-control " id="askemail" name="askemail" placeholder="Email" type="text" />
-                  <span id="askemailID"></span>
-                </div>
-                <div class="controls ">
-                  <textarea style="height: 150px" class="form-control " cols="25" id="askquestions" name="askquestions"
-                    placeholder="Comments/Questions" rows="10"></textarea>
-                  <span id="askquestionsID"></span>
-                </div>
-                <div class="control-group">
-                  <div class="controls" style="padding-top:16px">
-                    <button type="button" class="btnFindOutMore">
-                      Submit
-                    </button>
+              <div class="control-group">
+                <form [formGroup]="questionForm" (ngSubmit)="onsubmit()">
+                  <div class="controls ">
+                    <input class="form-control " formControlName="askname" placeholder="Name" type="text" />
+                    <span id="asknameID"></span>
                   </div>
-                </div>
+                  <div class="controls ">
+                    <input class="form-control " formControlName="askphone" placeholder="Phone" type="number" />
+                    <span id="askphoneID"></span>
+                  </div>
+                  <div class="controls ">
+                    <input class="form-control " formControlName="askemail" placeholder="Email" type="email" />
+                    <span id="askemailID"></span>
+                  </div>
+                  <div class="controls ">
+                    <textarea style="height: 150px" class="form-control " cols="25" formControlName="askquestions"
+                      placeholder="Comments/Questions" rows="10"></textarea>
+                    <span id="askquestionsID"></span>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls" style="padding-top:16px">
+                      <button type="submit" class="btnFindOutMore">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
 
             </div>

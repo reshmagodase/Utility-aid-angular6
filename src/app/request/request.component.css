@@ -113,7 +113,7 @@ textarea {
   margin-bottom: 25px;
 }
 
-.btnFindOutMore {
+.btnFindOutMore .btn {
   text-decoration: none;
   color: #3496c1;
   padding: 8px 10px;
@@ -123,15 +123,22 @@ textarea {
   display: inline-block;
 }
 
-.btnFindOutMore:hover {
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+}
+
+.btnFindOutMore .btn:hover {
   border: 6px solid black;
 }
 
-.btnFindOutMore a {
+.btnFindOutMore .btn {
   color: #3496c1;
 }
 
-.btnFindOutMore a:hover {
+.btnFindOutMore :hover {
   color: black;
   text-decoration: none;
 }
