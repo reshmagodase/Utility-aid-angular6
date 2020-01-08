@@ -20,10 +20,10 @@ section {
 }
 
 .steps {
-  max-width: 360px;
+  max-width: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 20px;
-  min-height: 340px;
+  min-height: 100%;
   padding: 20px;
   display: table;
   margin: 20px auto;
@@ -100,6 +100,16 @@ h2 {
   .heading-text {
     margin-top: 50px;
     font-size: 45px;
+  }
+
+  .blog-domestic {
+    max-width: 100%;
+    min-height: 100%;
+
+  }
+
+  .blog-domestic {
+    padding-bottom: 20px;
   }
 
   .container {

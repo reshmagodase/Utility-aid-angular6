@@ -3,13 +3,10 @@
   display: table;
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 70vh;
   background-size: cover;
   margin-top: -22px;
-  padding-bottom: 40px;
-  margin-bottom: 0px;
-  padding-top: 160px;
-  padding-bottom: 150px;
+
 }
 
 .contacts {
@@ -17,9 +14,11 @@
   /* margin-top: 150px;
   margin-bottom: 150px; */
 }
+
 .container {
   padding: 70px 20px;
 }
+
 .contacts h2 {
   font-size: 23.5px;
   color: #17252a;
@@ -27,29 +26,36 @@
   /* line-height:1.5; */
   padding-top: 10px;
 }
+
 .contacts h3 {
   font-size: 60px;
   color: white;
 }
+
 .fontBold {
   padding-top: 40px;
 }
+
 .contact {
   padding: 40px 10px;
 }
+
 .text-left {
   text-align: left;
 }
+
 .contact .title {
   font-size: 29.5px;
   font-family: "vag_roundedbold";
   color: #b4eaff;
 }
+
 .contact .location {
   color: #17252a;
   font-size: 29.5px;
   font-family: "vag_roundedbold";
 }
+
 .contact .address {
   color: #17252a;
   font-size: 20.5px;
@@ -57,21 +63,25 @@
   font-family: "vag_roundedregular";
   font-weight: 800;
 }
+
 .contact .number {
   font-size: 29.5px;
   font-family: "vag_roundedbold";
   color: white;
 }
+
 a {
   color: #337ab7;
   text-decoration: none;
 }
+
 .mail {
   margin-top: 10px;
   background: url("../../assets/mail.png");
   width: 49px;
   height: 33px;
 }
+
 .social .facebook {
   margin-top: 10px;
   background: url("../../assets/socialicon.png");
@@ -80,6 +90,7 @@ a {
   height: 50px;
   float: left;
 }
+
 .social .twitter {
   margin-top: 10px;
   background: url("../../assets/socialicon.png");
@@ -88,6 +99,7 @@ a {
   height: 50px;
   float: left;
 }
+
 .social .linkdin {
   margin-top: 10px;
   background: url("../../assets/socialicon.png");
@@ -96,6 +108,7 @@ a {
   height: 50px;
   float: left;
 }
+
 .social .instagram {
   margin-top: 10px;
   background: url("../../assets/socialicon.png");
@@ -104,6 +117,7 @@ a {
   height: 50px;
   float: left;
 }
+
 .btnFindOutMore {
   display: inline-block;
   /* margin-top:10px; */
@@ -112,15 +126,18 @@ a {
   border: 6px solid white;
   border-radius: 20px;
   font-size: 22px;
+  margin-bottom: 46px;
 }
+
 .text-center {
-  padding-bottom: 65px;
+  padding-bottom: 25px;
 }
 
 @media screen and (max-width: 767px) {
   .header {
     background-attachment: scroll !important;
   }
+
   .contacts h3 {
     font-size: 40px;
   }

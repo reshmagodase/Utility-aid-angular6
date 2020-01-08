@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MetaserviceService } from "../metaservice.service";
 import { FormGroup, FormBuilder } from "@angular/forms";
-declare var $: any;
+
 @Component({
   selector: "app-work-with-us",
   templateUrl: "./work-with-us.component.html",
@@ -18,7 +18,7 @@ export class WorkWithUsComponent implements OnInit {
     this.meta.updateMetaInfo(
       "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
       "Work With Us",
-      "contact.jpg",
+      "assets/contact.jpg",
       "workwithus"
     );
     this.meta.updateTitle("", "Work With Us");
@@ -37,8 +37,8 @@ export class WorkWithUsComponent implements OnInit {
     console.log("selectedFiles: " + this.fileName);
   }
   getName(e) {
-    $("#myModal2").modal("show");
     this.name = e;
+    this.fileName = "";
     console.log(e);
   }
   onSubmit() {

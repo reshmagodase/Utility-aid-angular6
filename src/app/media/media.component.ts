@@ -23,7 +23,7 @@ export class MediaComponent implements OnInit {
     this.meta.updateMetaInfo(
       "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
       "Media",
-      "contact.jpg",
+      "assets/news.jpg",
       "media"
     );
     this.meta.updateTitle("", "Media");

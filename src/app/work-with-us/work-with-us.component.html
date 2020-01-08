@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header d-flex align-items-center d-flex justify-content-center">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -47,11 +47,14 @@
         <li>The ability to hit and exceed targets</li>
         <li>Ability to build and manage your sales pipeline</li>
       </ul>
-      <a class="btnFindOutMore" (click)="getName('Norwich')">
+      <a class="btnFindOutMore" (click)="getName('Norwich')" data-toggle="modal" data-target="#myModal2">
         Apply Now
       </a>
     </div>
   </div>
+
+
+
 
   <!-- ////////////////////////////////////// second part///////////////////////////////////////// -->
   <div class="text-center" style="background-color: #f2f2f2;color: #000;">
@@ -94,7 +97,7 @@
           <li>The ability to hit and exceed targets</li>
           <li>Ability to build and manage your sales pipeline</li>
         </ul>
-        <a class="btnFindOutMore2" (click)="getName('Glasgow')">
+        <a class="btnFindOutMore2" (click)="getName('Glasgow')" data-toggle="modal" data-target="#myModal2">
           Apply Now
         </a>
       </div>

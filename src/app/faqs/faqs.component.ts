@@ -22,7 +22,7 @@ export class FAQsComponent implements OnInit {
     this.meta.updateMetaInfo(
       "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
       "FAQ",
-      "contact.jpg",
+      "assets/logoUA.png",
       "faq"
     );
     this.meta.updateTitle("", "FAQ");

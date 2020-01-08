@@ -3,13 +3,10 @@
   display: table;
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 70vh;
   background-size: cover;
   margin-top: -22px;
-  padding-bottom: 40px;
-  margin-bottom: 0px;
-  padding-top: 160px;
-  padding-bottom: 180px;
+
 }
 
 .container {
@@ -27,4 +24,10 @@
 .our-client-say p {
   font-size: 30px;
   line-height: 1.4;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .case-logo {
+    max-width: 50%;
+  }
 }

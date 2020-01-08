@@ -16,6 +16,12 @@ export class OurClientSayComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.meta.updateMetaInfo(
+      "Going through the energy audit process with Utility Aid has been extremely useful.It not only highlighted the savings to be made but saved us valuable time.",
+      "Our Clients Say",
+      "assets/our-client-say.jpg",
+      "our-client-say"
+    );
     this.meta.updateTitle("", "Our Clients Say");
   }
   getPartnerList() {

@@ -21,7 +21,7 @@ export class CustomerStoriesComponent implements OnInit {
     this.meta.updateMetaInfo(
       "Going through the energy audit process with ua has been extremely useful. It not only highlighted the savings to be made but saved us valuable time.",
       "Case Studies",
-      "contact.jpg",
+      "assets/our-client-say.jpg",
       "case-studies"
     );
     this.meta.updateTitle("", "Case Studies");

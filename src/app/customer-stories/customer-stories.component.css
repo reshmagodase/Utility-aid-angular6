@@ -3,13 +3,10 @@
   display: table;
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 70vh;
   background-size: cover;
   margin-top: -22px;
-  padding-bottom: 40px;
-  margin-bottom: 0px;
-  padding-top: 160px;
-  padding-bottom: 150px;
+
 }
 
 .blogs {
@@ -95,7 +92,7 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .case-blog {
     max-width: 50%;
   }
@@ -104,3 +101,5 @@ a {
     max-width: 50%;
   }
 }
+
+/* @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {} */

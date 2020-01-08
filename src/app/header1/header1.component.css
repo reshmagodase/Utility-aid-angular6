@@ -171,8 +171,8 @@ ul>li>a {
 
   nav {
     background-color: #17252a;
-    margin-bottom: 22px;
-    padding-bottom: 80px;
+
+    padding-bottom: 100px;
     margin-top: -8px;
   }
 
@@ -270,5 +270,10 @@ ul>li>a {
   .navbar-brand img {
     margin-top: 8px;
     /* width: 100%; */
+  }
+
+  .dropdown-menu {
+    top: 100%;
+    left: 10px;
   }
 }

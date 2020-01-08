@@ -13,7 +13,7 @@ export class DomesticEnergyComponent implements OnInit {
     this.meta.updateMetaInfo(
       "Compare your gas and electricity",
       "Energy Switching",
-      "contact.jpg",
+      "assets/logoUA.png",
       "energyswitching"
     );
     this.meta.updateTitle("", "Energy Switching");

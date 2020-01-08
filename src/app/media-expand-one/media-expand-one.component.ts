@@ -56,7 +56,7 @@ export class MediaExpandOneComponent implements OnInit {
           this.meta.updateMetaInfo(
             this.list1,
             this.details.heading,
-            "contact.jpg",
+            this.details.image,
             "news-media/" + this.heading + "/" + this.details.newsdate
           );
         },

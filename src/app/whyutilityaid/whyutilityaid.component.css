@@ -3,22 +3,20 @@
   display: table;
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 70vh;
   background-size: cover;
   margin-top: -22px;
-  padding-bottom: 40px;
-  margin-bottom: 8px;
+  /* padding-bottom: 40px;
+  margin-bottom: 8px; */
 }
 
 video {
-  width: 39%;
-  height: 40%;
+  width: 47%;
+  height: auto;
   border: 2px solid #000;
   border-radius: 10px;
-
-  display: table-cell;
   margin-top: -70px;
-  margin-left: 31%;
+
 }
 
 .text_center {
@@ -190,7 +188,7 @@ a {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .header {
     background-attachment: scroll;
   }

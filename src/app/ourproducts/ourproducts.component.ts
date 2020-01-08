@@ -24,7 +24,7 @@ export class OurproductsComponent implements OnInit {
     this.meta.updateMetaInfo(
       "Fixed Price Strategy, Market Trigger Strategy, Portfolio Managed Strategy, Bespoke Strategy, Bureau Services",
       "Our Products",
-      "contact.jpg",
+      "assets/products.jpg",
       "our-products"
     );
     this.meta.updateTitle("", "Our Products");

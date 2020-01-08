@@ -15,7 +15,7 @@ export class MetaserviceService {
         { property: "og:description", content: description },
         {
           property: "og:image",
-          content: "https://www.utility-aid.co.uk/" + image
+          content: "http://192.168.1.163:4300/" + image
         },
         { property: "og:url", content: "https://www.utility-aid.co.uk/" + url },
         { property: "og:type", content: "website" },

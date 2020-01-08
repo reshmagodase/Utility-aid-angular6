@@ -190,7 +190,7 @@ p {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .desc-info {
     display: inline-block;
   }

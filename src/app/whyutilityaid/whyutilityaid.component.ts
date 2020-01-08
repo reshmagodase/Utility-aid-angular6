@@ -40,7 +40,7 @@ export class WhyutilityaidComponent implements OnInit {
     this.meta.updateMetaInfo(
       "We primarily work in the Not-for-Profit sector. So, suppliers give us the lowest prices in the UK - guaranteed.",
       "Why UA?",
-      "contact.jpg",
+      "assets/whyua.jpg",
       "why-ua"
     );
     this.meta.updateTitle("", "Why UA?");

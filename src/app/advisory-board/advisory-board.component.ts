@@ -19,7 +19,7 @@ export class AdvisoryBoardComponent implements OnInit {
     this.meta.updateMetaInfo(
       "UA is proud to be the only energy broker in the UK that employs an Independent Advisory Panel. The panel is there for the benefit of customers requiring advisory services relating to a range of topics including Ethics, Regulation, Lobbying, Trading, Volume Purchasing, Fixed and Flexible products and Exotic Instruments.",
       "Advisory Board",
-      "contact.jpg",
+      "src/assets/advisoryboard.jpg",
       "advisory-board"
     );
     this.meta.updateTitle("", "Advisory Board");

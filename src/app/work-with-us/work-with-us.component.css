@@ -3,13 +3,10 @@
   display: table;
   position: relative;
   width: 100%;
-  height: 70%;
+  height: 70vh;
   background-size: cover;
   margin-top: -22px;
-  padding-bottom: 40px;
-  margin-bottom: 0px;
-  padding-top: 160px;
-  padding-bottom: 150px;
+
 }
 
 .blogs {
@@ -175,10 +172,17 @@ a.btnFindOutMore2 {
   }
 }
 
-@media (min-width:768px)and(max-width: 1024px) {
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
   .modal-dialog {
-    width: 100% !important;
-    /* padding-left: 30px;
-    padding-right: 30px; */
+    width: 60%;
   }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+  .modal-dialog {
+    width: 50%;
+  }
+
 }

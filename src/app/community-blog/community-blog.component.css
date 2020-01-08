@@ -1,24 +1,28 @@
-.blog-header {
+.blog-header img {
   /* background: url("community.image1"); */
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom left;
-  min-height: 598px;
+  height: 70%;
   margin-top: -15px;
+  width: 100%;
 }
 
 .blog-content {
   color: black;
   min-height: 450px;
 }
-.blog-content .container {
-  padding: 0px;
+
+.container {
+  max-width: 940px;
 }
+
 .white {
   background-color: #fff;
   margin-top: -80px;
 }
+
 .content h2 {
   padding: 20px 60px 0 36px;
   border-left: 8px solid #3496c1;
@@ -29,22 +33,26 @@
   margin-bottom: 50px;
   margin-top: 10px;
 }
+
 .content {
   font-size: 16.5px;
   line-height: 1.75;
   margin-bottom: 40px;
   font-family: "vag_roundedregular";
 }
+
 #editor1 {
   padding-left: 30px;
   padding-right: 60px;
 }
+
 h3 {
   font-size: 16px;
   font-family: "vag_roundedbold";
   margin-bottom: 30px;
   margin-top: 20px;
 }
+
 .articles a.recent {
   border-left: 4px solid #18252a;
   display: block;
@@ -53,22 +61,27 @@ h3 {
   color: #18252a;
   font-family: "vag_roundedregular";
 }
+
 a {
   text-decoration: none;
 }
+
 .articles a.recent:hover {
   border-left: 4px solid #3496c1;
   text-decoration: none;
   color: #3496c1;
 }
+
 .share a.share-fb {
   background: url("../../assets/share-fb.png");
   margin-right: 20px;
 }
+
 .share a.share-tw {
   background: url("../../assets/share-tw.png");
   margin-right: 20px;
 }
+
 .share span {
   float: left;
   display: block;
@@ -80,13 +93,50 @@ a {
   text-align: left;
   font-family: "vag_roundedbold", sans-serif;
 }
+
 .share {
   overflow: hidden;
 }
+
 .share a {
   float: left;
   width: 64px;
   height: 64px;
   background-size: 64px 64px;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+  ::ng-deep #editor1 img {
+    width: 100%;
+  }
+
+  .blog-header img {
+    min-height: 500px;
+  }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .blog-header img {
+    margin-top: -23px;
+  }
+
+  .col-md-8 {
+    max-width: 100%;
+  }
+
+  .blog-position {
+    padding-left: 10%;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .blog-header img {
+    margin-top: -23px;
+  }
+
+
 }
