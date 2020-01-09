@@ -277,3 +277,13 @@ ul>li>a {
     left: 10px;
   }
 }
+
+/* @media only screen and (max-device-width: 1280px) and (max-device-height: 800px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .navbar-right {
+    margin-left: 32px;
+  }
+
+  .freephone {
+    padding: 0;
+  }
+} */

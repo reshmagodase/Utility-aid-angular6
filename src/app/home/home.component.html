@@ -71,7 +71,7 @@
         </p>
       </h2>
       <br />
-      <a role="button" class="btnFindOutMore fontBold" (click)="scroll()">find out more</a>
+      <a role="button" class="btnFindOutMore fontBold" (click)="scroll()" style="cursor:pointer">find out more</a>
     </div>
     <!-- routerLink="why-ua" fragment="saveMoney" -->
   </div>
@@ -83,14 +83,15 @@
   <div class="text-vertical-center innerSpan burner-top">
     <span [innerHtml]="text"> </span><br />
     <span class="text-button">
-      <a class="btnFindOutMore fontBold" routerLink="our-client-say">find out more</a>
+      <a class="btnFindOutMore fontBold" routerLink="our-client-say" style="cursor:pointer">find out more</a>
     </span>
   </div>
 </section>
 
 <!-- //////////////////  lets work together  ////////// -->
-<section class="home" style="background-color: #17252a">
-  <div class="container-fluid">
+<section class="home" style="background-color: #17252a;padding: 20px;
+">
+  <div class="container-fluid ">
     <div class="text-center">
       <h2 class="heading_text_inner" style="margin-top: 45px;  margin-bottom: 0px;
             padding-bottom: 70px;
@@ -102,8 +103,8 @@
         <p style="font-size: 22.5px;color:white;margin-top:-23px;font-family: vag_roundedregular;line-height: 1.5;">
           The money we save for your organisation can be used to do more good!
         </p>
-        <br /><br /><br />
-        <div class="let-img text-center">
+        <br />
+        <div class="let-img d-flex justify-content-center">
           <img class="image1" src="assets/letsdomoregood.png" />
         </div>
       </h2>

@@ -143,6 +143,11 @@ textarea {
   text-decoration: none;
 }
 
+.form-check {
+
+  padding-left: 0px;
+}
+
 @media screen and (max-width: 767px) {
   .control-info {
     width: 100%;

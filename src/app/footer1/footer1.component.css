@@ -107,19 +107,12 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .askButton {
-    /* font-size:11px;
-        width:100%;
-     display:table; */
-
-    /* vertical-align: middle;
-        position: relative;
-      */
+    display: inline-flex;
     font-size: 19px;
     cursor: pointer;
     padding: 5px 15px;
     position: fixed;
     z-index: 999;
-    right: 0%;
     bottom: 0px;
     background-color: #3697c2;
     border: 1px solid black;

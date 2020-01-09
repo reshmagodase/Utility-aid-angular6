@@ -43,7 +43,7 @@
 
 #editor1 {
   padding-left: 30px;
-  padding-right: 60px;
+  padding-right: 30px;
 }
 
 h3 {
@@ -115,6 +115,10 @@ a {
     min-height: 500px;
   }
 
+  ::ng-deep #editor1 iframe {
+    width: 100%;
+    cursor: pointer;
+  }
 
 }
 
@@ -130,6 +134,10 @@ a {
   .blog-position {
     padding-left: 10%;
   }
+
+  /* ::ng-deep #editor1 iframe {
+    padding-left: 0;
+  } */
 
 }
 

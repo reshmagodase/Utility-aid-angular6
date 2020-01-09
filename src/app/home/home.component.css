@@ -84,7 +84,7 @@ ul>li>a {
   background-size: auto;
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: auto;
   background-size: cover;
 
   padding-bottom: 30px;
@@ -175,12 +175,13 @@ br {
   padding-bottom: 65px;
 }
 
+/* 
 .let-img {
   width: 80%;
   position: center;
   margin-top: -100px;
   margin-left: 130px;
-}
+} */
 
 .fontBold {
   font-family: vag_roundedbold, sans-serif;
