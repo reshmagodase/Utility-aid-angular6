@@ -9,6 +9,10 @@
 
 }
 
+/* .strategies .heading_container {
+  padding: 50px;
+} */
+
 .strategies .container {
   padding: 50px;
 }
@@ -36,7 +40,7 @@
 
 .nav-link.active {
   padding: 12px;
-  margin-left: 120px;
+
   font-size: 19.5;
 }
 
@@ -110,7 +114,7 @@ a.btnFindOutMore:hover {
   display: block;
   position: absolute;
   left: auto;
-  top: 89%;
+  top: 90%;
   width: 0;
   height: 0;
   border-left: 20px solid transparent;

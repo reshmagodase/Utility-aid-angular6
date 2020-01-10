@@ -10,9 +10,7 @@
 
 .container {
   padding: 70px 30px;
-  margin-right: auto;
-  margin-left: auto;
-  float: right;
+
 }
 
 .desc {
@@ -169,11 +167,12 @@ p {
 @media screen and (max-width: 767px) {
   .desc-info {
     display: inline-block;
+    padding: 11px;
   }
 
-  .container {
+  /* .container {
     float: none;
-  }
+  } */
 
   .appreciate {
     padding: 40px;
@@ -195,9 +194,9 @@ p {
     display: inline-block;
   }
 
-  .container {
+  /* .container {
     float: none;
-  }
+  } */
 
   .quote {
     font-size: 28px;

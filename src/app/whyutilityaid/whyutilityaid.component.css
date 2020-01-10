@@ -10,6 +10,11 @@
   margin-bottom: 8px;
 }
 
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 video {
   width: 47%;
   height: auto;
@@ -20,7 +25,7 @@ video {
 }
 
 .text_center {
-  text-align: center;
+  text-align: center !important;
 }
 
 h2 {

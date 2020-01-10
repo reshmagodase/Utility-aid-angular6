@@ -2,8 +2,8 @@
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image1 + ')'
   }">
-  <div class="container text-center" *ngIf="casestudy">
-    <div class="row desc-info">
+  <div class="container text-center " *ngIf="casestudy">
+    <div class="row desc-info d-flex align-items-center d-flex justify-content-center">
       <div class="desc">
         <h2>
           {{ casestudy.banner_col_1_title }}
@@ -36,7 +36,7 @@
     </div>
 
     <div class="row">
-      <h3 class="col-md-10 innerspan author">
+      <h3 class="col-md-12 innerspan author d-flex align-items-center d-flex justify-content-center">
         <span [innerHtml]="casestudy.banner_title"></span>
       </h3>
     </div>
