@@ -19,6 +19,7 @@ export class AppComponent {
     private meta: MetaserviceService
   ) {
     this.meta.updateTitle();
+    this.checkBrowser();
   }
 
   @HostListener("window:scroll", [])
@@ -52,5 +53,14 @@ export class AppComponent {
   onActivate(event) {
     console.log("---->", event);
     window.scroll(0, 0);
+  }
+  checkBrowser() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)), 10);
+    }
   }
 }

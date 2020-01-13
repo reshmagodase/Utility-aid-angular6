@@ -16,9 +16,6 @@ import { DomesticEnergyComponent } from "./domestic-energy/domestic-energy.compo
 import { AdvisoryBoardComponent } from "./advisory-board/advisory-board.component";
 import { CustomerStoriesComponent } from "./customer-stories/customer-stories.component";
 import { FAQsComponent } from "./faqs/faqs.component";
-//import { MediaComponent } from "./media/media.component";
-// import { MediaExpandOneComponent } from "./media-expand-one/media-expand-one.component";
-// import { MediaExpandTwoComponent } from "./media-expand-two/media-expand-two.component";
 import { WorkWithUsComponent } from "./work-with-us/work-with-us.component";
 import { ContactComponent } from "./contact/contact.component";
 import { RequestComponent } from "./request/request.component";
@@ -50,9 +47,6 @@ import { ReactiveFormsModule } from "@angular/forms";
     AdvisoryBoardComponent,
     CustomerStoriesComponent,
     FAQsComponent,
-    // MediaComponent,
-    // MediaExpandOneComponent,
-    // MediaExpandTwoComponent,
     WorkWithUsComponent,
     ContactComponent,
     RequestComponent,

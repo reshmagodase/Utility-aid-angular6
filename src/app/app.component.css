@@ -12,13 +12,25 @@
   border: 1px solid #3697c2;
 }
 
-
 @media screen and (max-height:700px) {
   .back-to-top {
     display: none;
-
+    top: 85%;
   }
 
+}
+
+@media screen and (max-height:1024px) {
+  .back-to-top {
+    top: 85%;
+  }
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) {
+  .back-to-top {
+    top: 80%;
+  }
 }
 
 /* @media screen and (min-height:800px)and(max-height:1280px) {

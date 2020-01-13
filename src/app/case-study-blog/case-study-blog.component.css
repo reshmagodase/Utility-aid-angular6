@@ -10,7 +10,6 @@
 
 .container {
   padding: 70px 30px;
-
 }
 
 .desc {
@@ -170,10 +169,6 @@ p {
     padding: 11px;
   }
 
-  /* .container {
-    float: none;
-  } */
-
   .appreciate {
     padding: 40px;
   }
@@ -194,10 +189,6 @@ p {
     display: inline-block;
   }
 
-  /* .container {
-    float: none;
-  } */
-
   .quote {
     font-size: 28px;
     line-height: 34px;
@@ -211,11 +202,9 @@ p {
   .case-study-blog {
     margin-top: -23px;
   }
-
-
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .author {
     margin-left: 85px;
   }
