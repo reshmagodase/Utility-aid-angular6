@@ -186,3 +186,12 @@ a.btnFindOutMore2 {
   }
 
 }
+
+@media (min-width: 800px) and (max-width: 1280px) {
+
+  .modal-dialog {
+    width: 60%;
+  }
+
+
+}
