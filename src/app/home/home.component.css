@@ -308,8 +308,8 @@ br {
   }
 
   .image1 {
-    max-width: 250px;
-    margin-left: -202px;
+    min-width: 100%;
+
     height: auto;
   }
 
