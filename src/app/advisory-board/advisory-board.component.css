@@ -1,5 +1,6 @@
 .header {
-  background: url(../../assets/advisoryboard.jpg)no-repeat center 50% fixed;
+  /* background: url(../../assets/advisoryboard.jpg)no-repeat center 50% fixed; */
+  background:no-repeat center 50% fixed;
   display: table;
   position: relative;
   width: 100%;
@@ -8,7 +9,18 @@
   margin-top: -22px;
 
 }
-
+.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+img.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
 .advisory {
   background-color: #17252a;
   padding-top: 10px;

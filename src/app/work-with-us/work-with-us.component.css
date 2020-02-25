@@ -1,5 +1,6 @@
 .header {
-  background: url(../../assets/workwithus.jpg) no-repeat center 50% fixed;
+  /* background: url(../../assets/workwithus.jpg) no-repeat center 50% fixed;
+   */background:no-repeat center 50% fixed;
   display: table;
   position: relative;
   width: 100%;
@@ -8,7 +9,14 @@
   margin-top: -22px;
 
 }
-
+.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .blogs {
   background-color: #23527c;
   color: #fff;

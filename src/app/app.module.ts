@@ -35,6 +35,7 @@ import { NgProgressModule } from "@ngx-progressbar/core";
 import { NgProgressHttpModule } from "@ngx-progressbar/http";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
+import { LazyLoadImageModule, scrollPreset } from 'ng-lazyload-image';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +71,11 @@ import { ReactiveFormsModule } from "@angular/forms";
       spinnerPosition: "left",
       color: "#3697c2"
     }),
-    NgProgressHttpModule
+    NgProgressHttpModule,
+    LazyLoadImageModule.forRoot({
+      preset: scrollPreset, // <-- tell LazyLoadImage that you want to use scrollPreset
+      // finally: ({ element }) => console.log('The image is loaded', element)
+    })
   ],
   providers: [
     LazyLoadScriptService,
@@ -86,4 +91,4 @@ import { ReactiveFormsModule } from "@angular/forms";
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule { }

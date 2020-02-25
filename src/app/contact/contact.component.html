@@ -1,4 +1,5 @@
-<header class="header d-flex align-items-center d-flex justify-content-center">
+<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/contact.jpg'">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -25,7 +26,7 @@
 
 
         <a href="mailto:Eberry@utility-aid.com">
-          <div class="mail"></div>
+          <div class="mail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/mail.png'"></div>
           <!-- mailto:recipient@domain.com?cc=other@domain.com -->
         </a>
       </div>
@@ -37,23 +38,23 @@
         <div class="number"><br /></div>
         <div class="social">
           <a routerLink="#">
-            <div class="facebook"></div>
+            <div class="facebook" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
           <a routerLink="#">
-            <div class="twitter"></div>
+            <div class="twitter" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
           <a routerLink="#">
-            <div class="linkdin"></div>
+            <div class="linkdin" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
           <a routerLink="#">
-            <div class="instagram"></div>
+            <div class="instagram" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<header class="header"></header>
+<header class="header" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/contact.jpg'"></header>
 <section class="home" style="background-color: #17252a">
   <div class="container-fluid">
     <div class="text-center">

@@ -1,4 +1,5 @@
-<header class="header d-flex align-items-center d-flex justify-content-center">
+<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/our-client-say.jpg'">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -38,7 +39,8 @@
       <div class="case-logo col-md-3 col-sm-6" *ngFor="let partner of partnerlist">
         <div class="partners">
           <a href="{{partner.link}}" target="_blank">
-            <img src="https://utility-aid.co.uk/{{ partner.image1 }}" width="200" />
+            <img [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'https://utility-aid.co.uk/'+partner.image1"
+              width="200" />
             <br />
             <span class="affinity-round" style="font-family:'vag_roundedregular';">
               {{ partner.partner_name }}

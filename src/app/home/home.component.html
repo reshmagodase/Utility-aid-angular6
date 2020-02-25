@@ -1,6 +1,7 @@
 <!-- ///////////////////////////      second part    /////////////////////////// -->
 
-<header class="home header ng-scope d-flex align-items-center d-flex justify-content-center" *ngIf="data">
+<header class="home header ng-scope d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/contact1.jpg'">
   <div class="container">
     <div class="text-vertical-center text-center">
       <h1 class="heading_text" style="margin-top:0;padding-top:0">
@@ -9,12 +10,17 @@
           Welcome to Utility Aid
         </span>
         <p id="text1" class="heading_text_inner">
-          {{ data[0]?.text1 }}
+
+          {{ data?.text1 }}
+
+
         </p>
       </h1>
       <h2>
+        <!-- <img [defaultImage]="defaultImage" [lazyLoad]="image"> -->
         <video id="videoplayer" poster="assets/videoimg.jpg" src="assets/videos/RA504_Utility_Aid_MASTER_Compressed.mp4"
           controls="" loop=""></video>
+
       </h2>
     </div>
   </div>
@@ -31,24 +37,27 @@
   <section class="home ng-scope" style="background-color: #17252a">
     <div class="container-fluid ab" style="padding:20px">
       <div class="text-center" style="margin-top:10px;font-size:23.5px;font-family: 'vag_roundedregular';">
-        <h2 id="text2" class="subheading" *ngIf="data">
-          {{ data[0].text2 }}
+        <h2 id="text2" class="subheading mb-1">
+          {{ data?.text2 }}
+
         </h2>
         <div class="slick-container">
-          <img class="thumbnail" src="assets/1.png" />
-          <img class="thumbnail" src="assets/2.png" />
-          <img class="thumbnail" src="assets/3.png" />
-          <img class="thumbnail" src="assets/4.png" />
-          <img class="thumbnail" src="assets/5.png" />
-          <img class="thumbnail" src="assets/6.png" />
-          <img class="thumbnail" src="assets/7.png" />
-          <img class="thumbnail" src="assets/8.png" />
-          <img class="thumbnail" src="assets/9.png" />
-          <img class="thumbnail" src="assets/10.png" />
-          <img class="thumbnail" src="assets/11.png" />
-          <img class="thumbnail" src="assets/12.png" />
-          <img class="thumbnail" src="assets/13.png" />
-          <img class="thumbnail" src="assets/14.png" />
+
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/1.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/2.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/3.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/4.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/5.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/6.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/7.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/8.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/9.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/10.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/11.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/12.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/13.png'" />
+          <img class="thumbnail" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/14.png'" />
+
         </div>
 
 
@@ -58,7 +67,7 @@
 </div>
 <!-- //////////////////// slider ends ////////////////////////////// -->
 
-<section class="home darkblue ng-scope" style="background-color:#3697c2" *ngIf="data">
+<section class="home darkblue ng-scope" style="background-color:#3697c2">
   <div class="container-fluid" style="padding-bottom: 75px;">
     <div class="text-center">
       <h2 class="heading_text">
@@ -67,10 +76,10 @@
 
         <br /><br />
         <p id="text3" class="subheading">
-          {{ data[0]?.text3 }}
+          {{ data?.text3 }}
         </p>
       </h2>
-      <br />
+      <br /><br>
       <a role="button" class="btnFindOutMore fontBold" (click)="scroll()" style="cursor:pointer">find out more</a>
     </div>
     <!-- routerLink="why-ua" fragment="saveMoney" -->
@@ -79,7 +88,7 @@
 
 <!--   //////////////////////////////   blue part/    //////////////////// -->
 
-<section class="home burner lightblue ng-scope" *ngIf="text">
+<section class="home burner lightblue ng-scope" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'../../assets/burner.jpg'">
   <div class="text-vertical-center innerSpan burner-top">
     <span [innerHtml]="text"> </span><br />
     <span class="text-button">
@@ -105,7 +114,8 @@
         </p>
         <br />
         <div class="let-img d-flex justify-content-center">
-          <img class="image1" src="assets/letsdomoregood.png" />
+          <img class="image1" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/letsdomoregood.png'" />
+          <!-- <img class="thumbnail " [defaultImage]="'assets/14.png'" [lazyLoad]="'assets/14.png'" /> -->
         </div>
       </h2>
     </div>

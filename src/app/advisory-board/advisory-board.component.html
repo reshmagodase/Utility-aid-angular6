@@ -1,4 +1,5 @@
-<header class="header d-flex align-items-center d-flex justify-content-center">
+<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/advisoryboard.jpg'">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -19,7 +20,7 @@
         <h3>
           The panel includes:
         </h3>
-        <img src="assets/advisory1.png" />
+        <img [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/advisory1.png'" />
         <h3 id="person1">
           {{ person[0].person1 }}
         </h3>
@@ -29,7 +30,7 @@
       </div>
 
       <div class="personname">
-        <img src="assets/advisory2.png" />
+        <img [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/advisory2.png'" />
         <h3 id="person2">
           {{ person[0].person2 }}
         </h3>
@@ -39,7 +40,7 @@
       </div>
 
       <div class="personname">
-        <img src="assets/advisory3.png" />
+        <img [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/advisory3.png'" />
         <h3 id="person3">
           {{ person[0].person3 }}
         </h3>
@@ -49,7 +50,7 @@
       </div>
 
       <div class="personname">
-        <img src="assets/advisory4.png" />
+        <img [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/advisory4.png'" />
         <h3 id="person4">
           {{ person[0].person4 }}
         </h3>

@@ -1,4 +1,5 @@
-<header class="header d-flex align-items-center d-flex justify-content-center">
+<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/request.jpg'">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -30,8 +31,8 @@
 
           <div class="control-group">
             <div class="controls">
-              <input formControlName="contact" type="number" id="contact" class="form-control" ng-model="contact"
-                name="contact" placeholder="Contact number " />
+              <input formControlName="contact" type="number" id="contact" class="form-control" ng-model="contact" name="contact"
+                placeholder="Contact number " />
             </div>
           </div>
 
@@ -78,21 +79,21 @@
           <h3>Your company</h3>
           <div class="control-group">
             <div class="controls">
-              <input formControlName="companyname" type="text" id="companyname" class="form-control"
-                ng-model="companyname" name="companyname" placeholder="Company name " />
+              <input formControlName="companyname" type="text" id="companyname" class="form-control" ng-model="companyname"
+                name="companyname" placeholder="Company name " />
             </div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <input formControlName="yourposition" type="text" id="yourposition" class="form-control"
-                ng-model="yourposition" name="yourposition" placeholder="Your position" />
+              <input formControlName="yourposition" type="text" id="yourposition" class="form-control" ng-model="yourposition"
+                name="yourposition" placeholder="Your position" />
             </div>
           </div>
 
           <div class="control-group">
             <div class="controls">
-              <input formControlName="supplier" type="text" id="supplier" class="form-control" ng-model="supplier"
-                name="supplier" placeholder="Current energy supplier" />
+              <input formControlName="supplier" type="text" id="supplier" class="form-control" ng-model="supplier" name="supplier"
+                placeholder="Current energy supplier" />
             </div>
           </div>
 

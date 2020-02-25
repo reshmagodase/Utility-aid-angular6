@@ -1,5 +1,6 @@
 .header {
-  background: url(../../assets/request.jpg) no-repeat center 25% fixed;
+  /* background: url(../../assets/request.jpg) no-repeat center 25% fixed; */
+  background: no-repeat center 25% fixed;
   display: table;
   position: relative;
   width: 100%;
@@ -11,7 +12,14 @@
   padding-top: 15%;
   padding-bottom: 15%;
 }
-
+.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .details {
   background-color: #f2f2f2;
 

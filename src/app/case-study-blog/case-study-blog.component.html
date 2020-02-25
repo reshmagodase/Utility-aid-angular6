@@ -1,7 +1,9 @@
-<section class="case-study-blog" [ngStyle]="{
+<section class="case-study-blog" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'https://utility-aid.co.uk/' + casestudy.image1">
+  <!-- <section [lazyLoad]="'assets/customer-stories.jpg'"> -->
+  <!--  [ngStyle]="{
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image1 + ')'
-  }">
+  }" -->
   <div class="caseStudy text-center " *ngIf="casestudy">
     <div class="row desc-info d-flex align-items-center d-flex justify-content-center">
       <div class="desc">
@@ -13,7 +15,7 @@
       </div>
 
       <div class="desc">
-        <img src="assets/plus.png" />
+        <img [defaultImage]="'assets/plus.png'" [lazyLoad]="'assets/plus.png'" />
       </div>
 
       <div class="desc">
@@ -24,7 +26,7 @@
       </div>
 
       <div class="desc">
-        <img src="assets/equal.png" />
+        <img [defaultImage]="'assets/equal.png'" [lazyLoad]="'assets/equal.png'" />
       </div>
 
       <div class="desc">
@@ -42,9 +44,10 @@
     </div>
   </div>
 </section>
+
 <section class="appreciate">
   <div class="container-fluid text-center" *ngIf="casestudy">
-    <h2 class="appreciate appreciate1">
+    <h2 class="appreciate appreciate1" [defaultImage]="'assets/appreciate-img1.png'" [lazyLoad]="'assets/appreciate-img1.png'">
       <div class="title-appreciate">
         {{ casestudy.block_1_title }}
       </div>
@@ -89,10 +92,12 @@
     </div>
   </div>
 </section>
-<section class="case-study-blog2" [ngStyle]="{
+
+<section class="case-study-blog2" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'https://utility-aid.co.uk/' + casestudy.image2">
+  <!-- [ngStyle]="{
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image2 + ')'
-  }">
+  }" -->
   <div class="container-fluid" *ngIf="casestudy">
     <div class="quote" [innerHtml]="casestudy.block_2_quote"></div>
     <h4>
@@ -103,9 +108,10 @@
     </h4>
   </div>
 </section>
+
 <section class="appreciate">
   <div class="container-fluid text-center" *ngIf="casestudy">
-    <h2 class="appreciate appreciate2">
+    <h2 class="appreciate appreciate2" [defaultImage]="'assets/analyse-img1.png'" [lazyLoad]="'assets/analyse-img1.png'">
       <div class="title-appreciate">
         {{ casestudy.block_3_title }}
       </div>
@@ -150,10 +156,12 @@
     </div>
   </div>
 </section>
-<section class="case-study-blog3" [ngStyle]="{
+
+<section class="case-study-blog3" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'https://utility-aid.co.uk/' + casestudy.image3">
+  <!-- [ngStyle]="{
     'background-image':
       'url(https://utility-aid.co.uk/' + casestudy.image3 + ')'
-  }">
+  }" -->
   <div class="container-fluid" *ngIf="casestudy">
     <div class="quote" [innerHtml]="casestudy.block_4_quote"></div>
     <h4>
@@ -164,9 +172,10 @@
     </h4>
   </div>
 </section>
+
 <section class="appreciate">
   <div class="container-fluid text-center" *ngIf="casestudy">
-    <h2 class="appreciate appreciate3">
+    <h2 class="appreciate appreciate3" [defaultImage]="'assets/action-img1.png'" [lazyLoad]="'assets/action-img1.png'">
       <div class="title-appreciate">
         {{ casestudy.block_5_title }}
       </div>

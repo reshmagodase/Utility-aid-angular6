@@ -1,4 +1,5 @@
-<header class="header d-flex align-items-center d-flex justify-content-center">
+<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/workwithus.jpg'">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -125,19 +126,18 @@
           <div class="modal-body">
             <div class="control-group">
               <div class="controls">
-                <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name"
-                  ng-model="name" formControlName="name" placeholder="Name" />
+                <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name" ng-model="name"
+                  formControlName="name" placeholder="Name" />
               </div>
               <div class="controls">
-                <input type="email" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email"
-                  ng-model="email" formControlName="email" placeholder="Email" />
+                <input type="email" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email" ng-model="email"
+                  formControlName="email" placeholder="Email" />
               </div>
 
               <div class="controls">
                 <label class="dropzone">
                   Drop your CV here
-                  <input type="file" formControlName="file" (change)="detectFiles($event)"
-                    accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  <input type="file" formControlName="file" (change)="detectFiles($event)" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     style="display:none;">
 
                 </label>

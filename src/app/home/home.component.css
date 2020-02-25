@@ -80,18 +80,26 @@ ul>li>a {
   margin-right: -40px;
   margin-bottom: 5px;
 }
-
+  img {
+   
+  transition: opacity 1s;
+  opacity: 0;
+}
+img.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
 .header {
-  background: url("../../assets/contact1.jpg") no-repeat center 25% fixed;
+  /* background: url(../../assets/contact1.jpg) no-repeat center 25% fixed; */
+  background: no-repeat center 25% fixed;
   background-size: auto;
   position: relative;
   width: 100%;
   height: auto;
   background-size: cover;
-
+display: table;
   padding-bottom: 30px;
-  /* padding-top: 30px; */
-  margin-top: -23px;
+   margin-top: -23px;
 }
 
 .banner-img {
@@ -149,7 +157,8 @@ br {
 }
 
 .burner {
-  background: url("../../assets/burner.jpg") no-repeat center center scroll;
+  /* background: url("../../assets/burner.jpg") no-repeat center center scroll; */
+  background: no-repeat center center scroll;
   background-size: auto;
   display: table;
   width: 100%;
@@ -320,4 +329,22 @@ br {
   .thumbnail {
     width: 70% !important;
   }
+}
+
+/* img.ng-lazyloaded { 
+  animation: fadein .5s;
+}
+header.ng-lazyloaded { 
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; } 
+} */
+header.ng-lazyloaded { 
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

@@ -1,20 +1,25 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { LazyLoadScriptService } from "../lazy-load-script.service";
 import { map, filter, take, switchMap } from "rxjs/operators";
 import { ServiceCallsService } from "../service-calls.service";
 import { DomSanitizer } from "@angular/platform-browser";
 import { MetaserviceService } from "../metaservice.service";
 import { Router } from "@angular/router";
+import lozad from 'lozad'
 
 declare var $;
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.css"]
+
 })
 export class HomeComponent implements OnInit {
+
   data: any;
+  siteData: any;
   text: any;
+  scroll$: any;
   constructor(
     private lazyLoadService: LazyLoadScriptService,
     private servicecalls: ServiceCallsService,
@@ -22,9 +27,17 @@ export class HomeComponent implements OnInit {
     private meta: MetaserviceService,
     private router: Router
   ) {
+
     this.getText();
+
   }
+
   ngOnInit() {
+    // const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    // observer.observe();
+    // $("div.header").lazyload({
+    //   effect: "fadeIn"
+    // });
     this.meta.updateMetaInfo(
       "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
       "Energy and Utilities Consultancy",
@@ -43,13 +56,15 @@ export class HomeComponent implements OnInit {
       .subscribe(
         (res: any) => {
           console.log("Res=>", res);
-          this.data = res;
-          // console.log("----", this.data);
-          var textFour = this.data[0].text4;
-          var textDec = decodeURIComponent(textFour);
+          this.data = res[0];
+          // this.siteData = res[0]
+
+          console.log("----", this.data);
+          // var textFour = this.data.text4;
+          let textDec = decodeURIComponent(res[0].text4);
           console.log("Res=>", textDec);
-          this.text = textDec;
-          this.text = this._sanitizer.bypassSecurityTrustHtml(this.text);
+
+          this.text = this._sanitizer.bypassSecurityTrustHtml(textDec);
         },
         error => {
           console.log("error", error);

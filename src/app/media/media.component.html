@@ -1,4 +1,5 @@
-<header class="header d-flex align-items-center d-flex justify-content-center">
+<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.jpeg'"
+  [lazyLoad]="'assets/media.jpg'">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -15,7 +16,7 @@
           <div class="ua-news-img">
             <!-- <a              class="ua-expand-link"              routerLink="['media-expand-one',newslist.heading]"
             >  </a>-->
-            <img class="img1" src="https://www.utility-aid.co.uk/{{ newslist.image }}" />
+            <img class="img1" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'https://www.utility-aid.co.uk/'+newslist.image" />
           </div>
         </div>
 

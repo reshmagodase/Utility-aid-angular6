@@ -7,7 +7,18 @@
   min-height: 584px;
   margin-top: -15px;
 }
-
+.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+img.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
 .caseStudy {
   padding: 70px 30px;
 }
@@ -44,15 +55,15 @@ h3 {
 }
 
 .appreciate1 {
-  background-image: url("../../assets/appreciate-img1.png");
+  /* background-image: url("../../assets/appreciate-img1.png"); */
 }
 
 .appreciate2 {
-  background-image: url("../../assets/analyse-img1.png");
+  /* background-image: url("../../assets/analyse-img1.png"); */
 }
 
 .appreciate3 {
-  background-image: url("../../assets/action-img1.png");
+  /* background-image: url("../../assets/action-img1.png"); */
 }
 
 .appreciate {

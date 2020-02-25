@@ -1,5 +1,6 @@
 .header {
-  background: url(../../assets/whyua.jpg) no-repeat center 25% fixed;
+  /* background: url(../../assets/whyua.jpg) no-repeat center 25% fixed; */
+  background:no-repeat center 25% fixed;
   display: table;
   position: relative;
   width: 100%;
@@ -9,12 +10,23 @@
   padding-bottom: 40px;
   margin-bottom: 8px;
 }
-
+header.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
 .container {
   margin-left: 0px;
   margin-right: 0px;
 }
-
+img {
+   
+  transition: opacity 1s;
+  opacity: 0;
+}
+img.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
 video {
   width: 47%;
   height: auto;
