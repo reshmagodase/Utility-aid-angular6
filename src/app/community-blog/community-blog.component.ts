@@ -42,6 +42,7 @@ export class CommunityBlogComponent implements OnInit {
     );
     this.meta.updateTitle("", this.community.page_content_extended_title);
   }
+
   getblogs(slug) {
     this.servicecalls.postServer("getBlogList", { slug: slug }).subscribe(
       (res: any) => {

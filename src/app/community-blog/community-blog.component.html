@@ -3,7 +3,7 @@
       'background-image':
         'url(https://utility-aid.co.uk/' + community.image1 + ')'
     }">
-    <img [src]="'https://utility-aid.co.uk/' + community.image1" />
+    <img [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'https://utility-aid.co.uk/' + community.image1" />
   </section>
 
   <section class="blog-content" *ngIf="community">
@@ -36,7 +36,8 @@
                     date: articles.publish_date_0 | date: 'yyyy/M/d',
                     slug: articles.slug
                   }
-                ]">{{ articles.page_content_extended_title }}</a>
+                ]">{{
+                articles.page_content_extended_title }}</a>
             </span>
           </div>
         </div>

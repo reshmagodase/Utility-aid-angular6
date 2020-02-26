@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { MetaserviceService } from "../metaservice.service";
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { ServiceCallsService } from '../service-calls.service';
+import { HttpHeaders } from '@angular/common/http';
 @Component({
   selector: "app-request",
   templateUrl: "./request.component.html",
@@ -8,8 +10,11 @@ import { FormGroup, FormBuilder } from "@angular/forms";
 })
 export class RequestComponent implements OnInit {
   requestForm: FormGroup;
+  isSubmitted = false;
+  isSubmittedOne = false;
 
-  constructor(private meta: MetaserviceService, private request: FormBuilder) {}
+
+  constructor(private meta: MetaserviceService, private request: FormBuilder, private service_api: ServiceCallsService) { }
 
   ngOnInit() {
     this.meta.updateMetaInfo(
@@ -23,20 +28,40 @@ export class RequestComponent implements OnInit {
   }
   initForm() {
     this.requestForm = this.request.group({
-      title: [""],
-      fullname: [""],
-      contact: [""],
-      email: [""],
-      audit: [""],
-      companyname: [""],
-      yourposition: [""],
-      supplier: [""],
-      cost: [""],
-      about: [""],
-      message: [""]
+      title: ["", Validators.required],
+      fullName: ["", Validators.required],
+      contact_number: ["", Validators.required],
+      email: ["", [Validators.required, Validators.email]],
+      audit: ["", Validators.required],
+      company_name: ["", Validators.required],
+      position: ["", Validators.required],
+      current_supplier: ["", Validators.required],
+      annual_energy_costs: ["", Validators.required],
+      hearfrom: ["", Validators.required],
+      msg: ["", Validators.required]
     });
   }
   onSubmit() {
-    console.log("form value", this.requestForm.value);
+    this.isSubmitted = true;
+    this.isSubmittedOne = true;
+    if (this.requestForm.valid) {
+      console.log("form value", this.requestForm.value);
+      this.service_api.postServer("sendRequestMail", this.requestForm.value).subscribe((data: any) => {
+        console.log(data);
+        this.requestForm.reset();
+      })
+    } else {
+      console.log("---->", Object.keys(this.requestForm.controls))
+      let lng = Object.keys(this.requestForm.controls)
+      for (let i = 0; i < lng.length; i++) {
+
+        if (this.requestForm.controls[lng[i]].status == 'INVALID') {
+          this.requestForm.controls[lng[i]].markAsDirty();
+        }
+      }
+      // this.requestForm.controls['audit'].markAsDirty();
+    }
+
+
   }
 }

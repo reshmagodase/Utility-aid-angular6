@@ -136,3 +136,17 @@ a:hover {
     overflow-y: auto;
   }
 }
+.danger {
+  color: red;
+  text-align:left;
+  margin:5px;
+  font-family: "vag_roundedregular";
+}
+.ng-lazyloaded {
+  opacity: 1;
+  animation: fadein .5s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -35,8 +35,7 @@
     <div class="modal-content askTable" style="background-color: #F2F2F2;margin: 0 auto">
       <div class="row">
         <div class="col-sm-7">
-          <div
-            style="vertical-align: top; color: black;border-right: 1px solid #e5e5e5;font-size: 14.5px;padding: 20px;">
+          <div style="vertical-align: top; color: black;border-right: 1px solid #e5e5e5;font-size: 14.5px;padding: 20px;">
             <h2 class="modal-title">We offer:</h2>
             <ul class="ua">
               <li>The lowest rates on energy in the UK - guaranteed!</li>
@@ -78,32 +77,41 @@
         <div class="col-md-5">
           <div style="min-width: 350px;padding: 10px 0px" class="text-center">
             <div class="modal-header">
-              <h2 class="modal-title" style="color:#000000">
+              <h2 class="modal-title  " style="color:#000000">
                 How can
                 <span style="color:#3697C2"> we help?</span>
               </h2>
-              <button type="button" class="close" data-dismiss="modal">
+              <button type="button" class="close" (click)="modalClose()">
                 ×
               </button>
             </div>
             <div class="modal-body">
-              <div class="control-group">
+              <div class="control-group " *ngIf="!show">
                 <form [formGroup]="questionForm" (ngSubmit)="onsubmit()">
                   <div class="controls ">
-                    <input class="form-control " formControlName="askname" placeholder="Name" type="text" />
-                    <span id="asknameID"></span>
+                    <input class="form-control " formControlName="name" placeholder="Name" type="text" />
+                    <p class="danger" *ngIf="questionForm.controls.name.invalid && !questionForm.controls.name.pristine">Name
+                      is required.</p>
                   </div>
                   <div class="controls ">
-                    <input class="form-control " formControlName="askphone" placeholder="Phone" type="number" />
+                    <input class="form-control " formControlName="phone" placeholder="Phone" type="number" />
+                    <p class="danger" *ngIf="questionForm.controls.phone.invalid && !questionForm.controls.phone.pristine">Phone
+                      Number is required.</p>
                     <span id="askphoneID"></span>
                   </div>
                   <div class="controls ">
-                    <input class="form-control " formControlName="askemail" placeholder="Email" type="email" />
+                    <input class="form-control " formControlName="email" placeholder="Email" type="email" />
+                    <div *ngIf="questionForm.controls.email.invalid && !questionForm.controls.email.pristine">
+                      <p class="danger" *ngIf="questionForm.controls.email.errors.email">Valid email is required.</p>
+                    </div>
                     <span id="askemailID"></span>
                   </div>
                   <div class="controls ">
-                    <textarea style="height: 150px" class="form-control " cols="25" formControlName="askquestions"
+                    <textarea style="height: 150px" class="form-control " cols="25" formControlName="questions"
                       placeholder="Comments/Questions" rows="10"></textarea>
+                    <p class="danger" *ngIf="questionForm.controls.questions.invalid && !questionForm.controls.questions.pristine">Comments/Questions
+                      are
+                      required.</p>
                     <span id="askquestionsID"></span>
                   </div>
                   <div class="control-group">
@@ -115,7 +123,22 @@
                   </div>
                 </form>
               </div>
+              <div *ngIf="show">
+                <div id="stage " class="mt-4">
+                  <p style="text-align:center;">
+                    <img width="128" height="128" [defaultImage]="'assets/utility-bgblur.jpeg'" [lazyLoad]="'assets/check-icon.png'">
+                  </p>
 
+                  <div style="text-align:center;">
+                    <h1 style="text-align: center;font-family:'vag_roundedregular'">Thank You!</h1>
+
+                    <p style="text-align: center;font-family:'vag_roundedregular'">
+                      We've received your query! Our team will respond as soon
+                      as possible.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>

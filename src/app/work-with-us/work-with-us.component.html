@@ -48,7 +48,7 @@
         <li>The ability to hit and exceed targets</li>
         <li>Ability to build and manage your sales pipeline</li>
       </ul>
-      <a class="btnFindOutMore" (click)="getName('Norwich')" data-toggle="modal" data-target="#myModal2">
+      <a class="btnFindOutMore" (click)="getName('Norwich')">
         Apply Now
       </a>
     </div>
@@ -98,7 +98,7 @@
           <li>The ability to hit and exceed targets</li>
           <li>Ability to build and manage your sales pipeline</li>
         </ul>
-        <a class="btnFindOutMore2" (click)="getName('Glasgow')" data-toggle="modal" data-target="#myModal2">
+        <a class="btnFindOutMore2" (click)="getName('Glasgow')">
           Apply Now
         </a>
       </div>
@@ -119,19 +119,22 @@
               <span style="color:#3697C2">Sales Executive - </span>
               <span>{{name}}</span>
             </h2>
-            <button type="button" class="close" data-dismiss="modal">
+            <button type="button" class="close" (click)="modalClose()">
               ×
             </button>
           </div>
           <div class="modal-body">
             <div class="control-group">
               <div class="controls">
-                <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="name" ng-model="name"
-                  formControlName="name" placeholder="Name" />
+                <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name" />
+                <p class="danger" *ngIf="applyForm.controls.name.invalid && !applyForm.controls.name.pristine">Name
+                  is required.</p>
               </div>
               <div class="controls">
-                <input type="email" class="form-control ng-pristine ng-valid ng-empty ng-touched" id="email" ng-model="email"
-                  formControlName="email" placeholder="Email" />
+                <input type="email" class="form-control" id="cvemail" formControlName="cvemail" placeholder="Email" />
+                <div *ngIf="applyForm.controls.cvemail.invalid && !applyForm.controls.cvemail.pristine">
+                  <p class="danger" *ngIf="applyForm.controls.cvemail.errors.email">Valid email is required.</p>
+                </div>
               </div>
 
               <div class="controls">
@@ -142,6 +145,8 @@
 
                 </label>
                 <div class="output">{{ fileName }} </div>
+                <p class="danger" *ngIf="applyForm.controls.file.invalid && !applyForm.controls.file.pristine">File
+                  is required.</p>
               </div>
 
               <div class="control-group">
