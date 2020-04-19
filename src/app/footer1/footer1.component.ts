@@ -51,9 +51,11 @@ export class Footer1Component implements OnInit {
     }
   }
   modalClose() {
+    
     this.show = false;
-    this.questionForm.reset();
     $("#myModal").modal("hide");
+    this.questionForm.reset();
+    
   }
 
 }
