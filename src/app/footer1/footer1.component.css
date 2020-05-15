@@ -82,6 +82,8 @@ a:hover {
 
 .controls {
   padding: 3px;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 
 .form-control {

@@ -1,6 +1,6 @@
 .header {
-  /* background: url(../../assets/products.jpg) ; */
-  background:no-repeat center 25% fixed;
+  background: url(../../assets/products.jpg) ;
+  /* background:no-repeat center 25% fixed; */
   display: table;
   position: relative;
   width: 100%;
@@ -220,6 +220,11 @@ h3 {
 
 .collapse {
   background-color: #17252a;
+}
+
+.bg {
+  background-color: #17252a !important;
+  margin: 0 !important;
 }
 
 .card-body {

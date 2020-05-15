@@ -17,7 +17,7 @@
     <h3 class="fontBold">
       0808 1788 170
     </h3>
-    <div class="row" *ngIf="contacts">
+    <div class="row" *ngIf="contacts" style="margin: 0;">
       <div class="col-md-4 col-sm-6 contact text-left" *ngFor="let contact of contacts">
         <div class="title">{{ contact.title }}</div>
         <div class="location">{{ contact.location }}</div>
@@ -37,16 +37,16 @@
         <div class="address"><br /></div>
         <div class="number"><br /></div>
         <div class="social">
-          <a routerLink="#">
+          <a href="https://m.facebook.com/ua.domoregood">
             <div class="facebook"  [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
-          <a routerLink="#">
+          <a href="https://mobile.twitter.com/UA_Energy">
             <div class="twitter"  [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
-          <a routerLink="#">
+          <a href="https://www.linkedin.com/company/utility-aid-ltd">
             <div class="linkdin"  [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
-          <a routerLink="#">
+          <a href="https://www.instagram.com/utilityaid/">
             <div class="instagram"  [lazyLoad]="'assets/socialicon.png'"></div>
           </a>
         </div>

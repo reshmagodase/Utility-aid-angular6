@@ -141,6 +141,11 @@ a {
   padding-bottom: 25px;
 }
 
+.social {
+  margin-top: 10px;
+  display: flex;
+}
+
 @media screen and (max-width: 767px) {
   .header {
     background-attachment: scroll !important;
@@ -149,4 +154,15 @@ a {
   .contacts h3 {
     font-size: 40px;
   }
+}
+
+@media (max-width: 768px) {
+.contact .address {
+    font-size: 18.5px;
+}
+.contact .number {
+  font-size: 26.5px;
+}
+
+
 }

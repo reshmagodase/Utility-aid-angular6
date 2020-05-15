@@ -214,7 +214,10 @@ ul>li>a {
   .dashboardView {
     display: none;
   }
-
+  .mobileView {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 
 }
 
