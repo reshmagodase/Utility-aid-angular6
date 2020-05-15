@@ -70,7 +70,7 @@ a.btnFindOutMore {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 a.btnFindOutMore2 {
@@ -104,7 +104,7 @@ a.btnFindOutMore2 {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .heading_text_inner {
@@ -155,6 +155,10 @@ a.btnFindOutMore2 {
   .heading_text {
     font-size: 45px !important;
     margin-left: 10px;
+  }
+
+  a.btnFindOutMore {
+    font-size: 17px;
   }
 }
 

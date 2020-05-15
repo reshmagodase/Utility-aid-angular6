@@ -1,6 +1,6 @@
 .header {
-  /* background: url(../../assets/advisoryboard.jpg)no-repeat center 50% fixed; */
-  background:no-repeat center 50% fixed;
+  background: url("../../assets/advisoryboard.jpg")no-repeat center 50% fixed;
+  /* background:no-repeat center 50% fixed; */
   display: table;
   position: relative;
   width: 100%;
