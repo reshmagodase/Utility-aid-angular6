@@ -1,6 +1,6 @@
 .header {
-  /* background: url(../../assets/faq.jpg) no-repeat center 25% fixed; */
-  background:no-repeat center 25% fixed;
+  background: url(../../assets/faq.jpg) no-repeat center 25% fixed;
+  /* background:no-repeat center 25% fixed; */
   display: table;
   position: relative;
   width: 100%;

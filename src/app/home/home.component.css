@@ -90,8 +90,8 @@ img.ng-lazyloaded {
   animation: fadein .5s;
 }
 .header {
-  /* background: url(../../assets/contact1.jpg) no-repeat center 25% fixed; */
-  background: no-repeat center 25% fixed;
+  background: url(../../assets/contact1.jpg) no-repeat center 25% fixed;
+  /* background: no-repeat center 25% fixed; */
   background-size: auto;
   position: relative;
   width: 100%;

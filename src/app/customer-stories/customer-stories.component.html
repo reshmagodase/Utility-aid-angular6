@@ -1,5 +1,4 @@
-<header class="header d-flex align-items-center d-flex justify-content-center" [defaultImage]="'assets/utility-bgblur.gif'"
-  [lazyLoad]="'assets/customer-stories.jpg'">
+<header class="header d-flex align-items-center d-flex justify-content-center" >
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -18,7 +17,7 @@
       <div class="case-blog col-md-4 col-sm-6" *ngFor="let blog of blogdata">
         <a [routerLink]="['/case-study-blog', blog.slug]">
           <div class="innerblog">
-            <img [defaultImage]="'assets/utility-bgblur.gif'" [lazyLoad]="'https://www.utility-aid.co.uk/'+blog.image1"
+            <img  [lazyLoad]="'https://www.utility-aid.co.uk/'+blog.image1"
               width="260" height="200" />
             <div class="details">
               <h2 class="hedaings">
@@ -48,7 +47,7 @@
       <div class="case-logo col-md-3 col-sm-6" *ngFor="let partner of partnerlist">
         <div class="partners">
           <a href={{partner.link}} target="_blank">
-            <img [defaultImage]="'assets/utility-bgblur.gif'" [lazyLoad]="'https://www.utility-aid.co.uk/'+partner.image1"
+            <img  [lazyLoad]="'https://www.utility-aid.co.uk/'+partner.image1"
               width="200" />
             <br />
             <span class="affinity-round" style="font-family:'vag_roundedregular';">
