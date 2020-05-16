@@ -17,7 +17,7 @@
       <div class="case-blog col-md-4 col-sm-6" *ngFor="let blog of blogdata">
         <a [routerLink]="['/case-study-blog', blog.slug]">
           <div class="innerblog">
-            <img  src="https://www.utility-aid.co.uk/+{{blog.image1}}"
+            <img  src="https://www.utility-aid.co.uk/{{blog.image1}}"
               width="260" height="200" />
             <div class="details">
               <h2 class="hedaings">
@@ -47,7 +47,7 @@
       <div class="case-logo col-md-3 col-sm-6" *ngFor="let partner of partnerlist">
         <div class="partners">
           <a href={{partner.link}} target="_blank">
-            <img  src="https://www.utility-aid.co.uk/+{{partner.image1}}"
+            <img  src="https://www.utility-aid.co.uk/{{partner.image1}}"
               width="200" />
             <br />
             <span class="affinity-round" style="font-family:'vag_roundedregular';">
