@@ -14,7 +14,7 @@
     <br /><br />
 
     <div class="row" *ngIf="blogdata">
-      <div class="case-blog col-md-4 col-sm-6" *ngFor="let blog of blogdata">
+      <div class="case-blog col-md-4 col-sm-12" *ngFor="let blog of blogdata">
         <a [routerLink]="['/case-study-blog', blog.slug]">
           <div class="innerblog">
             <img  src="https://www.utility-aid.co.uk/{{blog.image1}}"

@@ -129,3 +129,10 @@ a.btnFindOutMore:hover {
   border-right: 20px solid transparent;
   border-bottom: 20px solid #3697c2;
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 10px !important;
+    max-width: 100% !important;
+}
+}

@@ -18,8 +18,8 @@
       </div>
     </div>
   </footer>
-  <div class="d-flex justify-content-center">
-    <a class="askButton " data-toggle="modal" data-target="#myModal">
+  <div class="d-flex justify-content-center" style="width: 100%;">
+    <a class="askButton " data-toggle="modal" style="max-width: 100%;" ata-target="#myModal">
       Having billing or broker problems? We can help. Click here
     </a>
   </div>
@@ -35,7 +35,8 @@
     <div class="modal-content askTable" style="background-color: #F2F2F2;margin: 0 auto">
       <div class="row">
         <div class="col-sm-7">
-          <div style="vertical-align: top; color: black;border-right: 1px solid #e5e5e5;font-size: 14.5px;padding: 20px;">
+          <div
+            style="vertical-align: top; color: black;border-right: 1px solid #e5e5e5;font-size: 14.5px;padding: 20px;">
             <h2 class="modal-title">We offer:</h2>
             <ul class="ua">
               <li>The lowest rates on energy in the UK - guaranteed!</li>
@@ -90,12 +91,14 @@
                 <form [formGroup]="questionForm" (ngSubmit)="onsubmit()">
                   <div class="controls ">
                     <input class="form-control " formControlName="name" placeholder="Name" type="text" />
-                    <p class="danger" *ngIf="questionForm.controls.name.invalid && !questionForm.controls.name.pristine">Name
+                    <p class="danger"
+                      *ngIf="questionForm.controls.name.invalid && !questionForm.controls.name.pristine">Name
                       is required.</p>
                   </div>
                   <div class="controls ">
                     <input class="form-control " formControlName="phone" placeholder="Phone" type="number" />
-                    <p class="danger" *ngIf="questionForm.controls.phone.invalid && !questionForm.controls.phone.pristine">Phone
+                    <p class="danger"
+                      *ngIf="questionForm.controls.phone.invalid && !questionForm.controls.phone.pristine">Phone
                       Number is required.</p>
                     <span id="askphoneID"></span>
                   </div>
@@ -109,7 +112,9 @@
                   <div class="controls ">
                     <textarea style="height: 150px" class="form-control " cols="25" formControlName="questions"
                       placeholder="Comments/Questions" rows="10"></textarea>
-                    <p class="danger" *ngIf="questionForm.controls.questions.invalid && !questionForm.controls.questions.pristine">Comments/Questions
+                    <p class="danger"
+                      *ngIf="questionForm.controls.questions.invalid && !questionForm.controls.questions.pristine">
+                      Comments/Questions
                       are
                       required.</p>
                     <span id="askquestionsID"></span>
@@ -126,7 +131,7 @@
               <div *ngIf="show">
                 <div id="stage " class="mt-4">
                   <p style="text-align:center;">
-                    <img width="128" height="128"  [lazyLoad]="'assets/check-icon.png'">
+                    <img width="128" height="128" [lazyLoad]="'assets/check-icon.png'">
                   </p>
 
                   <div style="text-align:center;">
