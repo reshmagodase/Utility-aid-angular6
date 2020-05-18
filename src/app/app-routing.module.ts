@@ -93,7 +93,8 @@ const routes: Routes = [
   {
     path: "engine",
     component: EngineComponent
-  }
+  },
+  { path: '**', redirectTo: "" }
 ];
 
 @NgModule({

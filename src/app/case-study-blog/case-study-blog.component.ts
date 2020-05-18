@@ -33,6 +33,7 @@ export class CaseStudyBlogComponent implements OnInit {
         this.casestudy.image1 = this.casestudy.image1.replace(/ /g, "%20");
         this.casestudy.image2 = this.casestudy.image2.replace(/ /g, "%20");
         this.casestudy.image3 = this.casestudy.image3.replace(/ /g, "%20");
+        console.log('this.casestudy.image1', this.casestudy.image1);
         var author = this.casestudy.banner_title;
         var textDec = decodeURIComponent(author);
         this.bannerTitle = textDec;
