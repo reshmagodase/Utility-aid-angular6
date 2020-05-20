@@ -210,3 +210,12 @@ p {
     margin-left: 85px;
   } */
 }
+
+.image1 {
+  text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    min-height: 584px;
+    margin-top: -15px;
+}

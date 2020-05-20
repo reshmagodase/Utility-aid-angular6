@@ -9,10 +9,10 @@ import { MetaserviceService } from "../metaservice.service";
   styleUrls: ["./case-study-blog.component.css"]
 })
 export class CaseStudyBlogComponent implements OnInit {
-  casestudy: any = [];
+  casestudy: any = {};
   case: any = [];
   bannerTitle: any;
-
+imageTemp:any='';
   constructor(
     private route: ActivatedRoute,
     private servicecalls: ServiceCallsService,
@@ -29,11 +29,12 @@ export class CaseStudyBlogComponent implements OnInit {
     this.servicecalls.postServer("getCaseStudyList", { slug: slug }).subscribe(
       (res: any) => {
         console.log("Res=>", res[0]);
-        this.casestudy = res[0];
-        this.casestudy.image1 = this.casestudy.image1.replace(/ /g, "%20");
+        this.casestudy ={...res[0]};
+        // this.casestudy.image1 = this.casestudy.image1.replace(/ /g, "%20");
         this.casestudy.image2 = this.casestudy.image2.replace(/ /g, "%20");
         this.casestudy.image3 = this.casestudy.image3.replace(/ /g, "%20");
-        console.log('this.casestudy.image1', this.casestudy.image1);
+     this.imageTemp=this.casestudy.image1;
+        console.log('this.casestudy.image1', this.imageTemp);
         var author = this.casestudy.banner_title;
         var textDec = decodeURIComponent(author);
         this.bannerTitle = textDec;

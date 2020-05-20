@@ -191,6 +191,15 @@ ul>li>a {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1024px) {
+  nav {
+    background-color: #17252a;
+
+    padding-bottom: 55px;
+    margin-top: -0;
+  }
+}
+
 /* @media (min-width: 992px) {
   #collapsibleNavbar.collapse {
     display: block;
