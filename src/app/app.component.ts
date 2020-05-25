@@ -48,7 +48,7 @@ export class AppComponent {
       } else {
         window.clearInterval(scrollToTop);
       }
-    }, 16);
+    }, 10);
   }
   onActivate(event) {
     console.log("---->", event);

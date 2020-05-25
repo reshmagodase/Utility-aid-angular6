@@ -50,6 +50,9 @@ export class HomeComponent implements OnInit {
   scroll() {
     this.router.navigate(["/why-ua"], { fragment: "saveMoney" });
   }
+  goTo() {
+    this.router.navigate(["/our-client-say"], { fragment: "case-studies" });
+  }
   getText() {
     this.servicecalls
       .postServer("getProductList", { collection: "home" })

@@ -91,7 +91,7 @@
   <div class="text-vertical-center innerSpan burner-top">
     <span [innerHtml]="text"> </span><br />
     <span class="text-button">
-      <a class="btnFindOutMore fontBold" routerLink="our-client-say" style="cursor:pointer">find out more</a>
+      <a class="btnFindOutMore fontBold" (click)="goTo()" style="cursor:pointer">find out more</a>
     </span>
   </div>
 </section>
