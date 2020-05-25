@@ -83,7 +83,7 @@ ul>li>a {
   img {
    
   transition: opacity 1s;
-  opacity: 0;
+  opacity: 1;
 }
 img.ng-lazyloaded {
   opacity: 1;
@@ -347,4 +347,9 @@ header.ng-lazyloaded {
 @keyframes fadein {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+.thumbnail {
+  background-color: transparent;
+    border: none;
 }

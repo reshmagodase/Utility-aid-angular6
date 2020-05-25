@@ -1,9 +1,6 @@
 <div class="community-blog" *ngIf="community">
-  <section class="blog-header" [ngStyle]="{
-      'background-image':
-        'url(https://utility-aid.co.uk/' + community.image1 + ')'
-    }">
-    <img  [lazyLoad]="'https://utility-aid.co.uk/' + community.image1" />
+  <section class="blog-header">
+    <img  src="https://utility-aid.co.uk/{{community.image1}}" />
   </section>
 
   <section class="blog-content" *ngIf="community">
@@ -31,7 +28,7 @@
           <div class="articles" *ngFor="let articles of Article">
             <span>
               <a class="recent" [routerLink]="[
-                  '/community-blog',
+                  '/blog',
                   {
                     date: articles.publish_date_0 | date: 'yyyy/M/d',
                     slug: articles.slug

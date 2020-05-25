@@ -75,18 +75,18 @@ export class HomeComponent implements OnInit {
   ngAfterContentInit() {
     this.lazyLoadService
       .loadScript(
-        "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
       )
-      .pipe(
-        map(_ => "jQuery is loaded"),
-        filter(jquery => !!jquery),
-        take(1),
-        switchMap(_ =>
-          this.lazyLoadService.loadScript(
-            "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-          )
-        )
-      )
+      // .pipe(
+      //   map(_ => "jQuery is loaded"),
+      //   filter(jquery => !!jquery),
+      //   take(1),
+      //   switchMap(_ =>
+      //     this.lazyLoadService.loadScript(
+      //       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      //     )
+      //   )
+      // )
       .subscribe(_ => {
         $(".slick-container").slick({
           dots: true,

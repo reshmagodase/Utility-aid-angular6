@@ -50,12 +50,13 @@ export class Footer1Component implements OnInit {
       // this.requestForm.controls['audit'].markAsDirty();
     }
   }
-  modalClose() {
+  // modalClose() {
     
-    this.show = false;
-    $("#myModal").modal("hide");
-    this.questionForm.reset();
+  //   this.show = false;
+  //   $("#myModal").modal("hide");
+  //   $("#myModal").removeClass("in");
+  //   this.questionForm.reset();
     
-  }
+  // }
 
 }

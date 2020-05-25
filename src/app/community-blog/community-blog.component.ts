@@ -3,6 +3,7 @@ import { ServiceCallsService } from "../service-calls.service";
 import { RouteConfigLoadEnd, ActivatedRoute } from "@angular/router";
 import { DomSanitizer } from "@angular/platform-browser";
 import { MetaserviceService } from "../metaservice.service";
+declare var $: any;
 @Component({
   selector: "app-community-blog",
   templateUrl: "./community-blog.component.html",
@@ -62,6 +63,9 @@ export class CommunityBlogComponent implements OnInit {
         this.editorChange = this._sanitizer.bypassSecurityTrustHtml(
           this.editorChange
         );
+        $("#editor1")
+        .find("*")
+        .removeAttr("style");
       },
       error => {
         console.log("error", error);

@@ -21,7 +21,7 @@ header.ng-lazyloaded {
 img {
    
   transition: opacity 1s;
-  opacity: 0;
+  opacity: 1;
 }
 img.ng-lazyloaded {
   opacity: 1;

@@ -188,7 +188,18 @@ ul>li>a {
   .dropdown-menu {
     top: 60%;
     left: 10px;
+    right: 0;
+    left: auto;
+    top: 40px;
   }
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: #17252a;
+}
+
+.dropdown-menu.nav>li>a:focus, .dropdown-menu.nav>li>a:hover {
+  background-color: #eee;
 }
 
 @media (min-width: 1024px) and (max-width: 1024px) {

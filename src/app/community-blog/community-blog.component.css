@@ -7,6 +7,18 @@
   height: 70%;
   margin-top: -15px;
   width: 100%;
+  min-height: 598px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+p {
+  -webkit-font-smoothing: antialiased !important;
+    font: 20.5px "vag_roundedregular", sans-serif !important;
+}
+span {
+  -webkit-font-smoothing: antialiased !important;
+    font: 20.5px "vag_roundedregular", sans-serif !important;
 }
 .ng-lazyloaded {
   opacity: 1;

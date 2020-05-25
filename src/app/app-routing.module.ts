@@ -77,7 +77,7 @@ const routes: Routes = [
     path: "case-study-blog/:slug",
     component: CaseStudyBlogComponent
   },
-  { path: "community-blog", component: CommunityBlogComponent },
+  { path: "blog", component: CommunityBlogComponent },
   {
     path: "privacy-policy",
     component: PrivacyPolicyComponent
