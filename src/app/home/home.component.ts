@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     this.meta.updateMetaInfo(
       "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
       "Energy and Utilities Consultancy",
-      "assest/contact.jpg",
+      "assest/contact1.jpg",
       ""
     );
     this.meta.updateTitle("", "Energy and Utilities Consultancy");

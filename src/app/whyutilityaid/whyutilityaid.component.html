@@ -90,10 +90,12 @@
       <div class="row-blog col-md-4 col-sm-6 col-12" *ngFor="let bloginfo of dataBlog">
         <a [routerLink]="[
             '/blog',
-            {
-              date: bloginfo.publish_date_0 | date: 'yyyy/M/d',
-              slug: bloginfo.slug
-            }
+            
+              bloginfo.publish_date_0 | date: 'yyyy',
+              bloginfo.publish_date_0 | date: 'M',
+              bloginfo.publish_date_0 | date: 'd',
+              bloginfo.slug
+            
           ]">
           <div class="innerblog">
             <img  src="https://www.utility-aid.co.uk/{{bloginfo.image1}}"

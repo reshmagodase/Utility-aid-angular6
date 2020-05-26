@@ -36,6 +36,7 @@ import { NgProgressHttpModule } from "@ngx-progressbar/http";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { LazyLoadImageModule, scrollPreset } from 'ng-lazyload-image';
+import { FacebookModule } from 'ngx-facebook';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,8 @@ import { LazyLoadImageModule, scrollPreset } from 'ng-lazyload-image';
     LazyLoadImageModule.forRoot({
       preset: scrollPreset, // <-- tell LazyLoadImage that you want to use scrollPreset
       // finally: ({ element }) => console.log('The image is loaded', element)
-    })
+    }),
+    FacebookModule.forRoot()
   ],
   providers: [
     LazyLoadScriptService,

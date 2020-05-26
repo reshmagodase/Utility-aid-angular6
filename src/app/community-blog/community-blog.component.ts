@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { ServiceCallsService } from "../service-calls.service";
-import { RouteConfigLoadEnd, ActivatedRoute } from "@angular/router";
-import { DomSanitizer } from "@angular/platform-browser";
+import { RouteConfigLoadEnd, ActivatedRoute, Router } from "@angular/router";
+import { DomSanitizer, Meta } from "@angular/platform-browser";
 import { MetaserviceService } from "../metaservice.service";
+import { FacebookService, InitParams, UIParams, UIResponse } from 'ngx-facebook';
+
 declare var $: any;
 @Component({
   selector: "app-community-blog",
@@ -18,13 +20,19 @@ export class CommunityBlogComponent implements OnInit {
   Author: any[];
   Article: any[];
   slug: any;
+  url: any;
   constructor(
     private route: ActivatedRoute,
     private servicecalls: ServiceCallsService,
     protected _sanitizer: DomSanitizer,
-    private meta: MetaserviceService
+    private meta: MetaserviceService,
+    public fb: FacebookService,
+    private router: Router,
+    private meta1: Meta
   ) {
     // this.getBlog();
+    console.log('-----------url',this.router.url);
+    this.url = this.router.url;
     this.route.params.subscribe(params => {
       console.log(new Date(params["date"]));
       this.slug = params["slug"];
@@ -32,16 +40,25 @@ export class CommunityBlogComponent implements OnInit {
       this.getAuthorDetails();
       this.getAuthor();
     });
+
+    
+    let initParams: InitParams = {
+      appId: '1073804676025156',
+      xfbml: true,
+      version: 'v2.8'
+    };
+ 
+    fb.init(initParams);
   }
 
   ngOnInit() {
-    this.meta.updateMetaInfo(
-      "",
-      this.community.page_content_extended_title,
-      "contact.jpg",
-      this.community.slug
-    );
-    this.meta.updateTitle("", this.community.page_content_extended_title);
+    // this.meta.updateMetaInfo(
+    //   "",
+    //   this.community.page_content_extended_title,
+    //   "contact.jpg",
+    //   this.community.slug
+    // );
+    // this.meta.updateTitle("", this.community.page_content_extended_title);
   }
 
   getblogs(slug) {
@@ -49,6 +66,18 @@ export class CommunityBlogComponent implements OnInit {
       (res: any) => {
         console.log("Res=>", res[0]);
         this.community = res[0];
+        var s1 = this.url;
+        var s2 = s1.substr(1);
+        this.meta.updateMetaInfo(
+          this.community.meta_data_meta_description,
+          this.community.title,
+          this.community.image1,
+          s2
+        );
+        this.meta.updateTitle("", this.community.title);
+        this.meta.updateOgUrl(this.url);
+        this.meta.updateDescription(this.community.meta_data_meta_description);
+        this.meta.updateOGtags(this.community.title);
         // debugger;
         //this.imagePath = "https://utility-aid.co.uk/" + this.community.image1;
 
@@ -70,6 +99,67 @@ export class CommunityBlogComponent implements OnInit {
       error => {
         console.log("error", error);
       }
+    );
+  }
+
+  fbShare() {
+    var loc = window.location.href;
+    console.log('loc', loc);
+      var title = "UA | " + this.community.title;
+      var summary = this.community.meta_data_meta_description;
+      var thumbImage = "https://www.utility-aid.co.uk/" + this.community.image1;
+      this.meta1.updateTag({ property: 'og:type', content: 'website' });
+      this.meta1.updateTag({ property: 'og:site_name', content: 'https://www.utility-aid.co.uk/' });
+                this.meta1.updateTag({ property: 'og:title', content: title});
+                this.meta1.updateTag({ property: 'og:description', content: summary});
+                this.meta1.updateTag({ property: 'og:image', content: thumbImage });
+      
+        this.fb.ui({
+          method: 'share_open_graph',
+          action_type: 'og.likes',
+          picture: thumbImage,
+          action_properties: JSON.stringify({
+            object: {
+              'og:title': title,
+              'og:description': summary,
+              'og:image': thumbImage,
+              'og:url': loc,
+            }
+          })
+        })
+        .then((res: UIResponse) => console.log(res))
+        .catch((e: any) => console.error(e));
+     
+      // let params: UIParams = {
+      //   display: 'popup',
+      //   href: loc,
+      //   method: 'feed',
+      //   name: title,
+      //   picture: thumbImage,
+      //   caption: title,
+      //   description: summary,
+      //   message: "",
+      //   redirect_uri: loc
+
+      // };
+     
+      // this.fb.ui(params)
+      //   .then((res: UIResponse) => console.log(res))
+      //   .catch((e: any) => console.error(e));
+  }
+
+  twitterShare() {
+    var loctw = window.location.href;
+      var titletw = this.community.title;
+      console.log('loctw', window.location)
+    window.open(
+      "https://twitter.com/share?url=" + loctw + "&text=" + titletw,
+      "twitterwindow",
+      "height=450, width=550, top=" +
+      ($(window).height() / 2 - 225) +
+      ", left=" +
+      $(window).width() / 2 +
+      ", toolbar=0, location=0, menubar=0, directories=0, scrollbars=0"
     );
   }
 

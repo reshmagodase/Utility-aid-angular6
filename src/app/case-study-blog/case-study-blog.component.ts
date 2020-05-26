@@ -44,10 +44,11 @@ imageTemp:any='';
         this.meta.updateMetaInfo(
           "",
           this.casestudy.title,
-          "contact.jpg",
+          "https://utility-aid.co.uk/"+this.casestudy.image1,
           this.casestudy.slug
         );
         this.meta.updateTitle("", this.casestudy.title);
+        this.meta.updateOgimage("https://utility-aid.co.uk/"+this.casestudy.image1)
       },
       error => {
         console.log("error", error);

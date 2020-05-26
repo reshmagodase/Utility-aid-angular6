@@ -13,10 +13,10 @@
             <div id="editor1" [innerHtml]="editorChange"></div>
 
             <div class="share">
-              <span>Share:</span>
+              <span class="mt-5">Share:</span>
               <div id="share-logo">
-                <a class="share-fb" routerLink="#"> </a>
-                <a class="share-tw" routerLink="#"> </a>
+                <a class="share-fb" style="cursor: pointer;" (click)="fbShare()"> </a>
+                <a class="share-tw" style="cursor: pointer;" (click)="twitterShare()"> </a>
               </div>
             </div>
           </div>

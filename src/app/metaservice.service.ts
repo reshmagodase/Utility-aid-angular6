@@ -11,14 +11,15 @@ export class MetaserviceService {
     this.meta.addTags(
       [
         { name: "description", content: description },
-        { property: "og:title", content: "UA" + "|" + title },
+        { property: "og:title", content: "UA " + " | " + title },
         { property: "og:description", content: description },
         {
           property: "og:image",
-          content: "http://192.168.1.163:4300/" + image
+          content: "https://www.utility-aid.co.uk/" + image
         },
         { property: "og:url", content: "https://www.utility-aid.co.uk/" + url },
         { property: "og:type", content: "website" },
+        { property: "fb:app_id", content: "1073804676025156" },
         { property: "twitter:description", content: description },
         {
           property: "twitter:image",
@@ -37,5 +38,21 @@ export class MetaserviceService {
 
   updateTitle(title?: string, description?: string) {
     this.titleService.setTitle("UA" + " | " + description);
+  }
+
+  updateOGtags(title: string) {
+    this.meta.updateTag({name: 'og:title', content: title})
+  }
+
+  updateDescription(desc: string) {
+    this.meta.updateTag({ name: 'description', content: desc })
+  }
+
+  updateOgUrl(url: string) {
+    this.meta.updateTag({ name: 'og:url', content: url })
+  }
+
+  updateOgimage(url: string) {
+    this.meta.updateTag({ name: 'og:image', content: url })
   }
 }

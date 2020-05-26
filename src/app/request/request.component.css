@@ -186,3 +186,23 @@ textarea {
   display: inline-flex;
   padding-left: 1.25rem;
 }
+
+.text-vertical-center {
+  padding: 20px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: "vag_roundedregular";
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: "vag_roundedregular";
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: "vag_roundedregular";
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-family: "vag_roundedregular";
+}
