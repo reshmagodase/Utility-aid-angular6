@@ -113,20 +113,43 @@ export class CommunityBlogComponent implements OnInit {
     this.meta1.updateTag({ property: 'og:title', content: title });
     this.meta1.updateTag({ property: 'og:description', content: summary });
     this.meta1.updateTag({ property: 'og:image', content: thumbImage });
-    let params: UIParams = {
-      display: 'popup',
-      href: loc,
-      method: 'feed',
-      name: title,
-      picture: thumbImage,
-      caption: title,
-      description: summary,
-      message: "",
-      redirect_uri: loc
+    // let params: UIParams = {
+    //   display: 'popup',
+    //   href: loc,
+    //   method: 'feed',
+    //   name: title,
+    //   picture: thumbImage,
+    //   caption: title,
+    //   description: summary,
+    //   message: "",
+    //   redirect_uri: loc
 
-    };
-    console.log("params",params);
-    
+    // };
+    // console.log("params",params);
+    const params: UIParams = {
+      method: 'share_open_graph',
+      action_type: 'og.shares',
+      action_properties: JSON.stringify({
+        object: {
+          'or:display': 'popup',
+          'or:href': loc,
+          "or:method": 'feed',
+          "or:name": title,
+          "or:picture": thumbImage,
+          "or:caption": title,
+          "or:description": summary,
+          "or:message": "",
+          "or:redirect_uri": loc,
+          // 'og:url': url,
+          // 'og:title': 'OG Title',
+          // 'og:description': 'OG Description',
+          // 'og:image': url + '/assets/share/share_base.jpg',
+          // 'og:image:width': '1200',
+          // 'og:image:height': '630',
+          // 'og:image:type': 'image/jpeg'
+        }
+      })
+    }
     setTimeout(() => {
 
 
@@ -134,6 +157,8 @@ export class CommunityBlogComponent implements OnInit {
         .then((res: UIResponse) => console.log(res))
         .catch((e: any) => console.error(e));
     }, 100);
+
+
 
   }
 
