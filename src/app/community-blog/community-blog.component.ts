@@ -131,22 +131,22 @@ export class CommunityBlogComponent implements OnInit {
       action_type: 'og.shares',
       action_properties: JSON.stringify({
         object: {
-          'or:display': 'popup',
-          'or:href': loc,
-          "or:method": 'feed',
-          "or:name": title,
-          "or:picture": thumbImage,
-          "or:caption": title,
-          "or:description": summary,
-          "or:message": "",
-          "or:redirect_uri": loc,
-          // 'og:url': url,
-          // 'og:title': 'OG Title',
+          'og:display': 'popup',
+          'og:href': loc,
+          "og:method": 'feed',
+          "og:name": title,
+          // "og:picture": thumbImage,
+          "og:caption": title,
+          "og:description": summary,
+          "og:message": "",
+          "og:redirect_uri": loc,
+          'og:url': loc,
+          'og:title': title,
           // 'og:description': 'OG Description',
-          // 'og:image': url + '/assets/share/share_base.jpg',
-          // 'og:image:width': '1200',
-          // 'og:image:height': '630',
-          // 'og:image:type': 'image/jpeg'
+          'og:image': thumbImage,
+          'og:image:width': '1200',
+          'og:image:height': '630',
+          'og:image:type': 'image/jpeg'
         }
       })
     }
