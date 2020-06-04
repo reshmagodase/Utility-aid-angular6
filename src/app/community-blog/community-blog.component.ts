@@ -31,7 +31,7 @@ export class CommunityBlogComponent implements OnInit {
     private meta1: Meta
   ) {
     // this.getBlog();
-    console.log('-----------url',this.router.url);
+    console.log('-----------url', this.router.url);
     this.url = this.router.url;
     this.route.params.subscribe(params => {
       console.log(new Date(params["date"]));
@@ -41,13 +41,13 @@ export class CommunityBlogComponent implements OnInit {
       this.getAuthor();
     });
 
-    
+
     let initParams: InitParams = {
       appId: '1073804676025156',
       xfbml: true,
       version: 'v2.8'
     };
- 
+
     fb.init(initParams);
   }
 
@@ -93,8 +93,8 @@ export class CommunityBlogComponent implements OnInit {
           this.editorChange
         );
         $("#editor1")
-        .find("*")
-        .removeAttr("style");
+          .find("*")
+          .removeAttr("style");
       },
       error => {
         console.log("error", error);
@@ -105,53 +105,42 @@ export class CommunityBlogComponent implements OnInit {
   fbShare() {
     var loc = window.location.href;
     console.log('loc', loc);
-      var title = "UA | " + this.community.title;
-      var summary = this.community.meta_data_meta_description;
-      var thumbImage = "https://www.utility-aid.co.uk/" + this.community.image1;
-      this.meta1.updateTag({ property: 'og:type', content: 'website' });
-      this.meta1.updateTag({ property: 'og:site_name', content: 'https://www.utility-aid.co.uk/' });
-                this.meta1.updateTag({ property: 'og:title', content: title});
-                this.meta1.updateTag({ property: 'og:description', content: summary});
-                this.meta1.updateTag({ property: 'og:image', content: thumbImage });
-      
-        this.fb.ui({
-          method: 'share_open_graph',
-          action_type: 'og.likes',
-          picture: thumbImage,
-          action_properties: JSON.stringify({
-            object: {
-              'og:title': title,
-              'og:description': summary,
-              'og:image': thumbImage,
-              'og:url': loc,
-            }
-          })
-        })
+    var title = "UA | " + this.community.title;
+    var summary = this.community.meta_data_meta_description;
+    var thumbImage = "https://www.utility-aid.co.uk/" + this.community.image1;
+    this.meta1.updateTag({ property: 'og:type', content: 'website' });
+    this.meta1.updateTag({ property: 'og:site_name', content: 'https://www.utility-aid.co.uk/' });
+    this.meta1.updateTag({ property: 'og:title', content: title });
+    this.meta1.updateTag({ property: 'og:description', content: summary });
+    this.meta1.updateTag({ property: 'og:image', content: thumbImage });
+    let params: UIParams = {
+      display: 'popup',
+      href: loc,
+      method: 'feed',
+      name: title,
+      picture: thumbImage,
+      caption: title,
+      description: summary,
+      message: "",
+      redirect_uri: loc
+
+    };
+    console.log("params",params);
+    
+    setTimeout(() => {
+
+
+      this.fb.ui(params)
         .then((res: UIResponse) => console.log(res))
         .catch((e: any) => console.error(e));
-     
-      // let params: UIParams = {
-      //   display: 'popup',
-      //   href: loc,
-      //   method: 'feed',
-      //   name: title,
-      //   picture: thumbImage,
-      //   caption: title,
-      //   description: summary,
-      //   message: "",
-      //   redirect_uri: loc
+    }, 100);
 
-      // };
-     
-      // this.fb.ui(params)
-      //   .then((res: UIResponse) => console.log(res))
-      //   .catch((e: any) => console.error(e));
   }
 
   twitterShare() {
     var loctw = window.location.href;
-      var titletw = this.community.title;
-      console.log('loctw', window.location)
+    var titletw = this.community.title;
+    console.log('loctw', window.location)
     window.open(
       "https://twitter.com/share?url=" + loctw + "&text=" + titletw,
       "twitterwindow",
