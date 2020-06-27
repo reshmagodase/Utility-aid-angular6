@@ -67,9 +67,10 @@ a {
   margin-top: 28px;
   margin-bottom: -20px;
   margin-left: 95px;
+  z-index: 99;
   /* padding-right: -40px;  */
   padding-top: 2px;
-  position: absolute;
+  /* position: absolute; */
   right: 0;
 }
 
@@ -160,13 +161,13 @@ ul>li>a {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar-right {
-    float: left !important;
+    float: right !important;
     margin-top: 60px;
     margin-bottom: -20px;
     margin-left: 5px;
 
     padding-top: 8px;
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     line-height: 2;
   }
@@ -199,14 +200,16 @@ ul>li>a {
     margin-top: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
+  }
 }
 
-.nav>li>a:focus, .nav>li>a:hover {
+.nav>li>a:focus,
+.nav>li>a:hover {
   background-color: #17252a;
 }
 
-.dropdown-menu.nav>li>a:focus, .dropdown-menu.nav>li>a:hover {
+.dropdown-menu.nav>li>a:focus,
+.dropdown-menu.nav>li>a:hover {
   background-color: #eee;
 }
 
@@ -242,6 +245,7 @@ ul>li>a {
   .dashboardView {
     display: none;
   }
+
   .mobileView {
     margin-right: -15px;
     margin-left: -15px;
@@ -250,7 +254,7 @@ ul>li>a {
   .navbar-brand img {
     margin-top: 8px !important;
     height: 40px !important;
-    
+
   }
 
   .navbar-brand {
@@ -272,13 +276,13 @@ ul>li>a {
 
 @media (min-width: 800px) and (max-width: 1280px) {
   .navbar-right {
-    float: left !important;
+    float: right !important;
     margin-top: 0px;
     margin-bottom: -20px;
     margin-left: 5px;
 
     /* padding-top: 30px; */
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     line-height: 2.3;
   }
@@ -301,13 +305,13 @@ ul>li>a {
   }
 
   .navbar-right {
-    float: left !important;
+    float: right !important;
 
     margin-bottom: -20px;
     margin-left: 5px;
 
     /* padding-top: 30px; */
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     line-height: 1.5;
   }
@@ -320,7 +324,7 @@ ul>li>a {
     margin-left: 5px;
 
     padding-top: 40px;
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     line-height: 1.5;
   }
