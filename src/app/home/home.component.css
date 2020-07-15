@@ -132,6 +132,7 @@ video {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 23.5px;
+  line-height: 1.5;
 }
 
 br {
@@ -352,4 +353,11 @@ header.ng-lazyloaded {
 .thumbnail {
   background-color: transparent;
     border: none;
+}
+@media screen and(max-width: 768px){
+
+.subheading {
+    font-size: 19.5px;
+}
+  
 }
