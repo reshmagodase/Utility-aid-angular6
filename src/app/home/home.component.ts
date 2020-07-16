@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { Component, OnInit, ChangeDetectionStrategy, ViewChild, ElementRef, Renderer2 } from "@angular/core";
 import { LazyLoadScriptService } from "../lazy-load-script.service";
 import { map, filter, take, switchMap } from "rxjs/operators";
 import { ServiceCallsService } from "../service-calls.service";
@@ -6,16 +6,29 @@ import { DomSanitizer } from "@angular/platform-browser";
 import { MetaserviceService } from "../metaservice.service";
 import { Router } from "@angular/router";
 import lozad from 'lozad'
+import { trigger, transition, style, animate, state } from '@angular/animations';
 
 declare var $;
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  styleUrls: ["./home.component.css"],
+  animations: [
+    trigger('animationOption2', [
+      transition(':enter', [
+        style({ opacity: '0' }),
+        animate(500)
+      ]),
+      // transition(':leave', [
+      //   animate(300, style({ backgroundColor: 'yellow' }))
+      // ]),
+      state('*', style({ opacity: 1 })),
+    ])
+  ]
 
 })
 export class HomeComponent implements OnInit {
-
+  @ViewChild('header') header: ElementRef
   data: any;
   siteData: any;
   text: any;
@@ -25,19 +38,16 @@ export class HomeComponent implements OnInit {
     private servicecalls: ServiceCallsService,
     protected _sanitizer: DomSanitizer,
     private meta: MetaserviceService,
-    private router: Router
+    private router: Router,
+    private renderer: Renderer2
   ) {
-
     this.getText();
+  }
 
+  ngAfterViewInit() {
   }
 
   ngOnInit() {
-    // const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-    // observer.observe();
-    // $("div.header").lazyload({
-    //   effect: "fadeIn"
-    // });
     this.meta.updateMetaInfo(
       "We're inspired by the organisations and people we work with. We want to help save them time and money when they source and purchase their energy.",
       "Energy and Utilities Consultancy",
@@ -50,27 +60,21 @@ export class HomeComponent implements OnInit {
   scroll() {
     this.router.navigate(["/why-ua"], { fragment: "saveMoney" });
   }
+
   goTo() {
     this.router.navigate(["/our-client-say"], { fragment: "case-studies" });
   }
+
   getText() {
     this.servicecalls
       .postServer("getProductList", { collection: "home" })
       .subscribe(
         (res: any) => {
-          console.log("Res=>", res);
           this.data = res[0];
-          // this.siteData = res[0]
-
-          console.log("----", this.data);
-          // var textFour = this.data.text4;
           let textDec = decodeURIComponent(res[0].text4);
-          console.log("Res=>", textDec);
-
           this.text = this._sanitizer.bypassSecurityTrustHtml(textDec);
         },
         error => {
-          console.log("error", error);
         }
       );
   }
@@ -80,16 +84,6 @@ export class HomeComponent implements OnInit {
       .loadScript(
         "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
       )
-      // .pipe(
-      //   map(_ => "jQuery is loaded"),
-      //   filter(jquery => !!jquery),
-      //   take(1),
-      //   switchMap(_ =>
-      //     this.lazyLoadService.loadScript(
-      //       "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      //     )
-      //   )
-      // )
       .subscribe(_ => {
         $(".slick-container").slick({
           dots: true,

@@ -1,0 +1,56 @@
+.loader-13:before,
+.loader-13:after,
+.loader-13 {
+    border-radius: 50%;
+    animation-fill-mode: both;
+    animation: loader-13 1.8s infinite ease-in-out;
+}
+
+[class*="loader-"] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    color: inherit;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+.loader-13 {
+    color: #499ba2;
+    position: relative;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+    top: -1em;
+}
+
+.loader-13:before {
+    right: 100%;
+    animation-delay: -0.32s;
+}
+
+.loader-13:after {
+    left: 100%;
+}
+
+.loader-13:before,
+.loader-13:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+}
+
+@keyframes loader-13 {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 1em 0 -1em;
+    }
+
+    40% {
+        box-shadow: 0 1em 0 -.2em;
+    }
+}

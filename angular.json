@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "utilityaid"
+  "defaultProject": "utilityaid",
+  "cli": {
+    "analytics": false
+  }
 }

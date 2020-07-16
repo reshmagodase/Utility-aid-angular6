@@ -1,25 +1,25 @@
 <!-- ///////////////////////////      second part    /////////////////////////// -->
-
-<header class="home header ng-scope d-flex align-items-center d-flex justify-content-center">
+<ng-template #placeholder>
+  <div style="height: 68px;"></div>
+</ng-template>
+<header #header class="home post-header-enhanced ng-scope d-flex align-items-center d-flex justify-content-center">
   <div class="container">
     <div class="text-vertical-center text-center">
-      <h1 class="heading_text" style="margin-top:0;padding-top:0">
+      <h1 class="heading_text anim" style="margin-top:0;padding-top:0">
         <span class="fontBold">
 
           Welcome to Utility Aid
         </span>
-        <p id="text1" class="heading_text_inner">
+        <p id="text1" [@animationOption2] *ngIf="data;else placeholder" class="heading_text_inner">
 
           {{ data?.text1 }}
 
 
         </p>
       </h1>
-      <h2>
-        <!-- <img [defaultImage]="defaultImage" [lazyLoad]="image"> -->
-        <video id="videoplayer" poster="assets/videoimg.jpg" src="assets/videos/RA504_Utility_Aid_MASTER_Compressed.mp4"
-          controls="" loop=""></video>
-
+      <h2 class="anim">
+        <video id="videoplayer" preload="none" poster="assets/videoimg.jpg"
+          src="assets/videos/RA504_Utility_Aid_MASTER_Compressed.mp4" controls="" loop=""></video>
       </h2>
     </div>
   </div>
@@ -27,35 +27,31 @@
 
 <!--       ///////////////////////   third part ///////////////////////// -->
 
-<div class="ng-scope">
-  <div class="banner-img">
-
-  </div>
-
-  <!-- //////////////////////   slider           /////////////////////// -->
-  <section class="home ng-scope" style="background-color: #17252a">
+<div class="ng-scope anim" style="overflow: hidden;">
+  <div class="banner-img"></div>
+  <section class="home ng-scope anim" style="background-color: #17252a">
     <div class="container-fluid ab" style="padding:20px">
       <div class="text-center" style="margin-top:10px;font-size:23.5px;font-family: 'vag_roundedregular';">
-        <h2 id="text2" class="subheading mb-1">
+        <h2 id="text2" *ngIf="data;else svg" class="subheading mb-1 anim">
           {{ data?.text2 }}
 
         </h2>
         <div class="slick-container">
 
-          <img class="thumbnail" src="assets/1.png" />
-          <img class="thumbnail" src="assets/2.png" />
-          <img class="thumbnail" src="assets/3.png" />
-          <img class="thumbnail" src="assets/4.png" />
-          <img class="thumbnail" src="assets/5.png" />
-          <img class="thumbnail" src="assets/6.png" />
-          <img class="thumbnail" src="assets/7.png" />
-          <img class="thumbnail" src="assets/8.png" />
-          <img class="thumbnail" src="assets/9.png" />
-          <img class="thumbnail" src="assets/10.png" />
-          <img class="thumbnail" src="assets/11.png" />
-          <img class="thumbnail" src="assets/12.png" />
-          <img class="thumbnail" src="assets/13.png" />
-          <img class="thumbnail" src="assets/14.png" />
+          <img class="thumbnail" [src]="'assets/1.png'" />
+          <img class="thumbnail" [src]="'assets/2.png'" />
+          <img class="thumbnail" [src]="'assets/3.png'" />
+          <img class="thumbnail" [src]="'assets/4.png'" />
+          <img class="thumbnail" [src]="'assets/5.png'" />
+          <img class="thumbnail" [src]="'assets/6.png'" />
+          <img class="thumbnail" [src]="'assets/7.png'" />
+          <img class="thumbnail" [src]="'assets/8.png'" />
+          <img class="thumbnail" [src]="'assets/9.png'" />
+          <img class="thumbnail" [src]="'assets/10.png'" />
+          <img class="thumbnail" [src]="'assets/11.png'" />
+          <img class="thumbnail" [src]="'assets/12.png'" />
+          <img class="thumbnail" [src]="'assets/13.png'" />
+          <img class="thumbnail" [src]="'assets/14.png'" />
 
         </div>
 
@@ -65,8 +61,33 @@
   </section>
 </div>
 <!-- //////////////////// slider ends ////////////////////////////// -->
-
-<section class="home darkblue ng-scope" style="background-color:#3697c2">
+<ng-template #svg>
+  <div>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+      <rect fill="#fff" width="3" height="100" transform="translate(0) rotate(180 3 50)">
+        <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" />
+      </rect>
+      <rect x="17" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 20 50)">
+        <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+          begin="0.1s" />
+      </rect>
+      <rect x="40" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 40 50)">
+        <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+          begin="0.3s" />
+      </rect>
+      <rect x="60" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 58 50)">
+        <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+          begin="0.5s" />
+      </rect>
+      <rect x="80" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 76 50)">
+        <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+          begin="0.1s" />
+      </rect>
+    </svg>
+  </div>
+</ng-template>
+<section class="home darkblue ng-scope anim" style="background-color:#3697c2">
   <div class="container-fluid" style="padding-bottom: 75px;">
     <div class="text-center">
       <h2 class="heading_text">
@@ -74,7 +95,7 @@
         <span class="fontBold">= £££ saved</span>
 
         <br /><br />
-        <p id="text3" class="subheading">
+        <p id="text3" *ngIf="data;else svg" class="subheading anim">
           {{ data?.text3 }}
         </p>
       </h2>
@@ -87,7 +108,7 @@
 
 <!--   //////////////////////////////   blue part/    //////////////////// -->
 
-<section class="home burner lightblue ng-scope" [lazyLoad]="'assets/burner.jpg'">
+<section class="home burner lightblue ng-scope anim">
   <div class="text-vertical-center innerSpan burner-top">
     <span [innerHtml]="text"> </span><br />
     <span class="text-button">
@@ -120,3 +141,9 @@
     </div>
   </div>
 </section>
+
+<div class="d-flex justify-content-center" style="width: 100%;">
+  <a class="askButton popBtm " data-toggle="modal" style="max-width: 98vw;" data-target="#myModal">
+    Having billing or broker problems? We can help. Click here
+  </a>
+</div>

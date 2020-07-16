@@ -40,7 +40,7 @@ export class WhyutilityaidComponent implements OnInit {
     this.meta.updateMetaInfo(
       "We primarily work in the Not-for-Profit sector. So, suppliers give us the lowest prices in the UK - guaranteed.",
       "Why UA?",
-      "assets/whyua.jpg",
+      "assets/whyua-1.jpg",
       "why-ua"
     );
     this.meta.updateTitle("", "Why UA?");
@@ -48,7 +48,7 @@ export class WhyutilityaidComponent implements OnInit {
   ngAfterViewInit(): void {
     try {
       document.querySelector("#" + this.fragment).scrollIntoView();
-    } catch (e) {}
+    } catch (e) { }
   }
   getText2() {
     this.servicecalls

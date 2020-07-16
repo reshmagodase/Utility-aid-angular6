@@ -15,13 +15,13 @@ import { IFrameComponent, iframeResizer } from "iframe-resizer";
   templateUrl: "./engine.component.html",
   styleUrls: ["./engine.component.css"]
 })
-@Directive({
-  selector: "[appIframeResizer]"
-})
+// @Directive({
+//   selector: "[appIframeResizer]"
+// })
 export class EngineComponent implements OnInit, AfterViewInit, OnDestroy {
   component: IFrameComponent;
   element: IFrameComponent;
-  constructor(private meta: MetaserviceService) {}
+  constructor(private meta: MetaserviceService) { }
   ngOnInit() {
     this.meta.updateTitle("", "Energy Switching");
   }

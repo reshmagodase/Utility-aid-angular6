@@ -1,94 +1,69 @@
-<header class="whyua header d-flex align-items-center d-flex justify-content-center" [lazyLoad]="'assets/whyua.jpg'">
-  <div class="container">
-    <div class="text-vertical-center text-center">
-      <h1 class="heading_text" style="margin-top:100px;">
-        <span class="fonBold">
-          why Utility Aid?
-        </span>
-      </h1>
+<div style="overflow: hidden;">
+  <header class="whyua header d-flex align-items-center d-flex justify-content-center anim">
+    <div class="container">
+      <div class="text-vertical-center text-center">
+        <h1 class="heading_text" style="margin-top:100px;">
+          <span class="fonBold">
+            why Utility Aid?
+          </span>
+        </h1>
 
-      <h2>
-        <video id="videowhyua" poster="assets/videoimg1.jpg" src="assets/videos/RA504_Utility_Aid_VOL_MASTER_small.mp4"
-          width="300" height="200" controls loop></video>
-      </h2>
+        <h2>
+          <video id="videowhyua" poster="assets/videoimg1.jpg"
+            src="assets/videos/RA504_Utility_Aid_VOL_MASTER_small.mp4" preload="none" width="300" height="200" controls
+            loop></video>
+        </h2>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
 
-<section #saveMoney id="saveMoney" class="save ng-scope" style="background-color:#17252a" *ngIf="text">
-  <div class="container-fluid" style="max-width:1100px">
-    <div class="text_center">
-      <h2 id="save_text" class="fontRegular innerSpan">
-        <span [innerHtml]="text"> </span>
-      </h2>
-      <!-- <h2 id="save_text" class="fontRegular">
-        For more reasons than you'd think
-        <br />
-        <br />
-        * We primarily work in the Not-for-Profit sector. So, suppliers give us
-        the lowest prices in the UK - guaranteed
-        <br />
-        * We are the only broker in the UK that deals with 27 suppliers - most
-        brokers only work with a handful
-        <br />
-        * Free Invoice Validation to customers signed up to our 'Simple' product
-        <br />
-        * Your own portal to view your consumption data and historical bills
-        <br />
-        * Our own OJEU Procurement Framework
-        <br />
-        * The UK's only National Broker - having six offices across the country
-        <br />
-        * The only Broker in the UK with an Advisory Panel - free to help
-        clients understand key issues
-
+  <section #saveMoney id="saveMoney" class="save ng-scope anim" style="background-color:#17252a;">
+    <div class="container-fluid" style="max-width:1100px;">
+      <div class="text_center">
+        <h2 id="save_text" class="fontRegular innerSpan">
+          <span [innerHtml]="text"> </span>
+        </h2>
         <br />
         <br />
         <br />
-        <br />
-        The process of saving your money starts with 3 simple steps:
-      </h2> -->
-      <br />
-      <br />
-      <br />
-      <div>
-        <img  src="assets/gather.png" />
-        <h3>Gather Data</h3>
-        <p id="text5" class="innerSpan">
-          <span [innerHtml]="text1"> </span>
-        </p>
+        <div>
+          <img src="assets/gather.png" />
+          <h3>Gather Data</h3>
+          <p id="text5" class="innerSpan">
+            <span [innerHtml]="text1"> </span>
+          </p>
+        </div>
+        <br /><br /><br />
+        <div>
+          <img src="assets/provide.png" />
+          <h3>Provide Check</h3>
+          <p id="text5" class="innerSpan">
+            <span [innerHtml]="text2"> </span>
+          </p>
+        </div>
+        <br /><br /><br />
+        <div>
+          <img src="assets/relax.png" />
+          <h3>Sign and Relax</h3>
+          <p id="text5" class="innerSpan">
+            <span [innerHtml]="text3"> </span>
+          </p>
+        </div>
+        <br /><br /><br />
       </div>
-      <br /><br /><br />
-      <div>
-        <img  src="assets/provide.png" />
-        <h3>Provide Check</h3>
-        <p id="text5" class="innerSpan">
-          <span [innerHtml]="text2"> </span>
-        </p>
-      </div>
-      <br /><br /><br />
-      <div>
-        <img  src="assets/relax.png" />
-        <h3>Sign and Relax</h3>
-        <p id="text5" class="innerSpan">
-          <span [innerHtml]="text3"> </span>
-        </p>
-      </div>
-      <br /><br /><br />
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="blogs" class="blogs">
-  <div class="text-center ">
-    <h2 class="heading_text_inner fontBold ">Utility Aid in the Community</h2>
-    <br />
-    <br />
+  <section id="blogs" class="blogs anim">
+    <div class="text-center ">
+      <h2 class="heading_text_inner fontBold ">Utility Aid in the Community</h2>
+      <br />
+      <br />
 
-    <div class="row" *ngIf="dataBlog">
-      <div class="row-blog col-md-4 col-sm-6 col-12" *ngFor="let bloginfo of dataBlog">
-        <a [routerLink]="[
+      <div class="row" *ngIf="dataBlog">
+        <div class="row-blog col-md-4 col-sm-6 col-12" *ngFor="let bloginfo of dataBlog">
+          <a [routerLink]="[
             '/blog',
             
               bloginfo.publish_date_0 | date: 'yyyy',
@@ -97,21 +72,20 @@
               bloginfo.slug
             
           ]">
-          <div class="innerblog">
-            <img  src="https://www.utility-aid.co.uk/{{bloginfo.image1}}"
-              width="260" height="200" />
-            <div class="details">
-              <h2 class="hedaings">
-                {{ bloginfo.title }}
-              </h2>
-              <p class="four-lines">
-                {{ bloginfo.page_content_excerpt }}
-              </p>
+            <div class="innerblog">
+              <img src="https://www.utility-aid.co.uk/{{bloginfo.image1}}" width="260" height="200" />
+              <div class="details">
+                <h2 class="hedaings">
+                  {{ bloginfo.title }}
+                </h2>
+                <p class="four-lines">
+                  {{ bloginfo.page_content_excerpt }}
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- ///////////////////////////////////////////////////////// -->
-  </div>
-</section>
+  </section>
+</div>

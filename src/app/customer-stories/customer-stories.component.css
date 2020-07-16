@@ -1,25 +1,34 @@
 .header {
-  background: url(../../assets/customer-stories.jpg) no-repeat center 25% fixed;
+
   display: table;
   position: relative;
   width: 100%;
-  height: 70vh;
-  background-size: cover;
-  margin-top: -22px;
+  height: 71vh;
+  object-fit: cover;
+  margin-top: 0px;
 
 }
+
 header.ng-lazyloaded {
   opacity: 1;
   animation: fadein .5s;
 }
+
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
+
 img.ng-lazyloaded {
   opacity: 1;
   animation: fadein .5s;
 }
+
 .blogs {
   background-color: #e4dcc1;
   border-bottom: 1px solid darkkhaki;
