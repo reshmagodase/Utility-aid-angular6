@@ -33,7 +33,7 @@ img.ng-lazyloaded {
 }
 
 video {
-  width: 47%;
+  width: 45%;
   height: auto;
   border: 2px solid #000;
   border-radius: 10px;
@@ -228,4 +228,11 @@ a {
   .row-blog {
     max-width: 33%;
   }
+}
+@media only screen and (max-device-width: 768px) and (min-device-width: 601px)
+{
+video {
+    width: 70%;
+    height: auto;
+}
 }
