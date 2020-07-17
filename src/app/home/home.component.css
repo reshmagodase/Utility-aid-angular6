@@ -13,7 +13,7 @@ nav {
   color: white;
 
   margin-bottom: 30px;
-  margin-top: -45px !important;
+  /* margin-top: -45px !important; */
 
   padding-bottom: -26px;
 
@@ -152,7 +152,7 @@ h2>video {
 }
 
 video {
-  width: 45%;
+  width: 50%;
   /* height: 100%; */
   height: auto;
   border: 2px solid #000;
@@ -410,10 +410,10 @@ svg {
     transform: translateY(0%);
   }
 }
-@media only screen and (max-device-width: 768px) and (min-device-width: 601px)
-{
-video {
+
+@media only screen and (max-device-width: 768px) and (min-device-width: 601px) {
+  video {
     width: 70%;
     height: auto;
-}
+  }
 }
