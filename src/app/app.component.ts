@@ -51,7 +51,6 @@ export class AppComponent {
     }, 10);
   }
   onActivate(event) {
-    console.log("---->", event);
     window.scroll(0, 0);
   }
   checkBrowser() {

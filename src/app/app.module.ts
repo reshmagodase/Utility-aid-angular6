@@ -37,6 +37,10 @@ import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { LazyLoadImageModule, scrollPreset } from 'ng-lazyload-image';
 import { FacebookModule } from 'ngx-facebook';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderDirective } from './loader.directive';
+import { SmallLoaderComponent } from './small-loader/small-loader.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +63,9 @@ import { FacebookModule } from 'ngx-facebook';
     EnviromentalPolicyComponent,
     BriberyActComponent,
     EngineComponent,
-    ScreenLoaderComponent
+    ScreenLoaderComponent,
+    LoaderDirective,
+    SmallLoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +74,7 @@ import { FacebookModule } from 'ngx-facebook';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     NgProgressModule.withConfig({
       spinnerPosition: "left",
       color: "#3697c2"
@@ -91,6 +98,6 @@ import { FacebookModule } from 'ngx-facebook';
     }
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

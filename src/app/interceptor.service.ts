@@ -24,7 +24,7 @@ export class InterceptorService implements HttpInterceptor {
     private router: Router,
 
     private Loaderservice: LoaderService
-  ) {}
+  ) { }
 
   retryObj: any;
 
@@ -74,6 +74,6 @@ export const genericRetryStrategy = ({
       }
       return timer(retryAttempt * scalingDuration);
     }),
-    finalize(() => {})
+    finalize(() => { })
   );
 };

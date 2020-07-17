@@ -1,5 +1,4 @@
-<header class="header d-flex align-items-center d-flex justify-content-center" 
-  [lazyLoad]="'assets/workwithus.jpg'">
+<header class="header d-flex align-items-center d-flex justify-content-center">
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
@@ -140,7 +139,8 @@
               <div class="controls">
                 <label class="dropzone">
                   Drop your CV here
-                  <input type="file" formControlName="file" (change)="detectFiles($event)" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  <input type="file" formControlName="file" (change)="detectFiles($event)"
+                    accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     style="display:none;">
 
                 </label>
