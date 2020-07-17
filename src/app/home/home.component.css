@@ -13,7 +13,7 @@ nav {
   color: white;
 
   margin-bottom: 30px;
-  margin-top: -45px !important;
+  /* margin-top: -45px !important; */
 
   padding-bottom: -26px;
 
@@ -108,7 +108,7 @@ padding-bottom:40px;
     display: table;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-size: cover;
     margin-top: 0px;
 }
@@ -152,7 +152,7 @@ h2>video {
 }
 
 video {
-  width: 45%;
+  width: 50%;
   /* height: 100%; */
   height: auto;
   border: 2px solid #000;
