@@ -18,6 +18,8 @@ import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.componen
 import { EnviromentalPolicyComponent } from "./enviromental-policy/enviromental-policy.component";
 import { BriberyActComponent } from "./bribery-act/bribery-act.component";
 import { EngineComponent } from "./engine/engine.component";
+import { LoaUploadComponent } from './loa-upload/loa-upload.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 const routes: Routes = [
   {
     path: "",
@@ -93,6 +95,14 @@ const routes: Routes = [
   {
     path: "engine",
     component: EngineComponent
+  },
+  {
+    path: "loa-upload",
+    component: LoaUploadComponent
+  },
+  {
+    path: "thankyou-upload-loa",
+    component: ThankyouComponent
   },
   { path: '**', redirectTo: "" }
 ];

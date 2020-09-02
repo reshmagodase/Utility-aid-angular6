@@ -40,6 +40,8 @@ import { FacebookModule } from 'ngx-facebook';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderDirective } from './loader.directive';
 import { SmallLoaderComponent } from './small-loader/small-loader.component';
+import { LoaUploadComponent } from './loa-upload/loa-upload.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { SmallLoaderComponent } from './small-loader/small-loader.component';
     EngineComponent,
     ScreenLoaderComponent,
     LoaderDirective,
-    SmallLoaderComponent
+    SmallLoaderComponent,
+    LoaUploadComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
