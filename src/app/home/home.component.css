@@ -152,7 +152,7 @@ h2>video {
 }
 
 video {
-  width: 50%;
+  width: 53%;
   /* height: 100%; */
   height: auto;
   border: 2px solid #000;
@@ -217,7 +217,7 @@ br {
 }
 
 .text-vertical-center {
-  padding-top: 80px;
+  /* padding-top: 80px; */
   /* display: table-cell; */
   text-align: center;
   vertical-align: middle;

@@ -40,7 +40,7 @@ nav {
 .freephone {
   font-size: 21.7px;
   text-align: center;
-  padding: 8px;
+  padding: 8px 20px 8px 8px;
   /* margin-top:-17px; */
 }
 
@@ -272,7 +272,7 @@ ul>li>a {
 
   .dashboardView {
     width: 100%;
-    display: grid;
+    /* display: grid; */
   }
 
   .dashboardView ul {
