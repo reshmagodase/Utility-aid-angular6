@@ -152,6 +152,13 @@ ul>li>a {
   .freephone-nav {
     padding-top: 5px;
   }
+  nav {
+    padding-bottom: 0;
+  }
+
+  /* ::ng-deep .navbar-nav {
+    display: block !important;
+  } */
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -382,6 +389,10 @@ ul>li>a {
   animation: hfade 1s ease-in;
 }
 
+::ng-deep .hanim {
+  display: block;
+}
+
 .ianim {
   animation: upper 1s ease-in;
 }
@@ -408,4 +419,16 @@ ul>li>a {
     opacity: 1;
     transform: translateX(0%);
   }
+}
+
+@media (min-width: 768px){
+  .navbar-nav > li > a {
+      margin-top: 20px;
+      padding-bottom: 5px;
+  }
+  }
+
+  .navbar-right > li > a:focus {
+    color: #3697c2 !important;
+    text-decoration: none;
 }

@@ -18,6 +18,7 @@ export class WorkWithUsComponent implements OnInit {
   applyForm: FormGroup;
   cvpath: any;
   cvname: any;
+  loader:boolean = false;
   constructor(private meta: MetaserviceService, private http: HttpClient, private apply: FormBuilder, private service_api: ServiceCallsService) { }
 
   ngOnInit() {
@@ -66,7 +67,7 @@ export class WorkWithUsComponent implements OnInit {
   onSubmit() {
     // debugger;
     console.log("form value", this.applyForm.value);
-
+    this.loader = true;
 
 
 
@@ -78,6 +79,7 @@ export class WorkWithUsComponent implements OnInit {
         // console.log(data.headers.get('X-Token'));
         console.log(data);
         if (data && data.status == 200) {
+          this.loader= false;
           this.applyForm.reset();
           $("#myModal2").modal("hide");
         }

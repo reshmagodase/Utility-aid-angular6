@@ -20,6 +20,10 @@ import { BriberyActComponent } from "./bribery-act/bribery-act.component";
 import { EngineComponent } from "./engine/engine.component";
 import { LoaUploadComponent } from './loa-upload/loa-upload.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
+import { GoogleAdComponent } from './google-ad/google-ad.component';
+import { GoogleadThankyouComponent } from './googlead-thankyou/googlead-thankyou.component';
+import { EnergyBrokerComponent } from './energy-broker/energy-broker.component';
 const routes: Routes = [
   {
     path: "",
@@ -103,6 +107,22 @@ const routes: Routes = [
   {
     path: "thankyou-upload-loa",
     component: ThankyouComponent
+  },
+  {
+    path: "thank-you",
+    component: ThankYouComponent
+  },
+  {
+    path: "google-ad",
+    component: GoogleAdComponent
+  },
+  {
+    path: "thankyou-ad",
+    component: GoogleadThankyouComponent
+  },
+  {
+    path: "energy-broker",
+    component: EnergyBrokerComponent
   },
   { path: '**', redirectTo: "" }
 ];

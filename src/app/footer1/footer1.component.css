@@ -44,6 +44,30 @@ textarea {
   font-size: 14px;
 }
 
+.askButton {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 15px;
+  position: fixed;
+  z-index: 999;
+  bottom: 0px;
+  background-color: #3697c2;
+  border: 1px solid black;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 10px 10px 0px 0px;
+  color: white !important;
+  border-bottom: none;
+  font-family: "vag_roundedregular";
+}
+
+.popBtm {
+  opacity: 0;
+  animation: popBottom 1s ease-in forwards;
+  animation-delay: 2s;
+}
+
 .askButton:hover {
   color: #23527c !important;
 }
@@ -121,10 +145,16 @@ a:hover {
 }
 
 .danger {
-  color: red;
-  text-align: left;
-  margin: 5px;
-  font-family: "vag_roundedregular";
+  background-color: #ffd6d6;
+    color: red;
+    text-align: left;
+    border-radius: 18px;
+    padding: 4px 0 0 15px;
+    margin-bottom: 20px;
+    height: 34px;
+    margin: 5px;
+    font-size: 16px;
+    font-family: "vag_roundedregular";
 }
 
 .ng-lazyloaded {
@@ -140,6 +170,11 @@ a:hover {
   to {
     opacity: 1;
   }
+}
+
+a:focus, a:hover {
+  color: #23527c !important;
+  text-decoration: underline !important;
 }
 
 /* .fade.in {

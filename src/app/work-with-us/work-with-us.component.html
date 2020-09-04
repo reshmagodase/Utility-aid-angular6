@@ -140,7 +140,7 @@
                 <label class="dropzone">
                   Drop your CV here
                   <input type="file" formControlName="file" (change)="detectFiles($event)"
-                    accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    accept=".doc,.pdf,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     style="display:none;">
 
                 </label>
@@ -152,6 +152,7 @@
               <div class="control-group">
                 <div class="controls" style="padding-top:16px;">
                   <button type="submit" class="btnFindOutMore">Submit</button>
+                  <img src="/assets/loading-gif.gif" class="fa fa-spinner" width="50" *ngIf="loader==true">
                   <br />
 
                 </div>

@@ -33,7 +33,12 @@ export class WhyutilityaidComponent implements OnInit {
   ngOnInit() {
     this.router.fragment.subscribe(fragment => {
       this.fragment = fragment;
+      let e = document.getElementById(this.fragment);
+      if(e){
+        e.scrollIntoView({ behavior: "smooth", block: "start" });
+      } 
     });
+    
     // this.elmnt = document.getElementById("saveMoney");
     // this.elmnt.scrollIntoView();
     // window.document.getElementById("saveMoney").scrollIntoView();

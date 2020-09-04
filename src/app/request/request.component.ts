@@ -3,6 +3,7 @@ import { MetaserviceService } from "../metaservice.service";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ServiceCallsService } from '../service-calls.service';
 import { HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: "app-request",
   templateUrl: "./request.component.html",
@@ -14,7 +15,7 @@ export class RequestComponent implements OnInit {
   isSubmittedOne = false;
 
 
-  constructor(private meta: MetaserviceService, private request: FormBuilder, private service_api: ServiceCallsService) { }
+  constructor(private meta: MetaserviceService, private router: Router, private request: FormBuilder, private service_api: ServiceCallsService) { }
 
   ngOnInit() {
     this.meta.updateMetaInfo(
@@ -49,6 +50,7 @@ export class RequestComponent implements OnInit {
       this.service_api.postServer("sendRequestMail", this.requestForm.value).subscribe((data: any) => {
         console.log(data);
         this.requestForm.reset();
+        this.router.navigate(["/thank-you"]);
       })
     } else {
       console.log("---->", Object.keys(this.requestForm.controls))

@@ -118,5 +118,9 @@ export class HomeComponent implements OnInit {
           ]
         });
       });
+      $("#collapsibleNavbar").removeClass("show");
+      $("#collapsibleNavbar").addClass("collapse");
+      $(".navbar-toggler").css("visibility", 'visible');
+      $('.navbar-nav').show();
   }
 }

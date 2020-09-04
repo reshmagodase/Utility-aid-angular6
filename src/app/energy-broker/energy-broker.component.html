@@ -1,0 +1,345 @@
+<!-- ///////////////////////////      second part    /////////////////////////// -->
+<ng-template #placeholder>
+    <div style="height: 68px;"></div>
+  </ng-template>
+  <header #header class="home post-header-enhanced ng-scope d-flex align-items-center d-flex justify-content-center">
+    <div class="container-fluid container1">
+      <div class="text-vertical-center text-center">
+        <h1 class="heading_text anim" style="margin-top:0;padding-top:0">
+          <span class="fontBold">
+  
+            Welcome to Utility Aid
+          </span>
+          <p id="text1" [@animationOption2] *ngIf="data;else placeholder" class="heading_text_inner">
+  
+            {{ data?.text1 }}
+  
+  
+          </p>
+        </h1>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 class="anim">
+                        <video id="videoplayer" width="300" height="200" poster="assets/videoimg.jpg"
+                          src="assets/videos/RA504_Utility_Aid_MASTER_Compressed.mp4" controls loop>
+                          <track label="English" kind="subtitles" src="assets/videos/UASubtitles.vtt" srclang="en" default>
+                        </video>
+                      </h2>
+                </div>
+                <div class="col-sm-6 formDiv">
+                    <form [formGroup]="leadForm" (ngSubmit)="onLeadFormSubmit()">
+                        <div class="col-sm-12 padding" style="padding-top: 20px;">
+                          <div class="control-group">
+                            <h3 class="text-center" style="font-weight: bold;padding-bottom:10px;">Contact Us</h3>
+                            <div class="controls">
+                                <label for="" class="label" style="color: #ffffff;font-size: 14px;">Name</label>
+                              <input type="text" class="form-control leadinput" id="name" formControlName="name" placeholder="Name" />
+                              <p class="danger" *ngIf="leadForm.controls.name.invalid && !leadForm.controls.name.pristine">Name
+                                is required.</p>
+                            </div>
+                            <div class="controls">
+                                <label for="" class="label" style="color: #ffffff;;font-size: 14px;">Contact No</label>
+                                <input type="text" class="form-control leadinput" formControlName="contactNo" placeholder="Contact No" />
+                                <p class="danger" *ngIf="leadForm.controls.contactNo.invalid && !leadForm.controls.contactNo.pristine">Contact No
+                                  is required.</p>
+                              </div>
+                            <div class="controls">
+                                <label for="" class="label" style="color: #ffffff;;font-size: 14px;">Email</label>
+                              <input type="email" class="form-control leadinput" id="cvemail" formControlName="cvemail" placeholder="Email" />
+                              <div *ngIf="leadForm.controls.cvemail.invalid && !leadForm.controls.cvemail.pristine">
+                                <p class="danger" *ngIf="leadForm.controls.cvemail.errors.email">Valid email is required.</p>
+                              </div>
+                            </div>
+                            <div class="controls">
+                                <label for="" class="label" style="color: #ffffff;;font-size: 14px;">Company</label>
+                                <input type="text" class="form-control leadinput" formControlName="company" placeholder="Company" />
+                                <p class="danger" *ngIf="leadForm.controls.company.invalid && !leadForm.controls.company.pristine">Company
+                                  is required.</p>
+                              </div>
+              
+                            <div class="control-group">
+                              <div class="controls text-center">
+                                <button type="submit" class="btnFindOutMore1">Submit</button>
+                                <img src="/assets/loading-gif.gif" class="fa fa-spinner" width="50" *ngIf="loader==true">
+                                <br />
+              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+  <div class="banner-img"></div>
+  <div class="enquiry-section rightPosition" id="enquirySection">
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active show">
+            <a class="btn-enquiry hideonMobileonly" id="enquiryformbyselldo" style="cursor: pointer;" data-backdrop="static" data-keyboard="false" data-toggle="modal" data-target="#leadFormModal">
+                <img style="width: 40px;transform: rotate(90deg);" src="assets/enquiry1.png"></a>
+            <a class="btn-enquiryMobile enquiry-icon" id="enquiryformbyselldo" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#leadFormModal">
+                <img style="width: 40px;transform: rotate(90deg);" src="assets/enquiry1.png">
+            </a>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <a class="btn-enquiry" id="enquiryformbyselldo" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#leadFormModal"><span class="icon">
+                    <img style="width: 20px;transform: rotate(90deg);" src="assets/enquirySidebar.png"></span>
+                ENQUIRE NOW
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Call button on mobile -->
+<div class="rightPosition mobileNoicon hideonWeb">
+    <a href="tel:08081788170" title="Request a callback">
+        <img width="40px" src="assets/telephone.png">
+    </a>
+</div>
+  <ng-template #svg>
+    <div>
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+        <rect fill="#fff" width="3" height="100" transform="translate(0) rotate(180 3 50)">
+          <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite" />
+        </rect>
+        <rect x="17" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 20 50)">
+          <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+            begin="0.1s" />
+        </rect>
+        <rect x="40" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 40 50)">
+          <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+            begin="0.3s" />
+        </rect>
+        <rect x="60" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 58 50)">
+          <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+            begin="0.5s" />
+        </rect>
+        <rect x="80" fill="#fff" width="3" height="100" transform="translate(0) rotate(180 76 50)">
+          <animate attributeName="height" attributeType="XML" dur="1s" values="30; 100; 30" repeatCount="indefinite"
+            begin="0.1s" />
+        </rect>
+      </svg>
+    </div>
+  </ng-template>
+  <section class="home darkblue ng-scope anim" style="background-color:#3697c2">
+    <div class="container-fluid" style="padding-bottom: 75px;">
+      <div class="text-center">
+        <h2 class="heading_text">
+          Utility Aid + you
+          <span class="fontBold">= £££ saved</span>
+  
+          <br /><br />
+          <p id="text3" *ngIf="data;else svg" class="subheading anim">
+            {{ data?.text3 }}
+          </p>
+        </h2>
+        <br /><br>
+        <a role="button" class="btnFindOutMore fontBold" (click)="scroll()" style="cursor:pointer">learn more</a>
+      </div>
+      <!-- routerLink="why-ua" fragment="saveMoney" -->
+    </div>
+  </section>
+  
+  <!--   //////////////////////////////   blue part/    //////////////////// -->
+  
+  <section class="home burner lightblue ng-scope anim">
+    <div class="text-vertical-center innerSpan burner-top">
+      <span [innerHtml]="text"> </span><br />
+      <span class="text-button">
+        <a class="btnFindOutMore fontBold saveMore " (click)="scroll()" style="cursor:pointer">find
+            out how much you can save</a>
+      </span>
+    </div>
+  </section>
+ 
+  
+   <div class="ng-scope anim" style="overflow: hidden;">
+    
+    <section class="home ng-scope anim" style="background-color: #17252a">
+      <div class="container-fluid ab" style="padding:20px">
+        <div class="text-center mt-5" style="margin-top:10px;padding-top: 15px;font-size:23.5px;font-family: 'vag_roundedregular';">
+          <h2 id="text2" *ngIf="data;else svg" class="subheading mb-1 anim">
+            <!-- {{ data?.text2 }} -->
+  
+          </h2>
+          <div class="slick-container">
+  
+            <img class="thumbnail" [src]="'assets/1.png'" />
+            <img class="thumbnail" [src]="'assets/2.png'" />
+            <img class="thumbnail" [src]="'assets/3.png'" />
+            <img class="thumbnail" [src]="'assets/4.png'" />
+            <img class="thumbnail" [src]="'assets/5.png'" />
+            <img class="thumbnail" [src]="'assets/6.png'" />
+            <img class="thumbnail" [src]="'assets/7.png'" />
+            <img class="thumbnail" [src]="'assets/8.png'" />
+            <img class="thumbnail" [src]="'assets/9.png'" />
+            <img class="thumbnail" [src]="'assets/10.png'" />
+            <img class="thumbnail" [src]="'assets/11.png'" />
+            <img class="thumbnail" [src]="'assets/12.png'" />
+            <img class="thumbnail" [src]="'assets/13.png'" />
+            <img class="thumbnail" [src]="'assets/14.png'" />
+  
+          </div>
+  
+  
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- //////////////////// slider ends ////////////////////////////// -->
+  <!-- Contact form -->
+  <section id="contactUs">
+    <header class="home header mobile text-center">
+        <div class="col-sm-12 text-vertical-center" style="background-color: white;padding-bottom: 0px;padding-top: 30px;">
+          <h2 class="heading" class="uploadLoa" style="margin-top: 0;padding-top:0;color: black;display: inline;">
+            Contact Us
+          </h2>
+          <!-- <p style="color: black;font-size: 20px;">When you are ready for a free energy audit simply upload your bills here:
+            <a href="/loa-upload" class="upload" style="margin-top: 8px;">
+              <i class="fa fa-upload" style="font-size: 24px;"></i> Upload LOA/Bill</a>
+            </p> -->
+          <p style="color: black;font-size: 18;">
+            If you would like some more information feel free to explore our site or contact us below.
+          </p>
+        </div>
+      </header>
+      <div class="container padding-top pb-5">
+        <div class="col-sm-8 offset-sm-2">
+            <form [formGroup]="adForm" (ngSubmit)="onSubmit()">
+                <div class="col-sm-12 padding" style="padding-top: 20px;">
+                  <div class="control-group">
+                    <div class="controls">
+                        <label for="" style="color: black;font-size: 14px;">Name</label>
+                      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name" />
+                      <p class="danger" *ngIf="adForm.controls.name.invalid && !adForm.controls.name.pristine">Name
+                        is required.</p>
+                    </div>
+                    <div class="controls">
+                        <label for="" style="color: black;font-size: 14px;">Contact No</label>
+                        <input type="text" class="form-control" formControlName="contactNo" placeholder="Contact No" />
+                        <p class="danger" *ngIf="adForm.controls.contactNo.invalid && !adForm.controls.contactNo.pristine">Contact No
+                          is required.</p>
+                      </div>
+                    <div class="controls">
+                        <label for="" style="color: black;font-size: 14px;">Email</label>
+                      <input type="email" class="form-control" id="cvemail" formControlName="cvemail" placeholder="Email" />
+                      <div *ngIf="adForm.controls.cvemail.invalid && !adForm.controls.cvemail.pristine">
+                        <p class="danger" *ngIf="adForm.controls.cvemail.errors.email">Valid email is required.</p>
+                      </div>
+                    </div>
+                    <div class="controls ">
+                        <label for="" style="color: black;font-size: 14px;">Message</label>
+                        <textarea class="form-control ng-pristine ng-valid" rows="3" formControlName="message" name="message"
+                          placeholder="Message"></textarea>
+                          <div *ngIf="adForm.controls.message.invalid && !adForm.controls.message.pristine">
+                            <p class="danger" *ngIf="adForm.controls.message.errors.email">Message is required.</p>
+                          </div>
+                      </div>
+      
+                    <div class="control-group">
+                      <div class="controls text-center" style="padding-top:16px;">
+                        <button type="submit" class="btnFindOutMore1">Submit</button>
+                        <img src="/assets/loading-gif.gif" class="fa fa-spinner" width="50" *ngIf="loader==true">
+                        <br />
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+        </div>
+        <div class="col-sm-12 text-center" style="padding: 0;">
+            <p style="color: black;">or <br> Contact with</p>
+            <a class="m-2" href="https://api.whatsapp.com/send?phone=447500798922&text=Hi" target="_blank">
+              <i class="fa fa-whatsapp" style="font-size:50px;color:#4FCE5D"></i>
+            </a>
+            <a class="m-2" href="https://www.facebook.com/ua.domoregood" target="_blank" style="margin-left: 5px;">
+              <i class="fa fa-facebook-square" style="font-size:50px;color:#3b5998"></i>
+            </a>
+            <a class="m-2" href="https://twitter.com/UA_Energy" target="_blank" style="margin-left: 5px;">
+              <i class="fa fa-twitter" style="font-size:50px;color:#00acee"></i>
+            </a>
+            <a class="m-2" href="https://www.instagram.com/utilityaid/" target="_blank" style="margin-left: 5px;">
+              <i id="insta" class="fa fa-instagram" style="font-size:50px;"></i>
+            </a>
+            <a class="m-2" href="https://www.linkedin.com/company/1462326/admin/" target="_blank" style="margin-left: 5px;">
+              <i class="fa fa-linkedin-square" style="font-size:50px;color:#0e76a8"></i>
+            </a>
+          </div>
+      </div>
+  </section>
+  
+<!-- //////////////////////////////////  modal 2//////////////////////////////// -->
+<div class="modal fade" id="leadFormModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <h1 class="text-center" style="margin-top: 0;">
+          <form [formGroup]="leadForm2" (ngSubmit)="onLead1Submit()" >
+            <div class="modal-header">
+              <h2 class="modal-title ml-auto" style="font-size: 30px;">
+                How can
+                <span style="color:#3697C2">we help? </span>
+              </h2>
+              <button type="button" class="close" (click)="modalClose()">
+                ×
+              </button>
+            </div>
+            <div class="modal-body" *ngIf="loader1==false">
+              <div class="control-group">
+                <div class="controls">
+                  <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name" />
+                  <p class="danger" *ngIf="leadForm2.controls.name.invalid && !leadForm2.controls.name.pristine">Name
+                    is required.</p>
+                </div>
+                <div class="controls">
+                    <input type="text" class="form-control" id="contactNo" formControlName="contactNo" placeholder="Phone" />
+                    <p class="danger" *ngIf="leadForm2.controls.contactNo.invalid && !leadForm2.controls.contactNo.pristine">Phone
+                      is required.</p>
+                  </div>
+                <div class="controls">
+                  <input type="email" class="form-control" id="cvemail" formControlName="cvemail" placeholder="Email" />
+                  <div *ngIf="leadForm2.controls.cvemail.invalid && !leadForm2.controls.cvemail.pristine">
+                    <p class="danger" *ngIf="leadForm2.controls.cvemail.errors.email">Valid email is required.</p>
+                  </div>
+                </div>
+                <div class="controls">
+                    <textarea class="form-control" formControlName="message" style="height: auto;" placeholder="Message" rows="5"></textarea>
+                    <!-- <input type="text" class="form-control" id="name" formControlName="name" placeholder="Phone" /> -->
+                    <p class="danger" *ngIf="leadForm2.controls.message.invalid && !leadForm2.controls.message.pristine">Message
+                      is required.</p>
+                  </div>
+                <div class="control-group">
+                  <div class="controls" style="padding-top:16px;">
+                    <button type="submit" class="btnFindOutMore1">Submit</button>
+                    <!-- <img src="/assets/loading-gif.gif" class="fa fa-spinner" width="50" *ngIf="loader==true"> -->
+                    <br />
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="stage1" class="form-all" style="padding: 0 15px;" *ngIf="loader1==true">
+            <p style="text-align:center;">
+              <img src="assets/check-icon.png" alt="" width="128" height="128" />
+            </p>
+
+            <div style="text-align:center;">
+              <h1 style="text-align: center;color: #000000;">Thank You!</h1>
+
+              <p style="text-align: center;color: #000000;">
+                We've received your request! Our team will respond as soon
+                as possible.
+              </p>
+            </div>
+          </div>
+        </h1>
+        
+      </div>
+    </div>
+  </div>

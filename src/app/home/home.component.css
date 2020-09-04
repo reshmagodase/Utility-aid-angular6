@@ -8,6 +8,10 @@ nav {
   margin-right: 0px;
 }
 
+::ng-deep .hanim {
+  display: block;
+}
+
 .heading_text {
   font-size: 66px;
   color: white;
@@ -152,7 +156,7 @@ h2>video {
 }
 
 video {
-  width: 53%;
+  width: 47%;
   /* height: 100%; */
   height: auto;
   border: 2px solid #000;
@@ -217,11 +221,11 @@ br {
 }
 
 .text-vertical-center {
-  /* padding-top: 80px; */
+  padding-top: 20px;
   /* display: table-cell; */
   text-align: center;
   vertical-align: middle;
-  padding-bottom: 65px;
+  padding-bottom: 20px;
 }
 
 /* 
@@ -246,7 +250,7 @@ br {
 }
 
 .darkblue .btnFindOutMore:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #17252a !important;
   border: 6px solid #17252a;
   font-size: 22px;
@@ -257,7 +261,7 @@ br {
 }
 
 .burner .btnFindOutMore:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #3697c2 !important;
   padding: 8px 10px;
   border: 6px solid #3697c2;
@@ -417,3 +421,9 @@ svg {
     height: auto;
   }
 }
+
+a:focus, a:hover {
+  color: #23527c !important;
+  text-decoration: underline !important;
+}
+

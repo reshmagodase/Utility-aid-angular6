@@ -42,6 +42,10 @@ import { LoaderDirective } from './loader.directive';
 import { SmallLoaderComponent } from './small-loader/small-loader.component';
 import { LoaUploadComponent } from './loa-upload/loa-upload.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
+import { GoogleAdComponent } from './google-ad/google-ad.component';
+import { GoogleadThankyouComponent } from './googlead-thankyou/googlead-thankyou.component';
+import { EnergyBrokerComponent } from './energy-broker/energy-broker.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,11 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     LoaderDirective,
     SmallLoaderComponent,
     LoaUploadComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    ThankYouComponent,
+    GoogleAdComponent,
+    GoogleadThankyouComponent,
+    EnergyBrokerComponent
   ],
   imports: [
     BrowserModule,

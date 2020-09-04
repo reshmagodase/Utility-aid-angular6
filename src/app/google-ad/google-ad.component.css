@@ -1,0 +1,155 @@
+.dropdown-menu {
+    background-color: #17252a;
+  }
+
+  .controls {
+    padding-bottom: 10px;
+  }
+
+  .errorlist {
+    margin-top: 3px;
+    margin-bottom: 0px;
+    color: red;
+    font-size: 12px;
+  }
+
+  .form-control {
+    height: 38px;
+}
+
+  .fa-spinner {
+    display: none;
+    width: 50px;
+  }
+
+  .heading {
+    margin-left: 0;
+    font-family: "vag_roundedregular" !important;
+  }
+
+  .h2, h2 {
+    font-size: 30px;
+    font-family: "vag_roundedregular" !important;
+}
+
+p {
+    font-size: 16.5px;
+    line-height: 1.4;
+    font-family: "vag_roundedregular" !important;
+}
+
+  #insta {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-size: 200px; /* change this to change the size*/
+  
+}
+
+  .btnFindOutMore {
+    text-decoration: none;
+    color: #23527c;
+    padding: 3px 10px;
+    border: 6px solid #23527c;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #f2f2f2;
+  }
+
+  .btnFindOutMore:hover {
+    text-decoration: none;
+    color: #23527c;
+    padding: 3px 10px;
+    border: 6px solid #23527c;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: 768px) {
+    .freephone {
+      position: absolute !important;
+      top: 5px;
+      right: 1.5%;
+    }
+
+    .navbar-nav>li>a {
+      margin-top: 20px;
+      padding-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .navbar-nav .open .dropdown-menu {
+      background-color: #17252a;
+    }
+
+    .navbar-nav .open .dropdown-menu>li>a {
+      color: white !important;
+    }
+
+    .uploadLoa {
+      text-align: center;
+      float: none !important;
+    }
+
+    .heading {
+    margin-left: 0;
+  }
+
+  .upload {
+    margin-left: 35px;
+  }
+
+  .padding {
+    padding: 0 !important;
+  }
+  .padding-top {
+    padding-top: 20px !important;
+  }
+  }
+
+  /* .dropdown-menu>li {} */
+
+  .dropdown-menu>li>a {
+    color: white;
+    font-size: 20.5px;
+  }
+
+  .container-fluid,
+  .container {
+    padding: 70px 20px;
+  }
+
+  .navbar-brand img {
+    height: 50px;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .navbar.container-fluid {
+      padding: 10px 20px 10px;
+    }
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 14px;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 14px;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    font-size: 14px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+    }
