@@ -46,6 +46,11 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 import { GoogleAdComponent } from './google-ad/google-ad.component';
 import { GoogleadThankyouComponent } from './googlead-thankyou/googlead-thankyou.component';
 import { EnergyBrokerComponent } from './energy-broker/energy-broker.component';
+import { ContactformComponent } from './contactform/contactform.component';
+import { ContactThankyouComponent } from './contact-thankyou/contact-thankyou.component';
+import { SendloaComponent } from './sendloa/sendloa.component';
+import { EmailCampaignComponent } from './email-campaign/email-campaign.component';
+import { LoaComponent } from './loa/loa.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +82,12 @@ import { EnergyBrokerComponent } from './energy-broker/energy-broker.component';
     ThankYouComponent,
     GoogleAdComponent,
     GoogleadThankyouComponent,
-    EnergyBrokerComponent
+    EnergyBrokerComponent,
+    ContactformComponent,
+    ContactThankyouComponent,
+    SendloaComponent,
+    EmailCampaignComponent,
+    LoaComponent
   ],
   imports: [
     BrowserModule,

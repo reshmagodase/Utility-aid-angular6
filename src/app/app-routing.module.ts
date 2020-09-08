@@ -24,6 +24,11 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 import { GoogleAdComponent } from './google-ad/google-ad.component';
 import { GoogleadThankyouComponent } from './googlead-thankyou/googlead-thankyou.component';
 import { EnergyBrokerComponent } from './energy-broker/energy-broker.component';
+import { ContactformComponent } from './contactform/contactform.component';
+import { ContactThankyouComponent } from './contact-thankyou/contact-thankyou.component';
+import { SendloaComponent } from './sendloa/sendloa.component';
+import { EmailCampaignComponent } from './email-campaign/email-campaign.component';
+import { LoaComponent } from './loa/loa.component';
 const routes: Routes = [
   {
     path: "",
@@ -123,6 +128,30 @@ const routes: Routes = [
   {
     path: "energy-broker",
     component: EnergyBrokerComponent
+  },
+  {
+    path: "contactform/:query",
+    component: ContactformComponent
+  },
+  {
+    path: "contactform",
+    component: ContactformComponent
+  },
+  {
+    path: "thankyou-contact",
+    component: ContactThankyouComponent
+  },
+  {
+    path: "sendloa",
+    component: SendloaComponent
+  },
+  {
+    path: "success",
+    component: EmailCampaignComponent
+  },
+  {
+    path: "addtocall",
+    component: LoaComponent
   },
   { path: '**', redirectTo: "" }
 ];

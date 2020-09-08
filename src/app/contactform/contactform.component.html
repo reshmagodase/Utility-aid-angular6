@@ -1,0 +1,65 @@
+<header class="home header mobile">
+    <div class="row text-vertical-center" style="background-color: #F4F1F1;padding-top: 30px;display: block;">
+        <div class="col-sm-6 col-sm-offset-3 well shadow">
+            <h4 class="title">
+                <br />
+                Sign up below to request a free Utility Aid bill audit
+            </h4>
+            <hr>
+            <div class="col-sm-12">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <div class="col-sm-12 padding" style="padding-top: 20px;">
+                        <div class="control-group">
+                            <div class="controls">
+                                <p style="color:#17252a;">Email</p>
+                                <input type="email" class="form-control" id="cvemail" formControlName="cvemail"
+                                    placeholder="Email" />
+                                <div *ngIf="contactForm.controls.cvemail.invalid && !contactForm.controls.cvemail.pristine">
+                                    <p class="danger" *ngIf="contactForm.controls.cvemail.errors.email">Valid email is
+                                        required.</p>
+                                </div>
+                            </div>
+                            <div class="controls">
+                                <p style="color:#17252a;">Name</p>
+                                <input type="text" class="form-control" id="name" formControlName="name"
+                                    placeholder="Name" />
+                                <p class="danger"
+                                    *ngIf="contactForm.controls.name.invalid && !contactForm.controls.name.pristine">Name
+                                    is required.</p>
+                            </div>
+                            <div class="controls">
+                                <p style="color:#17252a;">Organisation</p>
+                                <input type="text" class="form-control" id="organisation" formControlName="organisation"
+                                    placeholder="Organisation" />
+                                <p class="danger"
+                                    *ngIf="contactForm.controls.organisation.invalid && !contactForm.controls.organisation.pristine">Organisation
+                                    is required.</p>
+                            </div>
+                            <div class="controls">
+                                <p style="color:#17252a;">Phone No.</p>
+                                <input type="text" class="form-control" formControlName="contactNo"
+                                    placeholder="Phone No" />
+                                <p class="danger"
+                                    *ngIf="contactForm.controls.contactNo.invalid && !contactForm.controls.contactNo.pristine">
+                                    Phone No
+                                    is required.</p>
+                            </div>
+
+                            <div class="control-group">
+                                <div class="controls text-center" style="padding-top:16px;">
+                                    <button type="submit" style="font-size: 14px;" class="btn btn-primary">Submit</button>
+                                    <img src="/assets/loading-gif.gif" class="fa fa-spinner" width="50"
+                                        *ngIf="loader==true">
+                                    <br />
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-right mr-4"><a style="text-decoration: underline;" href="https://utility-aid.co.uk/privacy-policy/">Click here for our privacy
+                            policy</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

@@ -188,3 +188,11 @@ a.btnFindOutMore2 {
   text-align: justify !important;
   line-height: 1.4;
 }
+
+.collapsing {
+  width: 100%;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease;
+}
