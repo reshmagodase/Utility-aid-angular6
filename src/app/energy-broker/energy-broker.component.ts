@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { MetaserviceService } from '../metaservice.service';
 import { Router } from '@angular/router';
 import { ServiceCallsService } from '../service-calls.service';
@@ -41,8 +41,7 @@ export class EnergyBrokerComponent implements OnInit {
     private servicecalls: ServiceCallsService,
     protected _sanitizer: DomSanitizer,
     private meta: MetaserviceService,
-    private router: Router, private fb: FormBuilder,
-    private renderer: Renderer2) {
+    private router: Router, private fb: FormBuilder) {
       this.getText();
      }
 
