@@ -90,8 +90,8 @@
   </div>
 </ng-template>
 <section class="home darkblue ng-scope anim" style="background-color:#3697c2">
-  <div class="container-fluid" style="padding-bottom: 75px;">
-    <div class="text-center">
+  <div class="container" style="padding-bottom: 75px;margin-right: auto;margin-left: auto;">
+    <div class="text-center col-sm-10 offset-sm-1 col-12">
       <h2 class="heading_text">
         Utility Aid + you
         <span class="fontBold">= £££ saved</span>
@@ -99,6 +99,9 @@
         <br /><br />
         <p id="text3" *ngIf="data;else svg" class="subheading anim">
           {{ data?.text3 }}
+        </p>
+        <p id="text3" class="subheading1 anim text-center">
+          Unless otherwise stated, all our quotes are presented with Utility Aid’s fees already included. Fortunately these fees are payable directly by the supplier so you don’t need to worry about it.
         </p>
       </h2>
       <br /><br>

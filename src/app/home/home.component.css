@@ -31,6 +31,11 @@ p.subheading {
   margin-top: -35px;
 }
 
+p.subheading1 {
+  font-size: 23.5px;
+  color: white;
+}
+
 .heading_text_inner {
   font-size: 40px;
   margin-top: 10px !important;
@@ -171,6 +176,13 @@ video {
 }
 
 .subheading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 23.5px;
+  line-height: 1.5;
+}
+
+.subheading1 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 23.5px;
@@ -323,6 +335,10 @@ br {
   }
 
   p.subheading {
+    font-size: 19.5px;
+  }
+
+  p.subheading1 {
     font-size: 19.5px;
   }
 
