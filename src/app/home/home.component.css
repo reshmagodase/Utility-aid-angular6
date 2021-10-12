@@ -443,3 +443,31 @@ a:focus, a:hover {
   text-decoration: underline !important;
 }
 
+.feedback {
+  background-color : #17252a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: #ffffff;
+  font-size: 20px;
+}
+
+#mybutton {
+/*   position: fixed;
+  top:35%; 
+  -ms-transform: rotate(20deg); 
+  transform: rotate(90deg);
+  right: 0; */
+  position: fixed;
+  width: fit-content;
+  height: 100px;
+  left: 100%;
+  top: 50%;
+  z-index: 9999;
+  transform-origin: 0% 0%;
+  -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(270deg) translateX(-50%) translateY(-45%)
+}

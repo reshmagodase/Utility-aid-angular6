@@ -123,4 +123,8 @@ export class HomeComponent implements OnInit {
       $(".navbar-toggler").css("visibility", 'visible');
       $('.navbar-nav').show();
   }
+
+  howWeCharge() {
+    this.router.navigate(["/faq"], { fragment: "howwecharge" });
+  }
 }
