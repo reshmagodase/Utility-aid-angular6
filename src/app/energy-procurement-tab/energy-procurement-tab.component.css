@@ -1,0 +1,142 @@
+.header {
+    background: url("../../assets/pexels-mikael-blomkvist-6476260.jpg") no-repeat center 25% fixed;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    margin-top: 0px;
+    padding-bottom: 40px;
+    margin-bottom: 8px;
+}
+
+header.ng-lazyloaded {
+    opacity: 1;
+    animation: fadein .5s;
+}
+
+.container {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+img {
+
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+img.ng-lazyloaded {
+    opacity: 1;
+    animation: fadein .5s;
+}
+
+video {
+    width: 45%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-top: -70px;
+
+}
+
+.save {
+    margin-top: -8px;
+    padding-bottom: 45px;
+    margin-bottom: -15px;
+}
+
+.text_center {
+    text-align: center !important;
+}
+
+.fontRegular {
+    font-family: vag_roundedregular;
+}
+
+h2 {
+    font-size: 23.5px;
+    color: white;
+    line-height: 1.5;
+    padding-top: 100px;
+}
+
+h3 {
+    font-size: 40px;
+    font-family: vag_roundedbold;
+    color: #3697c2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    padding-top: 28px;
+    color: white;
+    font-size: 21.5px;
+    font-family: vag_roundedregular;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    video {
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .header img {
+        background: url(../../assets/whyua-1.jpg) no-repeat center 25% fixed;
+        width: 100%;
+        background-size: contain;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 19.5px;
+    }
+
+    .fontBold {
+        font-size: 32px;
+    }
+
+    .heading_text {
+        font-size: 45px !important;
+        margin-top: 60px !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        background-attachment: scroll;
+    }
+
+    .heading_text {
+        font-size: 45px;
+    }
+
+    .row-blog {
+        margin-right: 15%;
+    }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1366px) {
+    .row-blog {
+        max-width: 33%;
+    }
+}
+
+@media only screen and (max-device-width: 768px) and (min-device-width: 601px) {
+    video {
+        width: 70%;
+        height: auto;
+    }
+}

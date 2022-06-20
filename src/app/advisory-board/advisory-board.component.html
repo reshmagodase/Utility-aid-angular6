@@ -2,7 +2,7 @@
   <div class="text-vertical-center">
     <h1 class="heading_text">
       <span class="fontBold">
-        advisory board
+        Advisory Panel
       </span>
     </h1>
   </div>
@@ -15,7 +15,7 @@
         {{ person[0].titletext }}
       </h2>
       <br />
-      <div class="personname">
+      <div class="personname" *ngIf="person[0].person1">
         <h3>
           The panel includes:
         </h3>
@@ -28,7 +28,7 @@
         </h2>
       </div>
 
-      <div class="personname">
+      <div class="personname" *ngIf="person[0].person2">
         <img src="assets/advisory2.png" />
         <h3 id="person2">
           {{ person[0].person2 }}
@@ -38,7 +38,7 @@
         </h2>
       </div>
 
-      <div class="personname">
+      <div class="personname" *ngIf="person[0].person3">
         <img src="assets/advisory3.png" />
         <h3 id="person3">
           {{ person[0].person3 }}
@@ -48,7 +48,7 @@
         </h2>
       </div>
 
-      <div class="personname">
+      <div class="personname" *ngIf="person[0].person4">
         <img src="assets/advisory4.png" />
         <h3 id="person4">
           {{ person[0].person4 }}

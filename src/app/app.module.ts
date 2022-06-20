@@ -51,6 +51,14 @@ import { ContactThankyouComponent } from './contact-thankyou/contact-thankyou.co
 import { SendloaComponent } from './sendloa/sendloa.component';
 import { EmailCampaignComponent } from './email-campaign/email-campaign.component';
 import { LoaComponent } from './loa/loa.component';
+import { InvoiceValidationComponent } from './invoice-validation/invoice-validation.component';
+import { NetZeroCarbonReportingComponent } from './net-zero-carbon-reporting/net-zero-carbon-reporting.component';
+import { VoidManagementComponent } from './void-management/void-management.component';
+import { CustomerCareComponent } from './customer-care/customer-care.component';
+import { EnergyProcurementTabComponent } from './energy-procurement-tab/energy-procurement-tab.component';
+import { OurHeritageComponent } from './our-heritage/our-heritage.component';
+import { OurTeamComponent } from './our-team/our-team.component';
+import { AccountManagementComponent } from './account-management/account-management.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +95,15 @@ import { LoaComponent } from './loa/loa.component';
     ContactThankyouComponent,
     SendloaComponent,
     EmailCampaignComponent,
-    LoaComponent
+    LoaComponent,
+    InvoiceValidationComponent,
+    NetZeroCarbonReportingComponent,
+    VoidManagementComponent,
+    CustomerCareComponent,
+    EnergyProcurementTabComponent,
+    OurHeritageComponent,
+    OurTeamComponent,
+    AccountManagementComponent
   ],
   imports: [
     BrowserModule,

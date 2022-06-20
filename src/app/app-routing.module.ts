@@ -29,6 +29,14 @@ import { ContactThankyouComponent } from './contact-thankyou/contact-thankyou.co
 import { SendloaComponent } from './sendloa/sendloa.component';
 import { EmailCampaignComponent } from './email-campaign/email-campaign.component';
 import { LoaComponent } from './loa/loa.component';
+import { CustomerCareComponent } from "./customer-care/customer-care.component";
+import { EnergyProcurementTabComponent } from "./energy-procurement-tab/energy-procurement-tab.component";
+import { InvoiceValidationComponent } from "./invoice-validation/invoice-validation.component";
+import { NetZeroCarbonReportingComponent } from "./net-zero-carbon-reporting/net-zero-carbon-reporting.component";
+import { VoidManagementComponent } from "./void-management/void-management.component";
+import { OurHeritageComponent } from "./our-heritage/our-heritage.component";
+import { OurTeamComponent } from "./our-team/our-team.component";
+import { AccountManagementComponent } from "./account-management/account-management.component";
 const routes: Routes = [
   {
     path: "",
@@ -57,6 +65,14 @@ const routes: Routes = [
   {
     path: "advisory-board",
     component: AdvisoryBoardComponent
+  },
+  {
+    path: "our-heritage",
+    component: OurHeritageComponent
+  },
+  {
+    path: "our-team",
+    component: OurTeamComponent
   },
   {
     path: "case-studies",
@@ -153,6 +169,30 @@ const routes: Routes = [
     path: "addtocall",
     component: LoaComponent
   },
+  {
+    path: "energy-procurement",
+    component: EnergyProcurementTabComponent
+  },
+  {
+    path: "invoice-validation",
+    component: InvoiceValidationComponent
+  },
+  {
+    path: "net-zero-carban-reporting",
+    component: NetZeroCarbonReportingComponent
+  },
+  {
+    path: "void-management",
+    component: VoidManagementComponent
+  },
+  {
+    path: "customer-care",
+    component: CustomerCareComponent
+  },
+  {
+    path: "account-management",
+    component: AccountManagementComponent
+  },
   { path: '**', redirectTo: "" }
 ];
 
@@ -165,4 +205,4 @@ const routes: Routes = [
     })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
