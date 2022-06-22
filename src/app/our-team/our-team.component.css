@@ -56,7 +56,7 @@ img.ng-lazyloaded {
 .blogs .innerblog {
     text-align: left;
     background-color: white;
-    width: 300px;
+    width: 240px;
     padding: 20px;
     display: table;
     margin: 0 auto;
@@ -71,13 +71,13 @@ img.ng-lazyloaded {
 
 .blogs .details {
     overflow: hidden;
-    height: 200px;
+    /* height: 200px; */
 }
 
 .blogs .details h2 {
     font-size: 20.5px;
     color: #3496c1;
-    min-height: 80px;
+    /* min-height: 80px; */
     padding-top: 10px;
     font-family: "vag_roundedregular";
     line-height: 1.5;
@@ -130,6 +130,11 @@ a {
   
   .inner-img:hover {
     transform: scale(1.1);
+  }
+
+  .four-lines {
+      padding-top: 10px;
+      padding-bottom: 15px;
   }
 
 /* @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {} */
