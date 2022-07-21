@@ -72,7 +72,7 @@ export class OurHeritageComponent implements OnInit {
       "assets/products.jpg",
       "invoice-validation"
     );
-    this.meta.updateTitle("", "Invoice Validation");
+    this.meta.updateTitle("", "Our Heritage");
   }
 
   currentTabData(list) {

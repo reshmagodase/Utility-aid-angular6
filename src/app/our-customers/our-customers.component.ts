@@ -3,33 +3,33 @@ import { MetaserviceService } from '../metaservice.service';
 import { ServiceCallsService } from '../service-calls.service';
 
 @Component({
-  selector: 'app-our-team',
-  templateUrl: './our-team.component.html',
-  styleUrls: ['./our-team.component.css']
+  selector: 'app-our-customers',
+  templateUrl: './our-customers.component.html',
+  styleUrls: ['./our-customers.component.css']
 })
-export class OurTeamComponent implements OnInit {
-  product
-  text1
+export class OurCustomersComponent implements OnInit {
+  product: any;
+
   constructor(
     private servicecalls: ServiceCallsService,
     private meta: MetaserviceService
-  ) { 
+  ) {
     this.getTabs()
   }
 
   ngOnInit(): void {
     this.meta.updateMetaInfo(
       "Fixed Price Strategy, Market Trigger Strategy, Portfolio Managed Strategy, Bespoke Strategy, Bureau Services",
-      "Our Products",
+      "Our Customer",
       "assets/products.jpg",
-      "our-products"
+      "our-customer"
     );
-    this.meta.updateTitle("", "Our Team");
+    this.meta.updateTitle("", "Our Customer");
   }
 
   getTabs() {
     this.servicecalls
-      .getServer("getOurTeamPageData")
+      .getServer("getReviewPageData")
       .subscribe(
         (res: any) => {
           console.log("Res=>", res);

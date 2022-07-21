@@ -59,6 +59,9 @@ import { EnergyProcurementTabComponent } from './energy-procurement-tab/energy-p
 import { OurHeritageComponent } from './our-heritage/our-heritage.component';
 import { OurTeamComponent } from './our-team/our-team.component';
 import { AccountManagementComponent } from './account-management/account-management.component';
+import { NationalCharityTenderComponent } from './national-charity-tender/national-charity-tender.component';
+import { EducationSectorComponent } from './education-sector/education-sector.component';
+import { OurCustomersComponent } from './our-customers/our-customers.component';
 
 @NgModule({
   declarations: [
@@ -103,7 +106,10 @@ import { AccountManagementComponent } from './account-management/account-managem
     EnergyProcurementTabComponent,
     OurHeritageComponent,
     OurTeamComponent,
-    AccountManagementComponent
+    AccountManagementComponent,
+    NationalCharityTenderComponent,
+    EducationSectorComponent,
+    OurCustomersComponent
   ],
   imports: [
     BrowserModule,

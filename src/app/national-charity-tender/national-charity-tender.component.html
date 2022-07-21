@@ -2,25 +2,27 @@
     <div class="text-vertical-center">
         <h1 class="heading_text">
             <span class="fontBold">
-                Net Zero and Carbon Reporting
+                National Charity Tender
             </span>
         </h1>
     </div>
 </header>
 <section class="strategies">
     <div>
-        <div class="responsive-tabs responsive-tabs--enabled" *ngIf="product">
-            <!-- ===================================   tab 1  ===================================== -->
+        <div class="responsive-tabs responsive-tabs--enabled">
             <div class="tab-content">
                 <div id="tab1" class="container tab-pane active">
                     <br />
                     <div class="tabdetails innerspan">
-                        <h3>Net Zero and Carbon Reporting</h3>
+                        <h3>National Charity Tender</h3>
                         <p class="blueText fontBoldText">{{text1}}</p>
+                        <p class="blueText fontBoldText">{{text2}}</p>
+                        <p class="blueText fontBoldText">{{text3}}</p>
+
                         <div class="innerspan mt-5">
                             <span [innerHtml]="producttext1"></span>
                         </div>
-                        <div class="innerspan mt-5">
+                        <!-- <div class="innerspan mt-5">
                             <span [innerHtml]="producttext2"></span>
                         </div>
 
@@ -33,88 +35,22 @@
 
                         <div class="innerspan mt-5">
                             <span [innerHtml]="producttext5"></span>
-                        </div>
-                        <!-- <div>
-                            <h3 class="headings">Discovery Document</h3>
-                            <ul>
-                                <li>Make strategic decisions on investment to reduce energy use.</li>
-                                <li>Determine the potential for microgeneration across the estate and the impact on
-                                    Carbon.</li>
-                                <li>Decide on a timeline of improvement measures to align with maintenance/ improvement
-                                    budgets</li>
-                                <li>Set building energy targets and reduce the performance gap.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="headings">Display Energy Certificate (DEC)</h3>
-                            <ul>
-                                <li>A DEC shows the energy performance of a building based on actual energy consumption
-                                    as recorded over the last 12 months within the validity period of the DEC (the
-                                    operational rating).</li>
-                                <li>This rating is shown on a scale from A to G, where A is the lowest CO2 emissions
-                                    (best) and G is the highest CO2 emissions (worst).</li>
-                                <li>DECs for buildings larger than 1,000m2 also show the operational ratings for the
-                                    previous 2 years, where available.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="headings">Energy Use Investigation</h3>
-                            <div>An energy use investigation is a bespoke product looking at where energy is used in a
-                                building and making recommendations for improvement. Similar to the Discovery Document,
-                                but unlike the discovery documents which provides estimations, the energy use
-                                investigation is much more in depth and provides a more detailed and accurate report,
-                                allowing you to more confidently:</div>
-                            <ul class="mt-5">
-                                <li>Make strategic decisions on investment to reduce energy use.</li>
-                                <li>Determine the potential for microgeneration across the estate and the impact on
-                                    Carbon.</li>
-                                <li>Decide on a timeline of improvement measures to align with maintenance/ improvement
-                                    budgets</li>
-                                <li>Set building energy targets and reduce the performance gap.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="headings">Streamline Energy And Carbon Reporting (SECR) </h3>
-                            <ul class="mt-5">
-                                <li>Public bodies do not fall under the new regulations, but they are subject to other
-                                    legislation which requires carbon reporting.</li>
-                                <li>It is worth noting that charities, not-for-profit companies or others undertaking
-                                    public activities – such as companies owned by universities, academies or NHS Trusts
-                                    – will need to check whether they meet the above qualifying criteria.</li>
-                                <li>Private sector organisations which fall outside of the scope of the new regulations
-                                    are encouraged to voluntarily report in a similar manner.</li>
-                                <li>We can provide evidence backed Carbon & Energy Reporting for Scope 1 and 2
-                                    emissions, under the SECR guidance</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="headings">Smart Export Guarantee (SEG) </h3>
-                            <ul class="mt-5">
-                                <li>The Smart Export Guarantee (SEG) pays customers for renewable electricity they have
-                                    generated and put into the grid. It replaces the Feed-in Tariff (FIT) scheme</li>
-                                <li>There are five eligible low-carbon technology types for the SEG. If you have one of
-                                    these installed, you may be able to benefit from the SEG:</li>
-                                <li>Solar photovoltaic (solar PV)</li>
-                                <li>Wind</li>
-                                <li>Micro combined heat and power (micro-CHP)</li>
-                                <li>Hydro</li>
-                                <li>Anaerobic digestion (AD)</li>
-                                <li>These installations must be located in Great Britain and have a total installed
-                                    capacity (TIC) of no more than 5MW, or no more than 50kW for Micro-CHP.</li>
-                            </ul>
                         </div> -->
+                        <p style="font-size: x-large;">If you would like to advantage of this offer,
+                            please <a class="clickhere" style="color: #3697c2 !important;" (click)="open()"
+                                data-toggle="modal" data-target="#contactUs">click here</a> for a call back.</p>
                     </div>
                 </div>
-                <div class="container text-center pb-5" id="howwecharge">
+                <!-- <div class="container text-center pb-5" id="howwecharge">
                     <div class="row">
                         <div class="col-sm-12" style="padding-bottom: 15px;">
-                            <a class="btnFindOutMore fontBold pointer" (click)="open()" data-toggle="modal"
+                            <a class="btnFindOutMore fontBold pointer"  data-toggle="modal"
                                 style="max-width: 98vw;" data-target="#contactUs">
                                 Contact Us
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -127,14 +63,14 @@
                 <div class="col-md-12">
                     <div style="min-width: 350px;padding: 10px 0px" class="text-center">
                         <div class="modal-header">
-                            <h2 class="modal-title" *ngIf="!show" style="color:#3697C2;padding-left: 15px;">Contact Us
+                            <h2 class="modal-title" *ngIf="show" style="color:#3697C2;padding-left: 15px;">Contact Us
                             </h2>
                             <button type="button" data-dismiss="modal" class="close">
                                 ×
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="control-group " *ngIf="!show">
+                            <div class="control-group " *ngIf="show">
                                 <form [formGroup]="contactUsForm" (ngSubmit)="onsubmit()">
                                     <div class="controls ">
                                         <input class="form-control " formControlName="name" placeholder="Name"
@@ -178,7 +114,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div *ngIf="show">
+                            <div *ngIf="!show">
                                 <div id="stage " class="mt-4">
                                     <p style="text-align:center;">
                                         <img width="128" height="128" [lazyLoad]="'assets/check-icon.png'">

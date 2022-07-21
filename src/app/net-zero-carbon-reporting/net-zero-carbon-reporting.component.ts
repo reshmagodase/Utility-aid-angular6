@@ -41,12 +41,12 @@ export class NetZeroCarbonReportingComponent implements OnInit {
 
   ngOnInit(): void {
     this.meta.updateMetaInfo(
-      "Net Zero and Carban Reporting",
-      "Net Zero and Carban Reporting",
+      "Net Zero and Carbon Reporting",
+      "Net Zero and Carbon Reporting",
       "assets/products.jpg",
       "net-zero-carban-reporting"
     );
-    this.meta.updateTitle("", "Net Zero and Carban Reporting");
+    this.meta.updateTitle("", "Net Zero and Carbon Reporting");
     this.initForm();
   }
 
@@ -110,7 +110,7 @@ export class NetZeroCarbonReportingComponent implements OnInit {
           this.producttext2 = productTextDec;
           this.producttext2 = this._sanitizer.bypassSecurityTrustHtml(this.producttext2);
 
-          var productText2= this.product.txtEditor3;
+          var productText2 = this.product.txtEditor3;
           var productTextDec = decodeURIComponent(productText2);
           this.producttext3 = productTextDec;
           this.producttext3 = this._sanitizer.bypassSecurityTrustHtml(this.producttext3);
@@ -121,11 +121,11 @@ export class NetZeroCarbonReportingComponent implements OnInit {
           this.producttext4 = this._sanitizer.bypassSecurityTrustHtml(this.producttext4);
 
           var productText4 = this.product.txtEditor5;
-          var productTextDec = decodeURIComponent(productText4  );
+          var productTextDec = decodeURIComponent(productText4);
           this.producttext5 = productTextDec;
           this.producttext5 = this._sanitizer.bypassSecurityTrustHtml(this.producttext5);
           this.text1 = this.product.text1;
-          this.currentTabData("Net Zero and Carban Reporting");
+          this.currentTabData("Net Zero and Carbon Reporting");
         },
         error => {
           console.log("error", error);

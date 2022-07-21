@@ -37,6 +37,9 @@ import { VoidManagementComponent } from "./void-management/void-management.compo
 import { OurHeritageComponent } from "./our-heritage/our-heritage.component";
 import { OurTeamComponent } from "./our-team/our-team.component";
 import { AccountManagementComponent } from "./account-management/account-management.component";
+import { NationalCharityTenderComponent } from './national-charity-tender/national-charity-tender.component';
+import { EducationSectorComponent } from "./education-sector/education-sector.component";
+import { OurCustomersComponent } from "./our-customers/our-customers.component";
 const routes: Routes = [
   {
     path: "",
@@ -192,6 +195,18 @@ const routes: Routes = [
   {
     path: "account-management",
     component: AccountManagementComponent
+  },
+  {
+    path: "national-charity-tender",
+    component: NationalCharityTenderComponent
+  },
+  {
+    path: "education-sector",
+    component: EducationSectorComponent
+  },
+  {
+    path: "our-customer",
+    component: OurCustomersComponent
   },
   { path: '**', redirectTo: "" }
 ];

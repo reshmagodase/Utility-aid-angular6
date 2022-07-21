@@ -1,8 +1,8 @@
 <header class="header d-flex align-items-center d-flex justify-content-center">
     <div class="text-vertical-center">
         <h1 class="heading_text">
-            <span class="fontBold">
-                Our Team
+            <span class="fontBold text-white">
+                Our Customer
             </span>
         </h1>
     </div>
@@ -11,18 +11,21 @@
 
 <section id="case-study" class="blogs">
     <div class="container text-center">
-        <h2 class="heading_text_inner fontBold">Our Team</h2>
+        <h2 class="heading_text_inner fontBold">Our Customer</h2>
         <br /><br />
 
         <div class="row">
             <div class="case-blog col-md-4 col-sm-12" *ngFor="let team of product">
                 <a>
                     <div class="innerblog inner-img">
-                        <img class="" src="https://utility-aid.co.uk/{{team.image}}" width="200" height="260" />
                         <div class="details">
                             <h2 class="hedaings">{{team.name}}</h2>
-                            <p class="four-lines">{{team.heading}}</p>
+                            <p class="four-lines">{{team.review.length < 200 ? team.review :
+                                    team.review.substring(0,200)}} <span *ngIf="team.review.length > 200">...</span></p>
+                            <p class="four-lines1 onhover">"<i>{{team.review}}</i>"</p>
+
                         </div>
+
                     </div>
                 </a>
             </div>
