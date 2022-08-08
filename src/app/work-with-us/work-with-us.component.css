@@ -9,6 +9,13 @@
 
 }
 
+.bg {
+  background: url('../../assets/work-with-us.jpg') no-repeat left 100%;
+  background-size: cover;
+  margin-top: 5%;
+  text-align: left;
+}
+
 .ng-lazyloaded {
   opacity: 1;
   animation: fadein .5s;
@@ -25,8 +32,8 @@
 }
 
 .blogs {
-  background-color: #23527c;
-  color: #fff;
+  background-color: #f2f2f2;
+  color: #000;
 }
 
 .container {
@@ -57,9 +64,14 @@ p {
 }
 
 ul>li {
-  font-size: 16.5px;
+  /* font-size: 16.5px; */
   font-family: "vag_roundedregular";
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+ul {
+  margin-bottom: 30px;
 }
 
 a.btnFindOutMore {
@@ -224,4 +236,16 @@ a.btnFindOutMore2 {
     max-width: 100% !important;
     padding-bottom: 50px !important;
   }
+}
+
+.points {
+  font-size: x-large;
+  color: #3697c2;
+  font-weight: bold !important;
+}
+
+ul.ua {
+  font-size: x-large;
+  font-weight: bold !important;
+  list-style-image: url("../../assets/ua.png");
 }

@@ -45,6 +45,7 @@ export class CustomerCareComponent implements OnInit {
         this.producttext1 = productTextDec;
         this.producttext1 = this._sanitizer.bypassSecurityTrustHtml(this.producttext1);
         this.text1 = this.product.text1;
+        console.log("text1 is: " +this.text1)
         },
         (error) => {
           console.log("error", error);

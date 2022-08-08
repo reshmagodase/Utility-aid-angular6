@@ -181,7 +181,7 @@ const routes: Routes = [
     component: InvoiceValidationComponent
   },
   {
-    path: "net-zero-carban-reporting",
+    path: "net-zero-carbon-reporting",
     component: NetZeroCarbonReportingComponent
   },
   {
