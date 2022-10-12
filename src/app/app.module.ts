@@ -62,6 +62,7 @@ import { AccountManagementComponent } from './account-management/account-managem
 import { NationalCharityTenderComponent } from './national-charity-tender/national-charity-tender.component';
 import { EducationSectorComponent } from './education-sector/education-sector.component';
 import { OurCustomersComponent } from './our-customers/our-customers.component';
+import { EnergyReportComponent } from './energy-report/energy-report.component';
 
 @NgModule({
   declarations: [
@@ -109,7 +110,8 @@ import { OurCustomersComponent } from './our-customers/our-customers.component';
     AccountManagementComponent,
     NationalCharityTenderComponent,
     EducationSectorComponent,
-    OurCustomersComponent
+    OurCustomersComponent,
+    EnergyReportComponent
   ],
   imports: [
     BrowserModule,

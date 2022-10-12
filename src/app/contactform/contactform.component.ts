@@ -35,6 +35,7 @@ export class ContactformComponent implements OnInit {
       cvemail: ["", Validators.required],
       contactNo: ["", Validators.required],
       organisation: ["", Validators.required],
+      message:[""],
     });
   }
 
@@ -44,7 +45,7 @@ export class ContactformComponent implements OnInit {
     this.loader = true;
     if (this.contactForm.valid) {
       console.log("form value", this.contactForm.value);
-      this.service_api.postServerRes("saveContactFormData", { name: this.contactForm.value.name, email: this.contactForm.value.cvemail, phone: this.contactForm.value.contactNo, church: this.contactForm.value.organisation,source: this.urlParams?this.urlParams:"Default URL" }).pipe(
+      this.service_api.postServerRes("saveContactFormData", { name: this.contactForm.value.name, email: this.contactForm.value.cvemail, phone: this.contactForm.value.contactNo, message: this.contactForm.value.message, church: this.contactForm.value.organisation,source: this.urlParams?this.urlParams:"Default URL" }).pipe(
         tap((resp: any) => console.log('heaeder', resp.headers.get('ReturnStatus')))
       ).subscribe((data: any) => {
         // console.log(data.headers.get('X-Token'));
@@ -57,8 +58,6 @@ export class ContactformComponent implements OnInit {
       })
     }
     // resp.headers.get('ReturnStatus')
-
-
     else {
       console.log("---->", Object.keys(this.contactForm.controls))
       let lng = Object.keys(this.contactForm.controls)
@@ -70,8 +69,5 @@ export class ContactformComponent implements OnInit {
       }
       // this.requestForm.controls['audit'].markAsDirty();
     }
-
-
   }
-
 }

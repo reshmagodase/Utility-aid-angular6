@@ -1,0 +1,139 @@
+.outer{
+    background-color: #c6e1f1;
+}
+.content{
+    font-size: 13px;
+    font-family: Calibri, sans-serif;
+    text-align: justify;
+}
+.energyimg{
+width: 80%;
+height: 600px;
+}
+@media screen and (max-width: 480px) {
+    .energyimg{
+        width: 300px;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .text11{
+        /* float: right; */
+        width: 45% !important;
+        height: 17px;
+        
+    }
+}
+.energyoutlookContent{
+border: 2px solid #3697c2;
+padding: 10px;
+background-color: white;
+font-size: 13pt;
+font-family: Calibri, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-variant: normal;
+text-decoration: none;
+vertical-align: baseline;
+white-space: pre-wrap;
+color: #101010;
+}
+.energyoutlookContent p{
+    color: #444444;
+}
+.energyhistory{
+border: 2px solid #3697c2;
+padding: 10px;
+background-color: white;
+font-size: 13pt;
+font-family: Calibri, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-variant: normal;
+text-decoration: none;
+vertical-align: baseline;
+white-space: pre-wrap;
+color: black;
+}
+.mainContent{
+    /* border-style: solid;
+        border-color: blue; */
+    border: 2px solid #3697c2;
+    padding: 10px;
+    background-color: white;
+    font-size: 12pt;
+    font-family: Calibri, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    color: #101010;
+}
+.mainContent1{
+    border-style: solid;
+    border-color: #3697c2;
+    background-color: white;
+    font-size: 12pt;
+    font-family: Calibri, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    /* color: #e5f2fd; */
+    /* padding: 10px; */
+}
+
+.horizontalline{
+        border-style: solid;
+        border-color: #3697c2;
+        width: 500px;
+        float: right;
+}
+.eneryoutlook{
+text-align: end;
+font-family: "vag_roundedbold";
+font-size: 40px;
+font-weight: 0;
+line-height: 1.2;
+}
+.text{
+    text-align: end;
+}
+.energyimg{
+    display: block;
+     margin-left: auto;
+     margin-right: auto;
+   }
+.oilimg{
+    float: right;
+    margin-top: 15px;
+   }
+.text11{
+   float: right;
+    width: 30%;
+
+   }
+p{
+    padding-left: 10px;
+    padding-right:10px ;
+}
+.figname{
+    padding-left: 647px;
+}
+@media screen and (max-width: 480px) {
+    .figname{
+        padding-left: 20px;
+    }
+}
+h1{
+    font-size: 45px;
+    color: #6e6e6e;
+}
+.mainContent1 h1{
+    font-size: 35px;
+    color:white;
+}

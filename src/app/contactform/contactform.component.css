@@ -170,4 +170,6 @@ p {
         font-size: 23px;
         text-align: center;
       }
-    
+    .text{
+      min-height: 80px;
+    }

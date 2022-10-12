@@ -40,6 +40,7 @@ import { AccountManagementComponent } from "./account-management/account-managem
 import { NationalCharityTenderComponent } from './national-charity-tender/national-charity-tender.component';
 import { EducationSectorComponent } from "./education-sector/education-sector.component";
 import { OurCustomersComponent } from "./our-customers/our-customers.component";
+import { EnergyReportComponent } from "./energy-report/energy-report.component";
 const routes: Routes = [
   {
     path: "",
@@ -207,6 +208,10 @@ const routes: Routes = [
   {
     path: "our-customer",
     component: OurCustomersComponent
+  },
+  {
+    path: "energy-report",
+    component: EnergyReportComponent
   },
   { path: '**', redirectTo: "" }
 ];
