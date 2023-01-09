@@ -107,6 +107,7 @@ line-height: 1.2;
     display: block;
      margin-left: auto;
      margin-right: auto;
+     width: 90%;
    }
 .oilimg{
     float: right;
@@ -120,6 +121,7 @@ line-height: 1.2;
 p{
     padding-left: 10px;
     padding-right:10px ;
+    line-height: 1.6;
 }
 .figname{
     padding-left: 647px;
@@ -129,6 +131,12 @@ p{
         padding-left: 20px;
     }
 }
+@media screen and (max-width: 480px) {
+    .gasimg2{
+        float: left !important;
+        margin-left: 20px;
+    }
+}
 h1{
     font-size: 45px;
     color: #6e6e6e;
@@ -136,4 +144,16 @@ h1{
 .mainContent1 h1{
     font-size: 35px;
     color:white;
+}
+.gasimg1{
+    float: left;
+    margin-right: 10px;
+}
+.gasimg2{
+    float: right;
+    margin-left: 20px;
+}
+.electricityimg{
+    float: left;
+    margin-right: 10px;
 }
