@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaserviceService } from "../metaservice.service";
 
 @Component({
   selector: 'app-energy-report',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnergyReportComponent implements OnInit {
 
-  constructor() { }
+  constructor(private meta: MetaserviceService) { }
 
   ngOnInit(): void {
-    
+    this.meta.updateTitle("", "Energy Report");
   }
 
 }
